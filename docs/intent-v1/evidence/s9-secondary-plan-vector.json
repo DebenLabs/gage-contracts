@@ -1,0 +1,39 @@
+{
+  "scope": "Golden EIP-712 vector for the Intent secondary purchase plan (S9). The Solidity verifier test and the quote-service test hash this exact plan and must both produce `digest`. Addresses and amounts are fixtures, not deployments.",
+  "domain": {
+    "name": "gage Intent quotes",
+    "version": "1",
+    "chainId": 46630,
+    "verifyingContract": "0x00000000000000000000000000000000000e1F1E"
+  },
+  "plan": {
+    "engine": "0x1111111111111111111111111111111111111111",
+    "loanId": "42",
+    "seller": "0x2222222222222222222222222222222222222222",
+    "market": "0x3333333333333333333333333333333333333333",
+    "slots": 15,
+    "price": "1040000003",
+    "nonce": "3",
+    "maxFeeBps": 100,
+    "filler": "0x4444444444444444444444444444444444444444",
+    "token": "0x5555555555555555555555555555555555555555",
+    "collateral": "100000000000000000000",
+    "principal": "1000000003",
+    "cap": "1100000010",
+    "maturity": 1791555200,
+    "modelAnnualBps": 1000,
+    "policyVersion": 1,
+    "epoch": "7",
+    "valuedAt": 1790000000,
+    "issuedAt": 1790000000,
+    "expiry": 1790000090,
+    "evidenceText": "s9 golden evidence",
+    "minRewards": ["1", "2", "3", "4"],
+    "allocations": [
+      { "vault": "0x6666666666666666666666666666666666666666", "slots": 5, "price": "520000002", "repayment": "550000006", "minimum": "3333334", "executionFee": "5999999", "maxReserveShares": "1000000000000000000", "policyRevision": "1", "extraBps": 300, "capBps": 2000, "managerBps": 1000 },
+      { "vault": "0x7777777777777777777777777777777777777777", "slots": 2, "price": "260000001", "repayment": "275000002", "minimum": "1666667", "executionFee": "2999999", "maxReserveShares": "0", "policyRevision": "2", "extraBps": 0, "capBps": 2000, "managerBps": 1500 },
+      { "vault": "0x8888888888888888888888888888888888888888", "slots": 8, "price": "260000000", "repayment": "275000002", "minimum": "1666667", "executionFee": "3000000", "maxReserveShares": "7", "policyRevision": "1", "extraBps": 10000, "capBps": 5000, "managerBps": 500 }
+    ]
+  },
+  "digest": "0x17845f711b10260aae8d2a4fa09cd477788cd24ce334825cc10046a437950526"
+}

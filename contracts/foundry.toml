@@ -1,0 +1,95 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+script = "script"
+solc_version = "0.8.28"
+# Uniswap v4 uses transient storage, so the chain must support Cancun. VERIFY ArbOS version in addresses.json.
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 1_000_000
+additional_compiler_profiles = [
+    { name = "v2-native", optimizer_runs = 200, via_ir = true },
+    { name = "hybrid", optimizer_runs = 200, via_ir = true },
+]
+compilation_restrictions = [
+    { paths = "src/v2/**", optimizer_runs = 200, via_ir = true },
+    { paths = "test/v2/**", optimizer_runs = 200, via_ir = true },
+    # Size-oriented IR build for the Earn account engine.
+    { paths = "src/HybridVault.sol", optimizer_runs = 200, via_ir = true },
+    # The factory replays the strategy's creation code, so it must compile the same bytes.
+    { paths = "src/HybridFactory.sol", optimizer_runs = 200, via_ir = true },
+    # The third Earn design and its factory, which embeds the strategy's creation code.
+    { paths = "src/earn/**", optimizer_runs = 200, via_ir = true },
+    { paths = "src/intent/**", optimizer_runs = 200, via_ir = true },
+    { paths = "test/intent/**", optimizer_runs = 200, via_ir = true },
+    # The private lane's entry router compiles with the Intent engine it calls.
+    { paths = "src/private/**", optimizer_runs = 200, via_ir = true },
+    { paths = "test/private/**", optimizer_runs = 200, via_ir = true },
+    # The loop router fills through the Intent engine the same way.
+    { paths = "src/loop/**", optimizer_runs = 200, via_ir = true },
+    { paths = "test/loop/**", optimizer_runs = 200, via_ir = true },
+]
+via_ir = false
+bytecode_hash = "none"
+cbor_metadata = false
+fs_permissions = [
+    { access = "read", path = "./addresses.json" },
+    { access = "read", path = "./test/private/fixtures" },
+    { access = "read-write", path = "./deployments" },
+    { access = "read", path = "./lib/v4-periphery/foundry-out" },
+    { access = "read", path = "./lib/v4-periphery/lib/v4-core/out" },
+    { access = "read", path = "./lib/v4-periphery/lib/permit2/out" },
+    # The canonical v3 factory bytecode v4-core's differential tests deploy, for the local cash-out route suite.
+    { access = "read", path = "./lib/v4-periphery/lib/v4-core/test/bin" },
+    { access = "read-write", path = "../launch/live" },
+    # The Intent quote arithmetic's reference vectors, replayed by the fee-math test.
+    { access = "read", path = "../docs/intent-v1/evidence/s3-fee-vectors.json" },
+    # The S9 secondary arithmetic's reference vectors (docs/intent-v1/evidence/check-secondary-math.py).
+    { access = "read", path = "../docs/intent-v1/evidence/s9-secondary-vectors.json" },
+    { access = "read", path = "../docs/intent-v1/evidence/s9-secondary-plan-vector.json" },
+    # Written by the opt-in pinned mainnet fork run of Intent revenue (test/fork/IntentRevenue.fork.t.sol).
+    { access = "read-write", path = "../docs/intent-v1/evidence/s7-mainnet-fork.json" },
+    # Written by the opt-in pinned mainnet fork run of the whole lifecycle (test/fork/IntentLifecycle.fork.t.sol).
+    { access = "read-write", path = "../docs/intent-v1/evidence/s8-mainnet-fork-lifecycle.json" },
+    { access = "read-write", path = "../docs/intent-v1/evidence/s9-mainnet-fork-secondary.json" },
+    { access = "read-write", path = "../docs/intent-v1/evidence/s8-testnet-fork-lifecycle.json" },
+]
+gas_reports = ["DealVault", "CollateralRegistry", "FeeSink", "EntryRouter"]
+
+[profile.default.fuzz]
+runs = 256
+
+[profile.default.invariant]
+runs = 64
+depth = 64
+fail_on_revert = true
+
+[profile.ci.fuzz]
+runs = 1000
+
+[profile.v2]
+optimizer_runs = 200
+via_ir = true
+out = "out-v2"
+cache_path = "cache-v2"
+
+[profile.ci.invariant]
+runs = 256
+depth = 128
+
+[profile.nightly.invariant]
+runs = 4000
+depth = 256
+
+[fmt]
+line_length = 120
+tab_width = 4
+bracket_spacing = false
+int_types = "long"
+number_underscore = "thousands"
+
+[rpc_endpoints]
+robinhood = "${ROBINHOOD_RPC_URL}"
+robinhood_testnet = "${ROBINHOOD_TESTNET_RPC_URL}"

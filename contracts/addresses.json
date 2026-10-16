@@ -1,0 +1,571 @@
+{
+  "$schema": "./addresses.schema.json",
+  "chainId": 4663,
+  "chainName": "Robinhood Chain",
+  "stack": "Arbitrum Orbit (Nitro), ETH gas, Ethereum blob DA",
+  "docsCheckedAt": "2026-09-06",
+  "rules": [
+    "Every entry starts as VERIFY. It moves to VERIFIED only with a non-null checksummed address, a verifiedAt date, a verifiedBy handle, and findings recorded.",
+    "M0 does not close, and M1 does not close, while any entry the vault layer depends on is still VERIFY.",
+    "scripts/check_addresses.py enforces the schema in CI."
+  ],
+  "chain": {
+    "forceInclusionDelay": {
+      "value": null,
+      "unit": "seconds",
+      "status": "VERIFY",
+      "why": "Delayed-inbox force-inclusion delay bounds how long a sequencer outage can block a borrower's reclaim. GRACE must exceed it.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "arbOsVersion": {
+      "value": null,
+      "status": "VERIFY",
+      "why": "Contracts compile for cancun (transient storage). Uniswap v4 on the chain implies support; confirm.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "explorerVerifyApi": {
+      "value": null,
+      "status": "VERIFY",
+      "why": "Contract source verification endpoint for forge verify-contract.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "create2Factory": {
+      "value": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "status": "VERIFIED",
+      "verifiedAt": "2026-09-07",
+      "verifiedBy": "claude-fable-5.1 via cast against rpc.mainnet.chain.robinhood.com (on-chain identity checks, not a source review)",
+      "findings": "Deterministic CREATE2 deployer present on mainnet (4663) and testnet (46630); Deploy.s.sol relies on it."
+    }
+  },
+  "rpc": {
+    "primary": {
+      "provider": "Quicknode",
+      "url": "env:ROBINHOOD_RPC_URL",
+      "status": "VERIFY",
+      "why": "Rate limits, archive depth, websocket support.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "fallback": {
+      "provider": "GetBlock",
+      "url": "env:ROBINHOOD_RPC_FALLBACK_URL",
+      "status": "VERIFY",
+      "why": "Same checks as primary.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    }
+  },
+  "tokens": {
+    "USDG": {
+      "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "status": "VERIFIED",
+      "source": "Paxos dollar, native on the chain",
+      "why": "Decimals (6 or 18). Freeze and blocklist function names and events, for the indexer and the monitor.",
+      "verifiedAt": "2026-09-07",
+      "verifiedBy": "claude-fable-5.1 via cast against rpc.mainnet.chain.robinhood.com (on-chain identity checks, not a source review)",
+      "findings": "name 'Global Dollar', symbol USDG, decimals 6. EIP-1967 proxy (impl 0x68184c449e1a8f34fa18d289737129fd27b66f8f), owner 0xcFA0388f5ddf905FdC08c45c716C15Dc10A14C6F. paused() exists (false). isFrozen(address) exists (per-address freeze). isBlocked/isBlacklisted/frozen selectors revert (absent). Event names for freeze/pause still to be read from verified source: Blockscout API was unreachable from this machine. Vault treats USDG amounts as raw 6-decimal units."
+    },
+    "WETH": {
+      "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "status": "VERIFIED",
+      "source": "Canonical WETH on the chain",
+      "why": "Used as ERC-20 collateral through the same adapter as Stock Tokens.",
+      "verifiedAt": "2026-09-07",
+      "verifiedBy": "claude-fable-5.1 via cast against rpc.mainnet.chain.robinhood.com (on-chain identity checks, not a source review)",
+      "findings": "symbol WETH, decimals 18. Address matches docs.robinhood.com/chain/contracts. Testnet WETH at 0x7943e237c7F95DA44E0301572D358911207852Fa (symbol WETH, chain 46630)."
+    }
+  },
+  "stockTokens": {
+    "_source": "https://docs.robinhood.com/chain/contracts",
+    "_issuer": "Robinhood Assets (Jersey) Limited",
+    "_standard": "ERC-20, 18 decimals, ERC-8056 uiMultiplier(), pendingUIMultiplier with effectiveAt, UIMultiplierUpdated event",
+    "_perTokenChecks": [
+      "pause function and event",
+      "blocklist function and event",
+      "proxy or upgrade path",
+      "transfer hooks or fee-on-transfer",
+      "deepest USDG pool address, depth and 30-day median volume (listing criteria, spec 7.3)"
+    ],
+    "NVDA": {
+      "address": null,
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    }
+  },
+  "uniswapV4": {
+    "_note": "Addresses from docs.bags.fm/robinhood/overview, cross-checked on-chain 2026-09-07: PositionManager, StateView and V4Quoter all return PoolManager 0x8366a39CC670B4001A1121B8F6A443A643e40951 from poolManager(); PositionManager.permit2() is the canonical Permit2. FINDING: the UniversalRouter is a modified fork. Its v4 swap struct carries an extra minHopPriceX36 field, so stock Uniswap SDK calldata reverts. EntryRouter's front-end encoding and every M6 router must target this ABI. Still open: periphery version, subscriber behaviour on transfer, hook permission bit layout. Uniswap's own docs list only v3 for this chain.",
+    "PoolManager": {
+      "address": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "24009 bytes of code; referenced by PositionManager, StateView and V4Quoter."
+    },
+    "PositionManager": {
+      "address": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "name 'Uniswap v4 Positions NFT'; nextTokenId 2,053,076 on 2026-09-07; poolManager() and permit2() consistent."
+    },
+    "StateView": {
+      "address": "0xF3334192D15450CdD385c8B70e03f9A6bD9E673b",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "poolManager() consistent."
+    },
+    "UniversalRouter": {
+      "address": "0x8876789976dEcBfCbBbe364623C63652db8C0904",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "24546 bytes of code. MODIFIED FORK (minHopPriceX36 in the v4 swap struct). Same address as Uniswap's v3 deployments page lists."
+    },
+    "Permit2": {
+      "address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "Canonical Permit2 address; code present."
+    },
+    "V4Quoter": {
+      "address": "0x8Dc178eFB8111BB0973Dd9d722ebeFF267c98F94",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "poolManager() consistent. Off-chain quoting only."
+    },
+    "Multicall3": {
+      "address": "0xcA11bde05977b3631167028862bE2a173976CA11",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "Canonical address; code present. For the valuation service."
+    }
+  },
+  "pons": {
+    "Factory": {
+      "address": "0x7eD598BcEf8bd9Edd8C97A195C6d13f40801EC7e",
+      "status": "VERIFY",
+      "why": "Address from the brief; confirm on the explorer. Creator share, payout asset, claim function, whether the creator wallet may be a contract, whether per-launch supply is configurable, whether Universal Router routes through the Pons hook.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    }
+  },
+  "kyberswap": {
+    "_note": "KyberSwap's two routers on Robinhood Chain mainnet, both admitted as executors of LoopRouter.loopVia and GageV2CashoutRouter.cashOutVia by mainnet's release profile (contracts.leverage.executors, contracts.cashout.executors; D243, D245, D246): the valuation service asks KyberSwap for a Router V3 route first and for MetaAggregationRouterV2's when that request fails or the calling router does not admit V3 (docs/api.md, KyberSwap's routers). Third-party contracts: not gage's, outside the bug bounty's scope. Read on 2026-10-13 over a read-only mainnet relay and the public node; mainnet-fork runs of 2026-10-13 (contracts/test/loop/LoopRouterKyber.fork.t.sol, contracts/test/v2/GageV2CashoutKyber.fork.t.sol, contracts/test/loop/KyberRouterV3.fork.t.sol) sold and bought NVDA through both.",
+    "RouterV3": {
+      "address": "0x6868D319c8c9A78F7d39DC3602C5c917315132D7",
+      "status": "VERIFY",
+      "why": "KSAggregationRouterV3, asked first (D246). Before VERIFIED: a founder review of its admin's powers (defaultAdmin grants EXECUTOR_ROLE, unpauses and rescues, with no delay; guardians pause) and of the code its audit does not cover.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "16,858 bytes of runtime, keccak 0x0495909c9f14bcdb7976b38e8f69c1b17e7a437fdc468fcc59f79ee46baf8b97, the Sourcify exact match of KyberNetwork/ks-aggregation-router on Ethereum; no EIP-1967 implementation slot (no proxy). Named by KyberSwap's /routes only with useRouterV3=true, a parameter its published API specification does not list. defaultAdmin() 0xeB28e1C4c47b471a88B00bA93163a3a44AE65D9C (KyberSwap's operator multisig); PERMIT2() canonical; KyberSwap's executor 0x8F10B468b06c6FD214B65F87778827F7D113f996 holds EXECUTOR_ROLE; paused() false. A built call pulls its input with the router's own transferFrom from the caller (exact approval of the router). totalSupply() and decimals() revert. Hexens audit, 24 Nov to 5 Dec 2025; ksExecute(bytes) and the public swap added in January 2026 are not covered."
+    },
+    "MetaAggregationRouterV2": {
+      "address": "0x6131B5fae19EA4f9D964eAc0408E4408b66337b5",
+      "status": "VERIFY",
+      "why": "D239's router, the fallback since D246. Before VERIFIED: a founder review of its owner's powers (D245's open question 1: executor whitelist, rescueFunds, pause).",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "13,724 bytes of runtime, keccak 0xdc6eb20a6d4701d8f0f04f9a3342d254eb2698bbad281d8578d6efba21865867; no EIP-1967 implementation slot (no proxy). Named by KyberSwap's /routes without useRouterV3. owner() 0x1874028262F1F4B2DD1F2700A72Ee8b9b7C69090; WETH() is mainnet WETH 0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73; paused(), totalSupply() and decimals() revert. A built call pulls its input with transferFrom from the caller (exact approval of the router)."
+    }
+  },
+  "chainlink": {
+    "_note": "Display reference only. Never read on-chain (spec I11).",
+    "tokenizedEquityFeeds": {
+      "address": null,
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    }
+  },
+  "safe": {
+    "_note": "Safe deployment on the chain. Registry owner and treasury.",
+    "SafeProxyFactory": {
+      "address": null,
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "RegistryOwner": {
+      "address": "0x30e8E13E62DFcd063AF763aB29501FeE74C4918e",
+      "status": "VERIFY",
+      "why": "1-of-2 Safe that owns the registries, fee contracts and Earn factories since 2026-09-14 (D124); the original plan said 2-of-3 hardware signers",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": "owner() of CollateralRegistry, FeeSink, Emissions, FeeFloor, DealFeeRouter, the extension registries, the native engine registries and cash-out routers, HybridFactory, EarnFactory and GradeRegistry read over the public RPC on 2026-09-17; transfers accepted at block 62622930 (launch/safe-accept-ownership.4663.json). Status stays VERIFY until a founder review is recorded."
+    },
+    "Treasury": {
+      "address": null,
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    }
+  },
+  "testnet": {
+    "_note": "Robinhood Chain Testnet. Per docs.robinhood.com/chain/connecting on 2026-09-07: chain id 46630, settles to Ethereum Sepolia, bridge via portal.arbitrum.io in testnet mode, faucet at faucet.testnet.chain.robinhood.com.",
+    "chainId": {
+      "value": 46630,
+      "status": "VERIFIED",
+      "why": "Confirm on-chain with eth_chainId, and whether Stock Tokens and Uniswap v4 exist on testnet. If not, the mainnet fork stays the primary test environment.",
+      "verifiedAt": "2026-09-07",
+      "verifiedBy": "claude-fable-5.1 via cast (eth_chainId) and a live deployment",
+      "findings": "eth_chainId returns 46630. No USDG and no Stock Tokens found on the testnet (mainnet USDG address has no code there), so the testnet deployment uses mocks; Uniswap v4 presence on testnet still unknown. The mainnet fork stays the primary test environment for real tokens."
+    },
+    "publicRpc": {
+      "url": "https://rpc.testnet.chain.robinhood.com",
+      "status": "VERIFIED",
+      "verifiedAt": "2026-09-07",
+      "verifiedBy": "claude-fable-5.1 via cast",
+      "findings": "Served chain id 46630, blocks and receipts for a 49-transaction run. Gas price 0.01 gwei."
+    },
+    "explorer": {
+      "url": "https://explorer.testnet.chain.robinhood.com",
+      "status": "VERIFIED",
+      "verifiedAt": "2026-09-07",
+      "verifiedBy": "claude-fable-5.1 via curl",
+      "findings": "Blockscout v2 API at /api/v2 responds; contract verification attempted with forge verify-contract --verifier blockscout."
+    },
+    "faucet": {
+      "url": "https://faucet.testnet.chain.robinhood.com",
+      "status": "VERIFY",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "sepoliaDelayedInbox": {
+      "address": "0xF2939afA86F6f933A3CE17fCAB007907B6b0B7a4",
+      "status": "VERIFY",
+      "why": "Same entry as arbitrumProtocol.testnet.DelayedInbox; kept here so the testnet section is self-contained.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "gageDeployment": {
+      "_note": "Second testnet deployment, 2026-09-08 (salt gage.testnet.v2): our own Uniswap v4 instance, the vault layer with the position lane live, and the whole token layer with a mock GAGE. Source-verified on the explorer. Full record with pool keys in contracts/deployments/46630.json; the 2026-09-07 vault-only deployment is archived under contracts/deployments/superseded/v1/.",
+      "DealVault": "0x3b0709E9F8861b04bc0c1E269B2b85Dd8806E150",
+      "CollateralRegistry": "0xEEe4dF87282368406e613a567D803fED24E6c16e",
+      "FeeSink": "0xc49691C80293da5ceC88eA99468A878A0ec5D5d1",
+      "EntryRouter": "0xFef79Dc6D8f214CDDbab48c37C4F00ACD0d3Ab0e",
+      "PoolManager": "0x751562f1BD14925769E8641436fcFaCf51fF5740",
+      "PositionManager": "0x955F0Ebbdd848dA72894F745fD3eDFfEe9905e56",
+      "StateView": "0x780190f07C7847C7b87B998Ee14455BABA6e8618",
+      "LiquidityRouter": "0x9a65eEE83Fc1AFc88927915078962c47c32DD262",
+      "SwapRouter": "0x4C61B4562fd634829C9A0909263BAf01A7024213",
+      "GAGE": "0x6482508Edf446921F6f965Fd99327E46c0F738E3",
+      "sGAGE": "0x246Ad00eB9e7ACeE02E689A8f5C0743640fF6FF2",
+      "Emissions": "0x1e663EBb1e772880940591C1eeAd088C631456e9",
+      "Drip": "0xF340667a9bde1157CB33544D3dDd2F99a2aa83a4",
+      "DealRewards": "0x5C239171b1f83653B2Ec124c86791b4055b0B1F3",
+      "LPHook": "0x8F6e8f95471a73f01642B8A12aa33C0c4E688500",
+      "LPRewards": "0x2a1970Ad691f939323B7f8942ed3b68a62f6Aabe",
+      "SeedTimelock": "0xae4512eb1FA6dB89Ef89184714A66E226e555600",
+      "Buyback": "0x7Adb9a538A0d1cF9896fd55551a5b40287649C42",
+      "CreatorFeeSplitter": "0x61071B3F72D28C8CA24E16Ed07ba932Ce5E3Fc43",
+      "ReinvestRouter": "0x201870D594dd8b34c9cd1B65BF59f1c4cF4ff396",
+      "USDG": "0x512D23c1aCC455973d51A228E8C4FC16f80De2b8",
+      "NVDAx": "0x2167e6d67347E0dF1292f26926610b15be6F7780",
+      "NVDOG": "0x10c751216Fdc7fF2f4126eCdB1014431140F554C",
+      "MockUniversalRouter": "0xB4d342F6b98136e8113778fe713b4Cac934F0639",
+      "deployer": "0xa9CCD2D1fC2DFc61Da18cf007f906bDf687407a8",
+      "borrower": "0x014Bf210F4CDAA11b1Faad9F7F6Bf2F42e6516a4",
+      "lender": "0x20a55a2C7026099C5dC20A71858c0cE5CD9d91A9",
+      "seedTokenId": 1,
+      "reinvestTokenId": 5,
+      "positionDealId": 5
+    }
+  },
+  "gage": {
+    "_note": "Our own deployments. Filled by script/Deploy.s.sol output. CREATE2 salts make these known before deployment.",
+    "CollateralRegistry": {
+      "address": null,
+      "status": "VERIFY",
+      "salt": null,
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "FeeSink": {
+      "address": null,
+      "status": "VERIFY",
+      "salt": null,
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "DealVault": {
+      "address": null,
+      "status": "VERIFY",
+      "salt": null,
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "EntryRouter": {
+      "address": null,
+      "status": "VERIFY",
+      "salt": null,
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    },
+    "earn": {
+      "_note": "Earn is published: two Gage-curated strategies from one factory (Gage USDG Mix, Gage USDG Stocks). Internal identity review reads public views only and is not source verification. Factory instance 1 (0xe2A0fba62397c61B82BDA42e547E2cd6F956bbaC) is an unpublished duplicate from an interrupted stage and is listed nowhere. The third-design factory has the same shape: instance 0 (0x74BdE0472Aaa4AB0A050282CC50a43CE68A9ea3B, created at block 64910936 with the factory) is the first Gage USDG Memes instance, superseded by instance 2 on 2026-09-17; it holds nothing (totalSupply 0, cash 0, reserveShares 0 at block 68809543, CI run 35606446304) and is listed nowhere on purpose. scripts/metrics-report.mjs names both as unlisted factory instances; that is expected.",
+      "HybridFactory": {
+        "address": "0x1544b5E7BD7ab57fCcb991586694a8ACF054868B",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-13",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "count() is 3; vaults(0) is the published Gage USDG Mix strategy and vaults(2) the published Gage USDG Stocks strategy; vaults(1) is an unpublished duplicate instance. Head block 61709248; evidence: docs/hybrid/evidence/earn-strategy-review.json."
+      },
+      "HybridVault": {
+        "address": "0x1e95DD1EC0a80133D132279B2afA9182d9d63ca4",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-13",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Gage USDG Mix. fees() is the recorded HybridFees, CURATOR() the deployment EOA, RESERVE() the reviewed Steakhouse USDG reserve and VAULT() the published EarnCore; feeBps 1500, lane weights 40/30/30, not paused. Head block 61709248; evidence: docs/hybrid/evidence/earn-strategy-review.json."
+      },
+      "HybridFees": {
+        "address": "0x5E1Ef58e11f9d2F53Df84678bD82D48ae50774a4",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-13",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Gage USDG Mix fee companion: equals the strategy's fees() view. Head block 61709248; evidence: docs/hybrid/evidence/earn-strategy-review.json."
+      },
+      "HybridVaultStocks": {
+        "address": "0x21A8771DC8C260B12C916820ba8168B01Ab619BC",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-13",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Gage USDG Stocks (factory instance 2). fees() is the recorded HybridFees, CURATOR() the deployment EOA, RESERVE() the reviewed Steakhouse USDG reserve and VAULT() the published EarnCore; feeBps 1500, lane weights 100/0/0, not paused. Head block 61709285; evidence: docs/hybrid/evidence/earn-strategy-review.json."
+      },
+      "HybridFeesStocks": {
+        "address": "0x19baB029303d163Ad2BA2fd854bf4cC60412100D",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-13",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Gage USDG Stocks fee companion: equals the strategy's fees() view. Head block 61709285; evidence: docs/hybrid/evidence/earn-strategy-review.json."
+      },
+      "HybridReserve": {
+        "address": "0xBeEff033F34C046626B8D0A041844C5d1A5409dd",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-11",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Pinned runtime matches the recorded reserve identity. asset() is USDG, shares use 18 decimals, and liquidityAdapter() points to the reviewed adapter. Historical reserve source reproduction is archived in mainnet-verification.json. External fees, send-assets gates and allocator-controlled routes remain mutable. Pinned block 60297287; evidence: docs/hybrid/evidence/earn-address-review.json."
+      },
+      "HybridLiquidityAdapter": {
+        "address": "0x44ABc1d6cCFF2696d98890B92E2157AF242179c2",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-11",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Pinned runtime matches the recorded adapter identity. asset() is USDG, parentVault() is the reviewed Steakhouse USDG reserve, and morpho() is the reviewed Morpho core. This internal identity and route review does not establish a new source-verification result; the reserve allocator can change the route. Pinned block 60297287; evidence: docs/hybrid/evidence/earn-address-review.json."
+      },
+      "MorphoCore": {
+        "address": "0x9D53d5E3bd5E8d4Cbfa6DB1ca238AEA02E651010",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-11",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "Pinned runtime and address match the recorded Morpho core identity, and the reviewed reserve adapter's morpho() points here. This internal identity and route review does not establish a new source-verification result. Pinned block 60297287; evidence: docs/hybrid/evidence/earn-address-review.json."
+      },
+      "USDGImplementation": {
+        "address": "0x68184C449E1a8f34fA18d289737129FD27B66f8F",
+        "status": "VERIFIED",
+        "verifiedAt": "2026-09-11",
+        "verifiedBy": "automated-rpc-identity-review",
+        "findings": "The USDG proxy's EIP-1967 implementation slot points to this address; pinned runtime matches the recorded implementation identity. This internal identity review does not establish a new source-verification result. Issuer upgrade, pause and account-freeze controls remain. Pinned block 60297287; evidence: docs/hybrid/evidence/earn-address-review.json."
+      },
+      "EarnFactory": {
+        "address": "0x124d74D5626D392E937c3410c0325eA464700682",
+        "status": "VERIFY",
+        "why": "Third-design Earn factory published in launch/live/4663.json (earnV3.EarnFactory); owns nothing itself, is owned by the Safe",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": "Third-design Earn factory (D111/D124): creates strategies from a mandate; owner() read over the public RPC on 2026-09-17 returns the Safe 0x30e8E13E62DFcd063AF763aB29501FeE74C4918e. No Sourcify record yet."
+      },
+      "GradeRegistry": {
+        "address": "0x0250ADfA79Ab2E303AF4C434c62F92f55DD38e50",
+        "status": "VERIFY",
+        "why": "Grade registry the third-design strategies read (earnV3.GradeRegistry)",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": "Grade registry the third-design strategies read; owner() on 2026-09-17 returns the Safe. No Sourcify record yet."
+      },
+      "EarnVaultStocks": {
+        "address": "0x36b438761AA271d9852549F54E88283987977B7a",
+        "status": "VERIFY",
+        "why": "Live strategy holding depositor USDG (earnV3.strategies, id stocks)",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": "Gage USDG Stocks, third design (launch/live/4663.json earnV3.strategies, id stocks). No Sourcify record yet."
+      },
+      "EarnVaultMemes": {
+        "address": "0xc04a365061E5D3CF7f614cF353494294b0E3F0c9",
+        "status": "VERIFY",
+        "why": "Live strategy holding depositor USDG (earnV3.strategies, id memes)",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": "Gage USDG Memes, third design (launch/live/4663.json earnV3.strategies, id memes, recreated 2026-09-17). No Sourcify record yet."
+      }
+    }
+  },
+  "arbitrumProtocol": {
+    "_note": "Nitro rollup contracts from docs.robinhood.com/chain/protocol-contracts, read 2026-09-07. VERIFY each on the explorer before use. The Delayed Inbox is the force-inclusion path for a borrower's reclaim during a sequencer outage (engineering brief 11) and the programmatic ETH deposit path (Inbox.depositEth).",
+    "mainnet": {
+      "Rollup": {
+        "address": "0x23A19d23e89166adedbDcB432518AB01e4272D94",
+        "chain": "Ethereum L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "SequencerInbox": {
+        "address": "0xBd0D173EEb87D57A09521c24388a12789F33ba96",
+        "chain": "Ethereum L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "DelayedInbox": {
+        "address": "0x1A07cc4BD17E0118BdB54D70990D2158AbAD7a2D",
+        "chain": "Ethereum L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null,
+        "why": "Read maxTimeVariation / delay parameters here to resolve chain.forceInclusionDelay."
+      },
+      "Bridge": {
+        "address": "0xDf8755334ce7A73cCF6b581C02eA649AE3E864b3",
+        "chain": "Ethereum L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "Outbox": {
+        "address": "0xf0ce991ea4A0d2400A4AB49b20ae333f6Dce3DE9",
+        "chain": "Ethereum L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "L1GatewayRouter": {
+        "address": "0x6a2E3a1e16FC29f27Ce61429746D558d656975bB",
+        "chain": "Ethereum L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "L2GatewayRouter": {
+        "address": "0x1E324B9316138CA9a73F960213621AD1aaf01B89",
+        "chain": "Robinhood Chain L2",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      }
+    },
+    "testnet": {
+      "Rollup": {
+        "address": "0xdc5F8E399DBd8a9F5F87AeC4C23Beb12431b386D",
+        "chain": "Sepolia L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "SequencerInbox": {
+        "address": "0xA0D9dB3DC9791D54b5183C1C1866eFe1eCA7D414",
+        "chain": "Sepolia L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "DelayedInbox": {
+        "address": "0xF2939afA86F6f933A3CE17fCAB007907B6b0B7a4",
+        "chain": "Sepolia L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null,
+        "why": "depositEth() here moves Sepolia ETH to the same address on chain 46630."
+      },
+      "Bridge": {
+        "address": "0x96295BDad104eaD97cC08797b3dC68efF59CcF30",
+        "chain": "Sepolia L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "Outbox": {
+        "address": "0x8D180Caf588f3Da027BEf1F42a106Da93F90b166",
+        "chain": "Sepolia L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "L1GatewayRouter": {
+        "address": "0xF6F11aAEE80875776C264d93B37B34cE437382D1",
+        "chain": "Sepolia L1",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      },
+      "L2GatewayRouter": {
+        "address": "0x77bF00A6A90c600f214b34BAFBB7918c0cF113A8",
+        "chain": "Robinhood Chain Testnet L2",
+        "status": "VERIFY",
+        "verifiedAt": null,
+        "verifiedBy": null,
+        "findings": null
+      }
+    }
+  },
+  "memeTokens": {
+    "_note": "Meme lane (spec 7.4). Each candidate needs the screening service's listing note before it is allowlisted: stock-paired v4 pool on the chain, pool age >= 7 days, market cap >= 1,000,000 USDG as a 7-day median, contract checks (mint after launch, pause, transfer tax, blocklist, proxy). Caps 1% per deal and 5% per asset of pool depth, raw units, revisited weekly. GAGE excluded for the first three months; sGAGE never.",
+    "_perTokenChecks": [
+      "stock pool id and pair Stock Token",
+      "pool created at",
+      "market cap 7-day median",
+      "contract checks",
+      "depth in USDG",
+      "liquidity locked and until when",
+      "top ten share",
+      "creator share",
+      "7-day volume",
+      "30-day drawdown"
+    ],
+    "_firstCandidate": {
+      "address": null,
+      "status": "VERIFY",
+      "why": "Needed for the M1 exit test (real meme on the fork). Pick the deepest stock-paired meme on the chain that passes 7.4.",
+      "verifiedAt": null,
+      "verifiedBy": null,
+      "findings": null
+    }
+  }
+}

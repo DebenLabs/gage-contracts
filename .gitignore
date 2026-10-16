@@ -1,0 +1,7 @@
+# Foundry build output and local state
+contracts/out*/
+contracts/cache*/
+contracts/broadcast/
+contracts/deployments/
+contracts/.env
+.DS_Store
