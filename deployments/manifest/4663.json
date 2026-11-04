@@ -1,0 +1,3298 @@
+{
+  "chainId": 4663,
+  "tokenLaunchBlock": 57081951,
+  "deployer": "0x86514e45293fcf111ED8A6bDA7c8bca4A64Dd9E5",
+  "PoolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+  "PositionManager": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+  "Permit2": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+  "StateView": "0xF3334192D15450CdD385c8B70e03f9A6bD9E673b",
+  "USDG": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+  "WETH": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+  "UniversalRouter": "0x8876789976dEcBfCbBbe364623C63652db8C0904",
+  "CollateralRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+  "FeeSink": "0xbE2066a95CF3eCc28c9665E5B024C3f8A313E19F",
+  "DealVault": "0x3D979740785ABd8b7Dd5c2Ff7Bf100CBe86fcBDF",
+  "EntryRouter": "0xa68a6Ab69c0f7672FD3669B6F214424f9652E9D9",
+  "Emissions": "0x6784E12e3cf4A5bbd71406ad30Ef693D819a976C",
+  "sGAGE": "0x78c88CF8F6E612955526cEB501be82BF3279Bd5d",
+  "Drip": "0x3f2b11467C0EAbdc7f0D5910193BA012BbCc08Ff",
+  "DealRewards": "0x5B95978dbE6193E9510aff8a8d78A92d84e6340d",
+  "LPHook": "0xB6D2C8A9bbd0468E2904a7E9B3Ab3De36e07C500",
+  "CompoundingSeedBootstrap": "0x71B41Cf96e88A31516c09576F68088f117E68aE0",
+  "GAGE": "0x7163aE1B5AeA2f09EBc609C52b4dcAc0a7a4bC2d",
+  "LPRewards": "0x57Ea11d7250C7Ee3127eFa9d0e2b114348C5ba19",
+  "CreatorFeeSplitter": "0x042fed6722e57093D97a4527ad622472ccC8A7be",
+  "DealFeeRouter": "0xEaE95cD11e1105BF1E82033c918ff17f931B0245",
+  "ReinvestRouter": "0x855283Dc751E05EBeb911032752ca0c5f4D95905",
+  "CompoundingSeedTimelock": "0x93cF65E925BA231a32358a59f6d97D948Cd0674e",
+  "pools": {
+    "spyUsdg": {
+      "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+      "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xfe2a80bb5618fd14984b92ca6d45bf5ba67443ddb1435e28b2e48df2fc1526cd"
+    },
+    "spcxUsdg": {
+      "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+      "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xcb6ffbcc84359535c2cc0a5688c0a76520ea6e0a4820fddd3ac8d7880e576370"
+    },
+    "aaplUsdg": {
+      "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xc748f4671a867db48b552f6b7650bf3255e05f80f00e3f7aad1b17ccb7898fdb"
+    },
+    "nvdaUsdg": {
+      "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x3bb34a44f1b2b5f32c034c38a53065a521a47b199700fa9bd19d60985ff24bf1"
+    },
+    "googlUsdg": {
+      "currency0": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+      "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xd4ecb79fdc521d7725d22b33ed43cb4e47aa96bfad76aa29577e3151f723ac5e"
+    },
+    "tslaUsdg": {
+      "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x8517f8071ae5b831b738052f12125e8e3d6c158b78728aa44ce3b25e5104d32e"
+    },
+    "metaUsdg": {
+      "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "currency1": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x5875d407a42965b0e768c8925cea290e06fa50603ef34fc99eb92a1050e6ae36"
+    },
+    "pltrUsdg": {
+      "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "currency1": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xee430ee1003e1985e1828a01b9a20dad67ad4302994fe2abb4a173de4ac54623"
+    },
+    "muUsdg": {
+      "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x6fa3ee0048e78bf0a513eb0ab56f482944a767c21db990fcf555605e69f05659"
+    },
+    "aiNVDA": {
+      "currency0": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+      "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27"
+    },
+    "bonerHIMS": {
+      "currency0": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+      "currency1": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d"
+    },
+    "mooMU": {
+      "currency0": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+      "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1"
+    },
+    "spacehoodSPCX": {
+      "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+      "currency1": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x225cc98f7d66b29fef96377becc7bf89582e2ab7b923a09aee9719fd80eb94ca"
+    },
+    "icoinAAPL": {
+      "currency0": "0x5d6ef090a1461b11c9427ac319260122d1c61e18",
+      "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0xc39187cec78a076c41a4085598b4cc05be2ed9b04a3443167471fa0fc4984188"
+    },
+    "pairSPY": {
+      "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+      "currency1": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x16d1560630ce74af4478d9b8ad46548a092a2000",
+      "poolId": "0xf224a070c8626c890a085b258cf562ee4bf052b6d1d59104b3b44d722640c001"
+    },
+    "doggieTSLA": {
+      "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "currency1": "0xa9efe2fc94de79734c03051515f48f254ce61e18",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x141be60316aeb3aa7c0e0d8e4fbdc0aa78105e6e462cfc03b8a0f0c59f0bf3f8"
+    },
+    "earnSPY": {
+      "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+      "currency1": "0xa3b6aee90017b72c0812dc1e013de70eb2917ba3",
+      "fee": 8388608,
+      "tickSpacing": 200,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x1fb9a45079b017a6661016ba7dea29e1c4864b0874c21f63e137a52e71c3395b"
+    },
+    "bowSPY": {
+      "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+      "currency1": "0x451b42a15100c340ca12f7c66de06fac5ea2d751",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+      "poolId": "0xdba909ac1600a59685928cf317fb953d518d405b4748371889e3cb2932adf4c2"
+    },
+    "optimusTSLA": {
+      "currency0": "0x0ff9072a1ead154d92c2d2fef16afba6028ce2b2",
+      "currency1": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+      "poolId": "0xa1771923045e0dade6578f8c99de248d5a6029b97fb928328f9e767674e7663a"
+    },
+    "djtUsdg": {
+      "currency0": "0x1D11f0496982706C5e14A514D4E79F2e6BdE4516",
+      "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 2057,
+      "tickSpacing": 21,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x55f2df399bf61fd758b99848452eaf217ee9d2f98fb9c79deb23fe9a2652bc5a"
+    },
+    "himsUsdg": {
+      "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "currency1": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
+      "fee": 9000,
+      "tickSpacing": 90,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x68d4f28f1432e0ad714658853edb2e6b0b1ac4060355ff3d169fea656b1d1c52"
+    },
+    "gageEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x7163aE1B5AeA2f09EBc609C52b4dcAc0a7a4bC2d",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xE5e702641Ea86F4ae6cC3cDaeD2B886f976Be044",
+      "poolId": "0x231764ab2a3150a9b9c21c294cfe3269d7ff6933d7bbe4fc56ede6d246cb2bda"
+    },
+    "gageSgage": {
+      "currency0": "0x7163aE1B5AeA2f09EBc609C52b4dcAc0a7a4bC2d",
+      "currency1": "0x78c88CF8F6E612955526cEB501be82BF3279Bd5d",
+      "fee": 30000,
+      "tickSpacing": 60,
+      "hooks": "0xB6D2C8A9bbd0468E2904a7E9B3Ab3De36e07C500",
+      "poolId": "0xf81fda45e69648fa1fe7202a7a296cf532223d478d5a61872acba2e07cb1bfe8"
+    },
+    "usdgEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 100,
+      "tickSpacing": 1,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x24107d152f14a76d292123265ae3f3c71f863fc2f4ef7ba49d64e78d28ea379e"
+    },
+    "ponsUsdg": {
+      "currency0": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x4be9657ec9002e528f4f17a5c43edc525a07f888f7b180c2afbf75e096c4f38a",
+      "createdBlock": 12594350
+    },
+    "shroomMU": {
+      "currency0": "0xab093def657f15df31b33922a95e047add645b29",
+      "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+      "poolId": "0xbacecf788d2279f65da62d7bf69f4de28580a88bec56847c8d2ba6fbdd73f6eb",
+      "createdBlock": 52657452
+    },
+    "snapUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xf6589f11bc40b669e584073f428b05562f568733",
+      "fee": 1950,
+      "tickSpacing": 20,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x2e4cc4c65587faca7a08b69a13c86ca8c86599d90ad818ceaa1a875176f5fb52",
+      "createdBlock": 53603765
+    },
+    "nudesSNAP": {
+      "currency0": "0xbe98b75361935b18d688409424a869a4c3dc7401",
+      "currency1": "0xf6589f11bc40b669e584073f428b05562f568733",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0x778b0c4eea7d35d66513b587ba87fc9084b0eacc",
+      "poolId": "0x383957bce2341f59ff97c47eda2ad3b3b839b7050adc8a4747a398abca0ad552",
+      "createdBlock": 51974190
+    },
+    "tendiesWeth": {
+      "poolAddress": "0x237609918f330add285b8bc5f8f2922283d1c4c5",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0x45242320dbb855eea8fd36804c6487e10e97fcf9",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000237609918f330add285b8bc5f8f2922283d1c4c5",
+      "createdBlock": 95557
+    },
+    "cashcatUsdg": {
+      "currency0": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 2690,
+      "tickSpacing": 54,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xa92a3df27a00a276183ff7265fd8affa11df1fe8bb23ddfaf13f6c879a3f818b",
+      "createdBlock": 10435412
+    },
+    "memeUsdg": {
+      "currency0": "0x385f4f8ae47651ce5f58f5265395a669f8281e18",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 6999,
+      "tickSpacing": 70,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x4b7c86491df95f366b31217b2950d2c5136a2f19b6879613eac73d0e69092a1a",
+      "createdBlock": 54991935
+    },
+    "hookrEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+      "fee": 2500,
+      "tickSpacing": 25,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x590dcb6a87828bf688b48089a62239b693378f1fb64d2286e6a399ed8c005fdf",
+      "createdBlock": 29056896
+    },
+    "ubikUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0x812486eaea648819853f8e372dc9f1516c7868bd",
+      "fee": 10000,
+      "tickSpacing": 100,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x6d56f66e52e63e8be558d708a987426314bb4de92bc9b43a44effee1f2abf317",
+      "createdBlock": 51854632
+    },
+    "zzzUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+      "fee": 9800,
+      "tickSpacing": 98,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xdd96a8b750ee5eb3c13dcf874ee7dfdfd8b2b04706ed676db7b9921536290641",
+      "createdBlock": 55706747
+    },
+    "asteroidSpcx": {
+      "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+      "currency1": "0xfd82d8db539b6ace0d50815845133767e24f1e18",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x15a09db785c7b5fc9d794f685a04e4ad38842a2035b9a8fab17909c0e54c425f",
+      "createdBlock": 9681917
+    },
+    "stonkEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0xe934e36a439c94017b64a3fece66af12099abf50",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xd33c8fd38b06e989cdbd4dffdefab71c4bdd415b24964c8d69e38ff35b068f92",
+      "createdBlock": 12670814
+    },
+    "stonkWethV3": {
+      "poolAddress": "0x9cd74d5980a4bf60408b9ba2b0f6a3d368ebf594",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0xe934e36a439c94017b64a3fece66af12099abf50",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000009cd74d5980a4bf60408b9ba2b0f6a3d368ebf594",
+      "createdBlock": 14053365
+    },
+    "juggWethV3": {
+      "poolAddress": "0x588b0785f50063260003b7790c42f1ef74902746",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0xd7321801caae694090694ff55a9323139f043b88",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000588b0785f50063260003b7790c42f1ef74902746",
+      "createdBlock": 126005
+    },
+    "injohWethV3": {
+      "poolAddress": "0xb09fa4f04032b9d9e690ac4a1d29523b5f9a72dc",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000b09fa4f04032b9d9e690ac4a1d29523b5f9a72dc",
+      "createdBlock": 23753682
+    },
+    "indexWethV3": {
+      "poolAddress": "0xd29893ffac8b29ec4db2cfe0cdb3fe1377c028ff",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000d29893ffac8b29ec4db2cfe0cdb3fe1377c028ff",
+      "createdBlock": 6481608
+    },
+    "indexUsdg": {
+      "currency0": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 7000,
+      "tickSpacing": 100,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x2500e77b68040591e0e75acaa612616fa6b4eaa33423ce35add57413c63ffa67",
+      "createdBlock": 52720083
+    },
+    "cmeEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0xe2324ff2a59f8ecba8c321c6466e59121c00e795",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+      "poolId": "0xff0aa5f0acd38204bcf7113cc8027b7269b34c675248129fff74371d7d2197b9",
+      "createdBlock": 57289683
+    },
+    "hmmWethV3": {
+      "poolAddress": "0x2b0d0183d017c58b924401ca8ac362f6e01f0e9e",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000002b0d0183d017c58b924401ca8ac362f6e01f0e9e",
+      "createdBlock": 13676926
+    },
+    "standardEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0xf1ee073811b14359d850825e48d200483200edcd",
+      "poolId": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9"
+    },
+    "orbioNvda": {
+      "currency0": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+      "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+      "poolId": "0xa95b1fbdccb15d2b07509b980f63adab8a94303b1781f5ebc53b72942d12ddc1",
+      "createdBlock": 51301900
+    },
+    "schiffyGld": {
+      "currency0": "0x42afa2124ca5a2b83898e46b2da9a190995b1e18",
+      "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0xc749412e31087a6e6f9210af575bc9100159fbc9f45da3ca8b26b31f3bf5777e",
+      "createdBlock": 49365824
+    },
+    "gldUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+      "fee": 8388608,
+      "tickSpacing": 10,
+      "hooks": "0xb608a78761f179f7c56f15e7d13921b92f00a080",
+      "poolId": "0xfe281bbfa9aa658c1aa9c2ad1b0c62c4286f96c7cb1074296b54e869935a7a3a",
+      "createdBlock": 44867864
+    },
+    "gldUsdgV3": {
+      "poolAddress": "0x7a6a053eccf1446a2633e05aa6d40d09381997ec",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000007a6a053eccf1446a2633e05aa6d40d09381997ec",
+      "createdBlock": 42412433
+    },
+    "gldUsdgV3Fee500": {
+      "poolAddress": "0xba2f1ed4ceb2169d538d1e614d847e83c5a55913",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+      "fee": 500,
+      "tickSpacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000ba2f1ed4ceb2169d538d1e614d847e83c5a55913",
+      "createdBlock": 46656024
+    },
+    "slvUsdgV3": {
+      "poolAddress": "0x8cb787e6c315d464775289bad00fdd67d53ecb3d",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000008cb787e6c315d464775289bad00fdd67d53ecb3d",
+      "createdBlock": 4840957
+    },
+    "usoUsdgV3": {
+      "poolAddress": "0x02175608f1b5e6b5ed221ccfdc7be197d111d915",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x00000000000000000000000002175608f1b5e6b5ed221ccfdc7be197d111d915",
+      "createdBlock": 12021761
+    },
+    "cookHood": {
+      "currency0": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+      "currency1": "0xe10195999a422314155b1e158281dbd4f27adc46",
+      "fee": 3000,
+      "tickSpacing": 200,
+      "hooks": "0x4eb1976978756bd56802d8162f2271844924e0cc",
+      "poolId": "0x10ea32252ee4aea2be282068a974f394684657b12d7dc976b5f4f41390455180",
+      "createdBlock": 64662222
+    },
+    "cookUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xe10195999a422314155b1e158281dbd4f27adc46",
+      "fee": 9000,
+      "tickSpacing": 90,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x33ec1cc715a975b9fe6b638ca378a57909dff6279a808f80170ecf376f7cb50e",
+      "createdBlock": 68736731
+    },
+    "hoodUsdg": {
+      "currency0": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 2000,
+      "tickSpacing": 20,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x7fb39eb653999feb9f0d3b1410848911383dfc681f3585229df4aa5b560bf0ba",
+      "createdBlock": 53175552
+    },
+    "cuckHoodV3": {
+      "poolAddress": "0x3f9d7f67d98f9a5c9283d69a65ed0d5fddd179c2",
+      "currency0": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+      "currency1": "0x7648f37c2314466726a28f7a5edbdb8dc7b3e23f",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000003f9d7f67d98f9a5c9283d69a65ed0d5fddd179c2"
+    },
+    "musebookMeta": {
+      "currency0": "0x91a2dae9699f0b82540b5886b0d8759c22820ba3",
+      "currency1": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+      "fee": 8388608,
+      "tickSpacing": 200,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x40a433930370f6cdf0a78debc2c6dd599c23bd428c0d67dd8b5373e4f101557f",
+      "createdBlock": 64271871
+    },
+    "upWethV3": {
+      "poolAddress": "0x4ef94cd1ab45ebbb50f9e73cd6e45c5027caa3f7",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000004ef94cd1ab45ebbb50f9e73cd6e45c5027caa3f7",
+      "createdBlock": 6559878
+    },
+    "imdEthV4": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+      "fee": 10000,
+      "tickSpacing": 100,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xd2fc01ee6f8400b6b4ea3b341a188568f2bd6c72b07b96741a82396fa6eb8f02",
+      "createdBlock": 55647981
+    },
+    "crclUsdgV3": {
+      "poolAddress": "0x654e4143e82a5824445ade0824351c2a9acd95a8",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000654e4143e82a5824445ade0824351c2a9acd95a8",
+      "createdBlock": 36421084
+    },
+    "mstrUsdgV3": {
+      "poolAddress": "0x17578c0e0d15da44f31677263114f71ae76653ea",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xec262a75e413fafd0df80480274532c79d42da09",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x00000000000000000000000017578c0e0d15da44f31677263114f71ae76653ea",
+      "createdBlock": 199920
+    },
+    "gmeUsdgV3": {
+      "poolAddress": "0xe9713f453adb9245b19559790c96f470a18f2fdf",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000e9713f453adb9245b19559790c96f470a18f2fdf",
+      "createdBlock": 199929
+    },
+    "gmeUsdgV3Fee500": {
+      "poolAddress": "0xe2b46c905e12ab8e2f864e4821a4325884c1b126",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 500,
+      "tickSpacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000e2b46c905e12ab8e2f864e4821a4325884c1b126",
+      "createdBlock": 17574196
+    },
+    "amcUsdgV3": {
+      "poolAddress": "0xaa34fea710a1a737840329051d81d3b0b7c564d5",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000aa34fea710a1a737840329051d81d3b0b7c564d5",
+      "createdBlock": 50927257
+    },
+    "sgovUsdgV3": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000fab520051f96f4d2a32c22b6a3dd7fffdf231bfe",
+      "createdBlock": 15647156,
+      "poolAddress": "0xfab520051f96f4d2a32c22b6a3dd7fffdf231bfe",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+    },
+    "qqqUsdgV3": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+      "fee": 500,
+      "tickSpacing": 10,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000d60a5d14db690b7afad71f76b108071d7175597d",
+      "createdBlock": 47501593,
+      "poolAddress": "0xd60a5d14db690b7afad71f76b108071d7175597d",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+    },
+    "rddtUsdgV3": {
+      "currency0": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000a8744e76aed23b05f0126335e7bd38f7935d19fe",
+      "createdBlock": 199988,
+      "poolAddress": "0xa8744e76aed23b05f0126335e7bd38f7935d19fe",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+    },
+    "amznUsdgV3": {
+      "currency0": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000008ac92da74ab5f3b1d024dc1943ad7e15dc4179ef",
+      "createdBlock": 15331828,
+      "poolAddress": "0x8ac92da74ab5f3b1d024dc1943ad7e15dc4179ef",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+    },
+    "coinUsdgV4": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x007a13fa152f6dc383cad20a8eaab4e1e2538b606936eae2a424f8aa47d6db31",
+      "createdBlock": 16650907
+    },
+    "intcUsdgV4": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0xf2e329e631d0fb315a5c563ee3a9120f24822b5ef6c502a91cb56b174d5d8c22",
+      "createdBlock": 9716418
+    },
+    "msftUsdgV3": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000eb60bcd1d920ad6e102690ccfc6fb488899e1510",
+      "createdBlock": 15302702,
+      "poolAddress": "0xeb60bcd1d920ad6e102690ccfc6fb488899e1510",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+    },
+    "costUsdgV3": {
+      "currency0": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x0000000000000000000000000a2121a50a09ed0796ae81f9c53ff9398355a398",
+      "createdBlock": 16834694,
+      "poolAddress": "0x0a2121a50a09ed0796ae81f9c53ff9398355a398",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+    },
+    "deltaWethV3": {
+      "poolAddress": "0xd64fbda67e1015df43fa5e49f02ca844729e5f94",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "currency1": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
+      "fee": 10000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x000000000000000000000000d64fbda67e1015df43fa5e49f02ca844729e5f94",
+      "createdBlock": 24555353
+    },
+    "prologueEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0xb9972ca7188e511174947e3936a5315ac7073277",
+      "fee": 2500,
+      "tickSpacing": 25,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x8651e656738064177752a395dbde2b2a9e3fc469edc2a9212e6060c0990bb7eb",
+      "createdBlock": 38994659
+    },
+    "inuAapl": {
+      "currency0": "0x63ee32ac3077d1fbd8a77ebba2a6ed4b8e9c1e18",
+      "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+      "fee": 8388608,
+      "tickSpacing": 8,
+      "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+      "poolId": "0x7e271c400427ecb727f5fbb27dec69254bce7c4219e95e3535d0ed128f79648a",
+      "createdBlock": 59846644
+    },
+    "routeEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x4a72b9702f991b790788f8afa9e7112541f4e8f8",
+      "fee": 0,
+      "tickSpacing": 200,
+      "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+      "poolId": "0x220e47dde1a5180cb131d4c720abf66d5c36fbdf3af91522f7b1c7f749770d8f",
+      "createdBlock": 57044212
+    },
+    "tibbirEth": {
+      "currency0": "0x0000000000000000000000000000000000000000",
+      "currency1": "0x4db7374e966097be94c6680d49156d580f097bbf",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x88e5d1cf9907acd48e7c81ff6ebc088ad358a5cc",
+      "poolId": "0xbf7dc545ff6d3b0e23f6264f7c23d4fa16a0f3bb1b26eda350593bd63a94da97",
+      "createdBlock": 75864247
+    },
+    "noshUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xe02c53d448a62067b2ac10ed70f5bc6c29471386",
+      "fee": 20000,
+      "tickSpacing": 200,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x63eeaac7a218d31dc36a404cf66b2e2843de4e7c5dd05fed3a9d7ce4e5b19527",
+      "createdBlock": 68452415
+    },
+    "priorsUsdg": {
+      "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "currency1": "0xedbf91223639800bcd5756815caf908df3b890be",
+      "fee": 10000,
+      "tickSpacing": 100,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x9be7ab27227e115085b0949a819a73f6963ddc6da0c6204d37757c24297706e8",
+      "createdBlock": 71946480
+    },
+    "ramUsdg": {
+      "currency0": "0x5173d45a1191ee33cbb7d8c7e65f21b04ed54802",
+      "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "fee": 9506,
+      "tickSpacing": 95,
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "poolId": "0x680eb556f5d466e1fee8468b93cbdd6c426e2136c369a6ab70ca36a5204cd471",
+      "createdBlock": 51013794
+    }
+  },
+  "startBlock": 57067880,
+  "readyBlock": 57869208,
+  "pons": {
+    "curve": "0xFEd2332f6650747Af8250314C76F43aE08abC137",
+    "factory": "0x7eD598BcEf8bd9Edd8C97A195C6d13f40801EC7e"
+  },
+  "FeeFloor": "0x042fed6722e57093D97a4527ad622472ccC8A7be",
+  "SeedTimelock": "0x93cF65E925BA231a32358a59f6d97D948Cd0674e",
+  "seedTokenId": 2126377,
+  "seed": {
+    "tokenId": "2126377",
+    "owner": "0x86514e45293fcf111ED8A6bDA7c8bca4A64Dd9E5",
+    "codeHash": "0xb2221c8cbee9f6adf8e22593a49eb51dcdd3e936f4b3bbaeb603aefba79bcbe6"
+  },
+  "collateralUpdate": {
+    "transactions": [
+      "0x0f30f30d0aa2338925911a5d38fea3a45fa81fe446e9655bfbf0b63f9d834d11"
+    ]
+  },
+  "lpFeeForwarders": [
+    "0xAf7703F8D41Da5140A8407aa0725E4f44A8e88A7",
+    "0x9bB55eD269D0096D50ecD08e34C283362d215f32",
+    "0x440B11b7F4843A49C9Ef1eE9212B7C139721033d"
+  ],
+  "vaultMarkets": [
+    {
+      "DealVault": "0xc23A08282AA1A9141C6fD7A29e7dFbFe841cC6B6",
+      "CollateralRegistry": "0x0e06d3d954d43A2e66A6D719fc0181e665c22f8d",
+      "FeeSink": "0xAf7703F8D41Da5140A8407aa0725E4f44A8e88A7",
+      "EntryRouter": "0x98Ae89Aaaf362508436bD649680215442662c0A5"
+    },
+    {
+      "DealVault": "0xe3628a01eaca2e7b0EC71Ed7bA616b997fEf9cDE",
+      "CollateralRegistry": "0x38e9D1c40bCf6cD630b01C4a11a7bCe8BcfDE51f",
+      "FeeSink": "0x9bB55eD269D0096D50ecD08e34C283362d215f32",
+      "EntryRouter": "0x85A2c1Ca936d2528032B2BEb8ACd3e4D99826AAd",
+      "PositionManager": "0x73991a25C818Bf1f1128dEAaB1492D45638DE0D3",
+      "V3Factory": "0x1f7d7550B1b028f7571E69A784071F0205FD2EfA",
+      "WETH": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "pools": [
+        {
+          "poolAddress": "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+          "currency0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "currency1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "fee": 10000,
+          "tickSpacing": 200,
+          "hooks": "0x0000000000000000000000000000000000000000",
+          "poolId": "0x00000000000000000000000010cc6bd38112cac182db90b6a71d8bb5939526ba"
+        }
+      ]
+    },
+    {
+      "DealVault": "0x73efE72F500F01Da3042a4BB03C647D200021bf5",
+      "CollateralRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+      "FeeSink": "0x87CA030782bF45fC48A3df9627C121b762EFaD4C",
+      "EntryRouter": "0x08321397515d8787C2422241E3A389b74Bd075e6",
+      "LPZapRouter": "0x430f91a2f4cdAA20DFe818163D2280c111987B66",
+      "LPZapQuoter": "0xDfb215909ce14A328445f8e931Dbc93108a7D0b1",
+      "WETH": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+    },
+    {
+      "DealVault": "0x4D52435086570D0A442320A843E0BfBEF2A57F8C",
+      "CollateralRegistry": "0x0e06d3d954d43A2e66A6D719fc0181e665c22f8d",
+      "FeeSink": "0x440B11b7F4843A49C9Ef1eE9212B7C139721033d",
+      "EntryRouter": "0xd5Dc7071904b9B76Ec3f515f341C6166ADe6B962",
+      "LPZapRouter": "0x5613D91DeE54dDdAeb11167350b24a796F1287Ae",
+      "LPZapQuoter": "0xDfb215909ce14A328445f8e931Dbc93108a7D0b1",
+      "WETH": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "zapPoolIds": [
+        "0xa92a3df27a00a276183ff7265fd8affa11df1fe8bb23ddfaf13f6c879a3f818b"
+      ]
+    }
+  ],
+  "collateralNotes": {
+    "0x45242320dbb855eea8fd36804c6487e10e97fcf9": {
+      "poolId": "0x000000000000000000000000237609918f330add285b8bc5f8f2922283d1c4c5"
+    },
+    "0x020bfc650a365f8bb26819deaabf3e21291018b4": {
+      "poolId": "0xa92a3df27a00a276183ff7265fd8affa11df1fe8bb23ddfaf13f6c879a3f818b"
+    },
+    "0x812486eaea648819853f8e372dc9f1516c7868bd": {
+      "poolId": "0x6d56f66e52e63e8be558d708a987426314bb4de92bc9b43a44effee1f2abf317"
+    },
+    "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a": {
+      "poolId": "0xdd96a8b750ee5eb3c13dcf874ee7dfdfd8b2b04706ed676db7b9921536290641"
+    },
+    "0xfd82d8db539b6ace0d50815845133767e24f1e18": {
+      "poolId": "0x15a09db785c7b5fc9d794f685a04e4ad38842a2035b9a8fab17909c0e54c425f"
+    },
+    "0xe934e36a439c94017b64a3fece66af12099abf50": {
+      "poolId": "0xd33c8fd38b06e989cdbd4dffdefab71c4bdd415b24964c8d69e38ff35b068f92"
+    },
+    "0xd7321801caae694090694ff55a9323139f043b88": {
+      "poolId": "0x000000000000000000000000588b0785f50063260003b7790c42f1ef74902746"
+    },
+    "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d": {
+      "poolId": "0x000000000000000000000000b09fa4f04032b9d9e690ac4a1d29523b5f9a72dc"
+    },
+    "0x56910d4409f3a0c78c64dd8d0545ff0705389870": {
+      "poolId": "0x000000000000000000000000d29893ffac8b29ec4db2cfe0cdb3fe1377c028ff"
+    },
+    "0xe2324ff2a59f8ecba8c321c6466e59121c00e795": {
+      "poolId": "0xff0aa5f0acd38204bcf7113cc8027b7269b34c675248129fff74371d7d2197b9"
+    },
+    "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f": {
+      "poolId": "0x0000000000000000000000002b0d0183d017c58b924401ca8ac362f6e01f0e9e"
+    },
+    "0x88ad8ddf1e3898412146a534538d418c6f8a9062": {
+      "poolId": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9"
+    },
+    "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3": {
+      "poolId": "0xa95b1fbdccb15d2b07509b980f63adab8a94303b1781f5ebc53b72942d12ddc1"
+    },
+    "0x42afa2124ca5a2b83898e46b2da9a190995b1e18": {
+      "poolId": "0xc749412e31087a6e6f9210af575bc9100159fbc9f45da3ca8b26b31f3bf5777e"
+    },
+    "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e": {
+      "poolId": "0x0000000000000000000000007a6a053eccf1446a2633e05aa6d40d09381997ec"
+    },
+    "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f": {
+      "poolId": "0x0000000000000000000000008cb787e6c315d464775289bad00fdd67d53ecb3d"
+    },
+    "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344": {
+      "poolId": "0x00000000000000000000000002175608f1b5e6b5ed221ccfdc7be197d111d915"
+    },
+    "0xe10195999a422314155b1e158281dbd4f27adc46": {
+      "poolId": "0x10ea32252ee4aea2be282068a974f394684657b12d7dc976b5f4f41390455180"
+    },
+    "0x7648f37c2314466726a28f7a5edbdb8dc7b3e23f": {
+      "poolId": "0x0000000000000000000000003f9d7f67d98f9a5c9283d69a65ed0d5fddd179c2"
+    },
+    "0x91a2dae9699f0b82540b5886b0d8759c22820ba3": {
+      "poolId": "0x40a433930370f6cdf0a78debc2c6dd599c23bd428c0d67dd8b5373e4f101557f"
+    },
+    "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1": {
+      "poolId": "0x0000000000000000000000004ef94cd1ab45ebbb50f9e73cd6e45c5027caa3f7"
+    },
+    "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127": {
+      "poolId": "0xd2fc01ee6f8400b6b4ea3b341a188568f2bd6c72b07b96741a82396fa6eb8f02"
+    },
+    "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5": {
+      "poolId": "0x000000000000000000000000654e4143e82a5824445ade0824351c2a9acd95a8"
+    },
+    "0xec262a75e413fafd0df80480274532c79d42da09": {
+      "poolId": "0x00000000000000000000000017578c0e0d15da44f31677263114f71ae76653ea"
+    },
+    "0x1b0e319c6a659f002271b69db8a7df2f911c153e": {
+      "poolId": "0x000000000000000000000000e9713f453adb9245b19559790c96f470a18f2fdf"
+    },
+    "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b": {
+      "poolId": "0x000000000000000000000000aa34fea710a1a737840329051d81d3b0b7c564d5"
+    },
+    "0x92fd66527192e3e61d4ddd13322aa222de86f9b5": {
+      "poolId": "0x000000000000000000000000fab520051f96f4d2a32c22b6a3dd7fffdf231bfe"
+    },
+    "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68": {
+      "poolId": "0x000000000000000000000000d60a5d14db690b7afad71f76b108071d7175597d"
+    },
+    "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c": {
+      "poolId": "0x000000000000000000000000a8744e76aed23b05f0126335e7bd38f7935d19fe"
+    },
+    "0x12f190a9f9d7d37a250758b26824b97ce941bf54": {
+      "poolId": "0x0000000000000000000000008ac92da74ab5f3b1d024dc1943ad7e15dc4179ef"
+    },
+    "0x6330d8c3178a418788df01a47479c0ce7ccf450b": {
+      "poolId": "0x007a13fa152f6dc383cad20a8eaab4e1e2538b606936eae2a424f8aa47d6db31"
+    },
+    "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681": {
+      "poolId": "0xf2e329e631d0fb315a5c563ee3a9120f24822b5ef6c502a91cb56b174d5d8c22"
+    },
+    "0xe93237c50d904957cf27e7b1133b510c669c2e74": {
+      "poolId": "0x000000000000000000000000eb60bcd1d920ad6e102690ccfc6fb488899e1510"
+    },
+    "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2": {
+      "poolId": "0x0000000000000000000000000a2121a50a09ed0796ae81f9c53ff9398355a398"
+    },
+    "0xe8ffd7e24187f72afb08d75b1bb13088a989a791": {
+      "poolId": "0x000000000000000000000000d64fbda67e1015df43fa5e49f02ca844729e5f94"
+    },
+    "0xb9972ca7188e511174947e3936a5315ac7073277": {
+      "poolId": "0x8651e656738064177752a395dbde2b2a9e3fc469edc2a9212e6060c0990bb7eb"
+    },
+    "0x63ee32ac3077d1fbd8a77ebba2a6ed4b8e9c1e18": {
+      "poolId": "0x7e271c400427ecb727f5fbb27dec69254bce7c4219e95e3535d0ed128f79648a"
+    },
+    "0x4a72b9702f991b790788f8afa9e7112541f4e8f8": {
+      "poolId": "0x220e47dde1a5180cb131d4c720abf66d5c36fbdf3af91522f7b1c7f749770d8f"
+    },
+    "0x4db7374e966097be94c6680d49156d580f097bbf": {
+      "poolId": "0xbf7dc545ff6d3b0e23f6264f7c23d4fa16a0f3bb1b26eda350593bd63a94da97"
+    },
+    "0xe02c53d448a62067b2ac10ed70f5bc6c29471386": {
+      "poolId": "0x63eeaac7a218d31dc36a404cf66b2e2843de4e7c5dd05fed3a9d7ce4e5b19527"
+    },
+    "0xedbf91223639800bcd5756815caf908df3b890be": {
+      "poolId": "0x9be7ab27227e115085b0949a819a73f6963ddc6da0c6204d37757c24297706e8"
+    },
+    "0x5173d45a1191ee33cbb7d8c7e65f21b04ed54802": {
+      "poolId": "0x680eb556f5d466e1fee8468b93cbdd6c426e2136c369a6ab70ca36a5204cd471"
+    }
+  },
+  "TENDIES": "0x45242320DBB855EeA8Fd36804C6487E10E97FCF9",
+  "CASHCAT": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+  "MEME": "0x385f4f8ae47651ce5f58f5265395a669f8281e18",
+  "HOOKR": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+  "nativeV2": {
+    "adapter": "0x2166a547bc27fef846c9858e3101b84d1a8d994e",
+    "engines": [
+      {
+        "engine": "0x22658055b70b8b09616b1e0953f2a51cc66cf493",
+        "registry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "rewards": "0xb1a4EB7B43d129617B2C5BaeF97B1A95b189Eb81",
+        "cashoutRouter": "0x38e37cc00427dd2a930d2a31e29e4104530d671b",
+        "entryRouter": "0x88168bd379a69a8429f1d3ceebe18783995ddc12",
+        "zapRouter": "0xdea3b7b6f57c63cce013a64ba42020c10af083ad",
+        "startBlock": 58114969,
+        "adapter": "0x647d46c0577453be8c75039f829740b5d2e44938"
+      },
+      {
+        "engine": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+        "registry": "0x5fbac7654c309eaeaa0a3bb9f4dc6d6dde04c7aa",
+        "rewards": "0xD855c721C82a773135B0C1B67305d78c6dd35696",
+        "cashoutRouter": "0x8f0ddfbb88a4a70ef4c82ab237eb8407c6b6d866",
+        "entryRouter": "0x346f21b71792a7f181860738ee90867f5688fde7",
+        "zapRouter": "0x53d0e390438fbeec6440403458641bfa7ec29178",
+        "startBlock": 60445674,
+        "adapter": "0x647d46c0577453be8c75039f829740b5d2e44938"
+      },
+      {
+        "engine": "0xfee799ade96229c2c128bc5ed9e55f8d9d01a7e9",
+        "registry": "0x17cfddae7247042a857326c2bb2abe43343e5d33",
+        "rewards": "0x7C2E47fe32C391bc9Dd6d8895559D67eF5651f21",
+        "cashoutRouter": "0x895285fdbbec09eada41fc3784117d5177427acc",
+        "entryRouter": "0x699b3f84d8c90789da766a524e7ea50522ac1132",
+        "zapRouter": "0xcf5d008e1ea2359223bf721e96c9c28b46cd3eeb",
+        "startBlock": 62950248,
+        "adapter": "0x2166a547bc27fef846c9858e3101b84d1a8d994e"
+      },
+      {
+        "engine": "0x856e4232469b957150cb29a8ce9b60059449e87e",
+        "registry": "0x09c52d590bd9c764fbe58e6ff8b6e31bae892670",
+        "rewards": "0x5f653337f0B017aa60dbF977Cbc4e48Aa71ffA3c",
+        "cashoutRouter": "0x3e7dc9bd908f5ba5aae43238c915e4f28a073ea7",
+        "startBlock": 88938673,
+        "bridge": "0x789637f1f3fde2760d66b365f2cf7e30d2c7f6ca",
+        "adapter": "0x789637f1f3fde2760d66b365f2cf7e30d2c7f6ca"
+      },
+      {
+        "engine": "0x0086ec1540719d4199432797e2b6068e6ae5a0e5",
+        "registry": "0x732fb25c6905d0cbeb639f1226398ab317189ba0",
+        "rewards": "0x614E087972d49DFe6FEDbaC1333192313aF36aD9",
+        "cashoutRouter": "0xfa91ee9221300e034916400da4c4fc556633ae15",
+        "startBlock": 105998737,
+        "bridge": "0x6c9661b2d0c2fab991097f4c3332f61d28b71891",
+        "adapter": "0x6c9661b2d0c2fab991097f4c3332f61d28b71891"
+      }
+    ],
+    "assets": [
+      {
+        "token": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "decimals": 18
+      },
+      {
+        "token": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
+        "decimals": 18
+      },
+      {
+        "token": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
+        "decimals": 18
+      },
+      {
+        "token": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9",
+        "decimals": 18
+      },
+      {
+        "token": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+        "decimals": 18
+      },
+      {
+        "token": "0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3",
+        "decimals": 18
+      },
+      {
+        "token": "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
+        "decimals": 18
+      },
+      {
+        "token": "0x1D11f0496982706C5e14A514D4E79F2e6BdE4516",
+        "decimals": 18
+      },
+      {
+        "token": "0xc0D6457C16Cc70d6790Dd43521C899C87ce02f35",
+        "decimals": 18
+      },
+      {
+        "token": "0x894E1EC2D74FFE5AEF8Dc8A9e84686acCB964F2A",
+        "decimals": 18
+      },
+      {
+        "token": "0xfF080c8ce2E5feadaCa0Da81314Ae59D232d4afD",
+        "decimals": 18
+      },
+      {
+        "token": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
+        "decimals": 18
+      },
+      {
+        "token": "0x2E8c31162b855A2ffa90F6F8634643Ad6F111e18",
+        "decimals": 18
+      },
+      {
+        "token": "0x98096d17e191B3dA1d5f99a6D7b3584351b11E18",
+        "decimals": 18
+      },
+      {
+        "token": "0xD9dB30BB0D2b8d2eae3826A1372117E058791e18",
+        "decimals": 18
+      },
+      {
+        "token": "0xFe7E19CbCe2f896C6C528BC355bAF5a768291E18",
+        "decimals": 18
+      },
+      {
+        "token": "0x5d6EF090a1461B11c9427aC319260122D1C61e18",
+        "decimals": 18
+      },
+      {
+        "token": "0x6b1d42927B1a84eC28Fa88d4fC6FA7AF404966be",
+        "decimals": 18
+      },
+      {
+        "token": "0xa9eFe2Fc94dE79734C03051515F48f254Ce61e18",
+        "decimals": 18
+      },
+      {
+        "token": "0xA3b6AEe90017b72c0812dC1e013De70eB2917ba3",
+        "decimals": 18
+      },
+      {
+        "token": "0x451b42A15100C340CA12F7c66DE06fac5EA2D751",
+        "decimals": 18
+      },
+      {
+        "token": "0x0fF9072a1EAD154d92C2d2Fef16AFba6028Ce2B2",
+        "decimals": 18
+      },
+      {
+        "token": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "decimals": 18
+      },
+      {
+        "token": "0xab093dEF657F15dF31b33922A95e047aDd645B29",
+        "decimals": 18
+      },
+      {
+        "token": "0xF6589F11Bc40b669e584073F428B05562F568733",
+        "decimals": 18
+      },
+      {
+        "token": "0xbe98b75361935b18d688409424a869a4C3dC7401",
+        "decimals": 18
+      },
+      {
+        "token": "0x45242320DBB855EeA8Fd36804C6487E10E97FCF9",
+        "decimals": 18
+      },
+      {
+        "token": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "decimals": 18
+      },
+      {
+        "token": "0x385F4f8ae47651ce5F58F5265395a669f8281e18",
+        "decimals": 18
+      },
+      {
+        "token": "0x18E674231A58c239Dc7DaeDcffE15Ec3A24cff5c",
+        "decimals": 18
+      },
+      {
+        "token": "0x812486eaea648819853f8e372dc9f1516c7868bd",
+        "decimals": 18
+      },
+      {
+        "token": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+        "decimals": 18
+      },
+      {
+        "token": "0xFd82D8DB539b6AcE0D50815845133767e24F1E18",
+        "decimals": 18
+      },
+      {
+        "token": "0xe934e36a439c94017b64a3fece66af12099abf50",
+        "decimals": 18
+      },
+      {
+        "token": "0xd7321801caae694090694ff55a9323139f043b88",
+        "decimals": 18
+      },
+      {
+        "token": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d",
+        "decimals": 18
+      },
+      {
+        "token": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+        "decimals": 18
+      },
+      {
+        "token": "0xe2324ff2a59f8ecba8c321c6466e59121c00e795",
+        "decimals": 18
+      },
+      {
+        "token": "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f",
+        "decimals": 18
+      },
+      {
+        "token": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
+        "decimals": 18
+      },
+      {
+        "token": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+        "decimals": 18
+      },
+      {
+        "token": "0x42afa2124ca5a2b83898e46b2da9a190995b1e18",
+        "decimals": 18
+      },
+      {
+        "token": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+        "decimals": 18
+      },
+      {
+        "token": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+        "decimals": 18
+      },
+      {
+        "token": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+        "decimals": 18
+      },
+      {
+        "token": "0xe10195999a422314155b1e158281dbd4f27adc46",
+        "decimals": 18
+      },
+      {
+        "token": "0x7648f37c2314466726a28f7a5edbdb8dc7b3e23f",
+        "decimals": 18
+      },
+      {
+        "token": "0x91a2dae9699f0b82540b5886b0d8759c22820ba3",
+        "decimals": 18
+      },
+      {
+        "token": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1",
+        "decimals": 18
+      },
+      {
+        "token": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+        "decimals": 18
+      },
+      {
+        "token": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+        "decimals": 18
+      },
+      {
+        "token": "0xec262a75e413fafd0df80480274532c79d42da09",
+        "decimals": 18
+      },
+      {
+        "token": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+        "decimals": 18
+      },
+      {
+        "token": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+        "decimals": 18
+      },
+      {
+        "token": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+        "decimals": 18
+      },
+      {
+        "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+        "decimals": 18
+      },
+      {
+        "token": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+        "decimals": 18
+      },
+      {
+        "token": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "decimals": 18
+      },
+      {
+        "token": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+        "decimals": 18
+      },
+      {
+        "token": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+        "decimals": 18
+      },
+      {
+        "token": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+        "decimals": 18
+      },
+      {
+        "token": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+        "decimals": 18
+      },
+      {
+        "token": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
+        "decimals": 18
+      },
+      {
+        "token": "0xb9972ca7188e511174947e3936a5315ac7073277",
+        "decimals": 18
+      },
+      {
+        "token": "0x63ee32ac3077d1fbd8a77ebba2a6ed4b8e9c1e18",
+        "decimals": 18
+      },
+      {
+        "token": "0x4a72b9702f991b790788f8afa9e7112541f4e8f8",
+        "decimals": 18
+      },
+      {
+        "token": "0x4db7374e966097be94c6680d49156d580f097bbf",
+        "decimals": 18
+      },
+      {
+        "token": "0xe02c53d448a62067b2ac10ed70f5bc6c29471386",
+        "decimals": 18
+      },
+      {
+        "token": "0xedbf91223639800bcd5756815caf908df3b890be",
+        "decimals": 18
+      },
+      {
+        "token": "0x5173d45a1191ee33cbb7d8c7e65f21b04ed54802",
+        "decimals": 18
+      }
+    ],
+    "pools": [
+      {
+        "currency0": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+        "currency1": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+        "currency1": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x225cc98f7d66b29fef96377becc7bf89582e2ab7b923a09aee9719fd80eb94ca",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0x5d6ef090a1461b11c9427ac319260122d1c61e18",
+        "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xc39187cec78a076c41a4085598b4cc05be2ed9b04a3443167471fa0fc4984188",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x16d1560630ce74af4478d9b8ad46548a092a2000",
+        "poolId": "0xf224a070c8626c890a085b258cf562ee4bf052b6d1d59104b3b44d722640c001",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "currency1": "0xa9efe2fc94de79734c03051515f48f254ce61e18",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x141be60316aeb3aa7c0e0d8e4fbdc0aa78105e6e462cfc03b8a0f0c59f0bf3f8",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0xa3b6aee90017b72c0812dc1e013de70eb2917ba3",
+        "fee": 8388608,
+        "tickSpacing": 200,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x1fb9a45079b017a6661016ba7dea29e1c4864b0874c21f63e137a52e71c3395b",
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "currency0": "0xab093def657f15df31b33922a95e047add645b29",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0xbacecf788d2279f65da62d7bf69f4de28580a88bec56847c8d2ba6fbdd73f6eb",
+        "createdBlock": 52657452,
+        "sourceRegistry": "0x67B40102C474BA599Dfa4c58E77f5Bc20b933C2d",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x4be9657ec9002e528f4f17a5c43edc525a07f888f7b180c2afbf75e096c4f38a",
+        "createdBlock": 12594350,
+        "sourceRegistry": "0x0e06d3d954d43A2e66A6D719fc0181e665c22f8d",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 2690,
+        "tickSpacing": 54,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xa92a3df27a00a276183ff7265fd8affa11df1fe8bb23ddfaf13f6c879a3f818b",
+        "createdBlock": 10435412,
+        "sourceRegistry": "0x0e06d3d954d43A2e66A6D719fc0181e665c22f8d",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x385f4f8ae47651ce5f58f5265395a669f8281e18",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 6999,
+        "tickSpacing": 70,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x4b7c86491df95f366b31217b2950d2c5136a2f19b6879613eac73d0e69092a1a",
+        "createdBlock": 54991935,
+        "sourceRegistry": "0x0e06d3d954d43A2e66A6D719fc0181e665c22f8d",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "poolAddress": "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "currency0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "currency1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000010cc6bd38112cac182db90b6a71d8bb5939526ba",
+        "sourceRegistry": "0x38e9D1c40bCf6cD630b01C4a11a7bCe8BcfDE51f",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x812486eaea648819853f8e372dc9f1516c7868bd",
+        "fee": 10000,
+        "tickSpacing": 100,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x6d56f66e52e63e8be558d708a987426314bb4de92bc9b43a44effee1f2abf317",
+        "createdBlock": 51854632,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+        "fee": 9800,
+        "tickSpacing": 98,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xdd96a8b750ee5eb3c13dcf874ee7dfdfd8b2b04706ed676db7b9921536290641",
+        "createdBlock": 55706747,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+        "currency1": "0xfd82d8db539b6ace0d50815845133767e24f1e18",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x15a09db785c7b5fc9d794f685a04e4ad38842a2035b9a8fab17909c0e54c425f",
+        "createdBlock": 9681917,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631"
+      },
+      {
+        "poolAddress": "0x9cd74d5980a4bf60408b9ba2b0f6a3d368ebf594",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xe934e36a439c94017b64a3fece66af12099abf50",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000009cd74d5980a4bf60408b9ba2b0f6a3d368ebf594",
+        "createdBlock": 14053365,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "poolAddress": "0x588b0785f50063260003b7790c42f1ef74902746",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xd7321801caae694090694ff55a9323139f043b88",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000588b0785f50063260003b7790c42f1ef74902746",
+        "createdBlock": 126005,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "poolAddress": "0xb09fa4f04032b9d9e690ac4a1d29523b5f9a72dc",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000b09fa4f04032b9d9e690ac4a1d29523b5f9a72dc",
+        "createdBlock": 23753682,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "poolAddress": "0xd29893ffac8b29ec4db2cfe0cdb3fe1377c028ff",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d29893ffac8b29ec4db2cfe0cdb3fe1377c028ff",
+        "createdBlock": 6481608,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 7000,
+        "tickSpacing": 100,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x2500e77b68040591e0e75acaa612616fa6b4eaa33423ce35add57413c63ffa67",
+        "createdBlock": 52720083,
+        "sourceRegistry": "0x1d9f88705d398cd13af4e35a74ef21253734f153",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "poolAddress": "0x2b0d0183d017c58b924401ca8ac362f6e01f0e9e",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000002b0d0183d017c58b924401ca8ac362f6e01f0e9e",
+        "createdBlock": 13676926,
+        "sourceRegistry": "0x17cfddae7247042a857326c2bb2abe43343e5d33",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "currency0": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0xa95b1fbdccb15d2b07509b980f63adab8a94303b1781f5ebc53b72942d12ddc1",
+        "createdBlock": 51301900,
+        "sourceRegistry": "0x17cfddae7247042a857326c2bb2abe43343e5d33",
+        "removalHookCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "routingPools": [
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xfe2a80bb5618fd14984b92ca6d45bf5ba67443ddb1435e28b2e48df2fc1526cd"
+      },
+      {
+        "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+        "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xcb6ffbcc84359535c2cc0a5688c0a76520ea6e0a4820fddd3ac8d7880e576370"
+      },
+      {
+        "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xc748f4671a867db48b552f6b7650bf3255e05f80f00e3f7aad1b17ccb7898fdb"
+      },
+      {
+        "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x3bb34a44f1b2b5f32c034c38a53065a521a47b199700fa9bd19d60985ff24bf1"
+      },
+      {
+        "currency0": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+        "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xd4ecb79fdc521d7725d22b33ed43cb4e47aa96bfad76aa29577e3151f723ac5e"
+      },
+      {
+        "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x8517f8071ae5b831b738052f12125e8e3d6c158b78728aa44ce3b25e5104d32e"
+      },
+      {
+        "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "currency1": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x5875d407a42965b0e768c8925cea290e06fa50603ef34fc99eb92a1050e6ae36"
+      },
+      {
+        "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "currency1": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xee430ee1003e1985e1828a01b9a20dad67ad4302994fe2abb4a173de4ac54623"
+      },
+      {
+        "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x6fa3ee0048e78bf0a513eb0ab56f482944a767c21db990fcf555605e69f05659"
+      },
+      {
+        "currency0": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27"
+      },
+      {
+        "currency0": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+        "currency1": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d"
+      },
+      {
+        "currency0": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1"
+      },
+      {
+        "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+        "currency1": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x225cc98f7d66b29fef96377becc7bf89582e2ab7b923a09aee9719fd80eb94ca"
+      },
+      {
+        "currency0": "0x5d6ef090a1461b11c9427ac319260122d1c61e18",
+        "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xc39187cec78a076c41a4085598b4cc05be2ed9b04a3443167471fa0fc4984188"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x16d1560630ce74af4478d9b8ad46548a092a2000",
+        "poolId": "0xf224a070c8626c890a085b258cf562ee4bf052b6d1d59104b3b44d722640c001"
+      },
+      {
+        "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "currency1": "0xa9efe2fc94de79734c03051515f48f254ce61e18",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x141be60316aeb3aa7c0e0d8e4fbdc0aa78105e6e462cfc03b8a0f0c59f0bf3f8"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0xa3b6aee90017b72c0812dc1e013de70eb2917ba3",
+        "fee": 8388608,
+        "tickSpacing": 200,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x1fb9a45079b017a6661016ba7dea29e1c4864b0874c21f63e137a52e71c3395b"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x451b42a15100c340ca12f7c66de06fac5ea2d751",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0xdba909ac1600a59685928cf317fb953d518d405b4748371889e3cb2932adf4c2"
+      },
+      {
+        "currency0": "0x0ff9072a1ead154d92c2d2fef16afba6028ce2b2",
+        "currency1": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0xa1771923045e0dade6578f8c99de248d5a6029b97fb928328f9e767674e7663a"
+      },
+      {
+        "currency0": "0x1D11f0496982706C5e14A514D4E79F2e6BdE4516",
+        "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "fee": 2057,
+        "tickSpacing": 21,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x55f2df399bf61fd758b99848452eaf217ee9d2f98fb9c79deb23fe9a2652bc5a"
+      },
+      {
+        "currency0": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "currency1": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
+        "fee": 9000,
+        "tickSpacing": 90,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x68d4f28f1432e0ad714658853edb2e6b0b1ac4060355ff3d169fea656b1d1c52"
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "fee": 100,
+        "tickSpacing": 1,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x24107d152f14a76d292123265ae3f3c71f863fc2f4ef7ba49d64e78d28ea379e"
+      },
+      {
+        "currency0": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x4be9657ec9002e528f4f17a5c43edc525a07f888f7b180c2afbf75e096c4f38a",
+        "createdBlock": 12594350
+      },
+      {
+        "currency0": "0xab093def657f15df31b33922a95e047add645b29",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0xbacecf788d2279f65da62d7bf69f4de28580a88bec56847c8d2ba6fbdd73f6eb",
+        "createdBlock": 52657452
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xf6589f11bc40b669e584073f428b05562f568733",
+        "fee": 1950,
+        "tickSpacing": 20,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x2e4cc4c65587faca7a08b69a13c86ca8c86599d90ad818ceaa1a875176f5fb52",
+        "createdBlock": 53603765
+      },
+      {
+        "currency0": "0xbe98b75361935b18d688409424a869a4c3dc7401",
+        "currency1": "0xf6589f11bc40b669e584073f428b05562f568733",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0x778b0c4eea7d35d66513b587ba87fc9084b0eacc",
+        "poolId": "0x383957bce2341f59ff97c47eda2ad3b3b839b7050adc8a4747a398abca0ad552",
+        "createdBlock": 51974190
+      },
+      {
+        "poolAddress": "0x237609918f330add285b8bc5f8f2922283d1c4c5",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x45242320dbb855eea8fd36804c6487e10e97fcf9",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000237609918f330add285b8bc5f8f2922283d1c4c5",
+        "createdBlock": 95557
+      },
+      {
+        "currency0": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 2690,
+        "tickSpacing": 54,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xa92a3df27a00a276183ff7265fd8affa11df1fe8bb23ddfaf13f6c879a3f818b",
+        "createdBlock": 10435412
+      },
+      {
+        "currency0": "0x385f4f8ae47651ce5f58f5265395a669f8281e18",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 6999,
+        "tickSpacing": 70,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x4b7c86491df95f366b31217b2950d2c5136a2f19b6879613eac73d0e69092a1a",
+        "createdBlock": 54991935
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+        "fee": 2500,
+        "tickSpacing": 25,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x590dcb6a87828bf688b48089a62239b693378f1fb64d2286e6a399ed8c005fdf",
+        "createdBlock": 29056896
+      },
+      {
+        "poolAddress": "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "currency0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "currency1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000010cc6bd38112cac182db90b6a71d8bb5939526ba"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x812486eaea648819853f8e372dc9f1516c7868bd",
+        "fee": 10000,
+        "tickSpacing": 100,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x6d56f66e52e63e8be558d708a987426314bb4de92bc9b43a44effee1f2abf317",
+        "createdBlock": 51854632
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+        "fee": 9800,
+        "tickSpacing": 98,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xdd96a8b750ee5eb3c13dcf874ee7dfdfd8b2b04706ed676db7b9921536290641",
+        "createdBlock": 55706747
+      },
+      {
+        "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+        "currency1": "0xfd82d8db539b6ace0d50815845133767e24f1e18",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x15a09db785c7b5fc9d794f685a04e4ad38842a2035b9a8fab17909c0e54c425f"
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0xe934e36a439c94017b64a3fece66af12099abf50",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xd33c8fd38b06e989cdbd4dffdefab71c4bdd415b24964c8d69e38ff35b068f92",
+        "createdBlock": 12670814
+      },
+      {
+        "poolAddress": "0x9cd74d5980a4bf60408b9ba2b0f6a3d368ebf594",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xe934e36a439c94017b64a3fece66af12099abf50",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000009cd74d5980a4bf60408b9ba2b0f6a3d368ebf594",
+        "createdBlock": 14053365
+      },
+      {
+        "poolAddress": "0x588b0785f50063260003b7790c42f1ef74902746",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xd7321801caae694090694ff55a9323139f043b88",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000588b0785f50063260003b7790c42f1ef74902746",
+        "createdBlock": 126005
+      },
+      {
+        "poolAddress": "0xb09fa4f04032b9d9e690ac4a1d29523b5f9a72dc",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000b09fa4f04032b9d9e690ac4a1d29523b5f9a72dc",
+        "createdBlock": 23753682
+      },
+      {
+        "poolAddress": "0xd29893ffac8b29ec4db2cfe0cdb3fe1377c028ff",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d29893ffac8b29ec4db2cfe0cdb3fe1377c028ff",
+        "createdBlock": 6481608
+      },
+      {
+        "poolAddress": "0x2b0d0183d017c58b924401ca8ac362f6e01f0e9e",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000002b0d0183d017c58b924401ca8ac362f6e01f0e9e",
+        "createdBlock": 13676926
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0xf1ee073811b14359d850825e48d200483200edcd",
+        "poolId": "0xc73f3cd3fb68288e63f008e08ef69caa0437224e420963c6aeb4526178e87ad9",
+        "createdBlock": 63251626
+      },
+      {
+        "currency0": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0xa95b1fbdccb15d2b07509b980f63adab8a94303b1781f5ebc53b72942d12ddc1",
+        "createdBlock": 51301900
+      },
+      {
+        "currency0": "0x42afa2124ca5a2b83898e46b2da9a190995b1e18",
+        "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0xc749412e31087a6e6f9210af575bc9100159fbc9f45da3ca8b26b31f3bf5777e",
+        "createdBlock": 49365824
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+        "fee": 8388608,
+        "tickSpacing": 10,
+        "hooks": "0xb608a78761f179f7c56f15e7d13921b92f00a080",
+        "poolId": "0xfe281bbfa9aa658c1aa9c2ad1b0c62c4286f96c7cb1074296b54e869935a7a3a",
+        "createdBlock": 44867864
+      },
+      {
+        "poolAddress": "0x7a6a053eccf1446a2633e05aa6d40d09381997ec",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000007a6a053eccf1446a2633e05aa6d40d09381997ec",
+        "createdBlock": 42412433
+      },
+      {
+        "poolAddress": "0xba2f1ed4ceb2169d538d1e614d847e83c5a55913",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000ba2f1ed4ceb2169d538d1e614d847e83c5a55913",
+        "createdBlock": 46656024
+      },
+      {
+        "poolAddress": "0x8cb787e6c315d464775289bad00fdd67d53ecb3d",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000008cb787e6c315d464775289bad00fdd67d53ecb3d",
+        "createdBlock": 4840957
+      },
+      {
+        "poolAddress": "0x02175608f1b5e6b5ed221ccfdc7be197d111d915",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000002175608f1b5e6b5ed221ccfdc7be197d111d915",
+        "createdBlock": 12021761
+      },
+      {
+        "currency0": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+        "currency1": "0xe10195999a422314155b1e158281dbd4f27adc46",
+        "fee": 3000,
+        "tickSpacing": 200,
+        "hooks": "0x4eb1976978756bd56802d8162f2271844924e0cc",
+        "poolId": "0x10ea32252ee4aea2be282068a974f394684657b12d7dc976b5f4f41390455180",
+        "createdBlock": 64662222
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xe10195999a422314155b1e158281dbd4f27adc46",
+        "fee": 9000,
+        "tickSpacing": 90,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x33ec1cc715a975b9fe6b638ca378a57909dff6279a808f80170ecf376f7cb50e",
+        "createdBlock": 68736731
+      },
+      {
+        "currency0": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 2000,
+        "tickSpacing": 20,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x7fb39eb653999feb9f0d3b1410848911383dfc681f3585229df4aa5b560bf0ba",
+        "createdBlock": 53175552
+      },
+      {
+        "poolAddress": "0x3f9d7f67d98f9a5c9283d69a65ed0d5fddd179c2",
+        "currency0": "0x32ac8c1d7672667d5ebdea22935f7b06fc8d496f",
+        "currency1": "0x7648f37c2314466726a28f7a5edbdb8dc7b3e23f",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000003f9d7f67d98f9a5c9283d69a65ed0d5fddd179c2"
+      },
+      {
+        "currency0": "0x91a2dae9699f0b82540b5886b0d8759c22820ba3",
+        "currency1": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+        "fee": 8388608,
+        "tickSpacing": 200,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x40a433930370f6cdf0a78debc2c6dd599c23bd428c0d67dd8b5373e4f101557f",
+        "createdBlock": 64271871
+      },
+      {
+        "poolAddress": "0x4ef94cd1ab45ebbb50f9e73cd6e45c5027caa3f7",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000004ef94cd1ab45ebbb50f9e73cd6e45c5027caa3f7",
+        "createdBlock": 6559878
+      },
+      {
+        "poolAddress": "0x654e4143e82a5824445ade0824351c2a9acd95a8",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000654e4143e82a5824445ade0824351c2a9acd95a8",
+        "createdBlock": 36421084
+      },
+      {
+        "poolAddress": "0x17578c0e0d15da44f31677263114f71ae76653ea",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xec262a75e413fafd0df80480274532c79d42da09",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000017578c0e0d15da44f31677263114f71ae76653ea",
+        "createdBlock": 199920
+      },
+      {
+        "poolAddress": "0xe9713f453adb9245b19559790c96f470a18f2fdf",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000e9713f453adb9245b19559790c96f470a18f2fdf",
+        "createdBlock": 199929
+      },
+      {
+        "poolAddress": "0xe2b46c905e12ab8e2f864e4821a4325884c1b126",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000e2b46c905e12ab8e2f864e4821a4325884c1b126",
+        "createdBlock": 17574196
+      },
+      {
+        "poolAddress": "0xaa34fea710a1a737840329051d81d3b0b7c564d5",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000aa34fea710a1a737840329051d81d3b0b7c564d5",
+        "createdBlock": 50927257
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000fab520051f96f4d2a32c22b6a3dd7fffdf231bfe",
+        "createdBlock": 15647156,
+        "poolAddress": "0xfab520051f96f4d2a32c22b6a3dd7fffdf231bfe",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d60a5d14db690b7afad71f76b108071d7175597d",
+        "createdBlock": 47501593,
+        "poolAddress": "0xd60a5d14db690b7afad71f76b108071d7175597d",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+      },
+      {
+        "currency0": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000a8744e76aed23b05f0126335e7bd38f7935d19fe",
+        "createdBlock": 199988,
+        "poolAddress": "0xa8744e76aed23b05f0126335e7bd38f7935d19fe",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+      },
+      {
+        "currency0": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000008ac92da74ab5f3b1d024dc1943ad7e15dc4179ef",
+        "createdBlock": 15331828,
+        "poolAddress": "0x8ac92da74ab5f3b1d024dc1943ad7e15dc4179ef",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x007a13fa152f6dc383cad20a8eaab4e1e2538b606936eae2a424f8aa47d6db31",
+        "createdBlock": 16650907
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xf2e329e631d0fb315a5c563ee3a9120f24822b5ef6c502a91cb56b174d5d8c22",
+        "createdBlock": 9716418
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000eb60bcd1d920ad6e102690ccfc6fb488899e1510",
+        "createdBlock": 15302702,
+        "poolAddress": "0xeb60bcd1d920ad6e102690ccfc6fb488899e1510",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+      },
+      {
+        "currency0": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000000a2121a50a09ed0796ae81f9c53ff9398355a398",
+        "createdBlock": 16834694,
+        "poolAddress": "0x0a2121a50a09ed0796ae81f9c53ff9398355a398",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa"
+      },
+      {
+        "poolAddress": "0xd64fbda67e1015df43fa5e49f02ca844729e5f94",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d64fbda67e1015df43fa5e49f02ca844729e5f94",
+        "createdBlock": 24555353
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0xb9972ca7188e511174947e3936a5315ac7073277",
+        "fee": 2500,
+        "tickSpacing": 25,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x8651e656738064177752a395dbde2b2a9e3fc469edc2a9212e6060c0990bb7eb",
+        "createdBlock": 38994659
+      },
+      {
+        "currency0": "0x63ee32ac3077d1fbd8a77ebba2a6ed4b8e9c1e18",
+        "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+        "fee": 8388608,
+        "tickSpacing": 8,
+        "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+        "poolId": "0x7e271c400427ecb727f5fbb27dec69254bce7c4219e95e3535d0ed128f79648a",
+        "createdBlock": 59846644
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0x4a72b9702f991b790788f8afa9e7112541f4e8f8",
+        "fee": 0,
+        "tickSpacing": 200,
+        "hooks": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+        "poolId": "0x220e47dde1a5180cb131d4c720abf66d5c36fbdf3af91522f7b1c7f749770d8f",
+        "createdBlock": 57044212
+      },
+      {
+        "currency0": "0x0000000000000000000000000000000000000000",
+        "currency1": "0x4db7374e966097be94c6680d49156d580f097bbf",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x88e5d1cf9907acd48e7c81ff6ebc088ad358a5cc",
+        "poolId": "0xbf7dc545ff6d3b0e23f6264f7c23d4fa16a0f3bb1b26eda350593bd63a94da97",
+        "createdBlock": 75864247
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xe02c53d448a62067b2ac10ed70f5bc6c29471386",
+        "fee": 20000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x63eeaac7a218d31dc36a404cf66b2e2843de4e7c5dd05fed3a9d7ce4e5b19527",
+        "createdBlock": 68452415
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xedbf91223639800bcd5756815caf908df3b890be",
+        "fee": 10000,
+        "tickSpacing": 100,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x9be7ab27227e115085b0949a819a73f6963ddc6da0c6204d37757c24297706e8",
+        "createdBlock": 71946480
+      },
+      {
+        "currency0": "0x5173d45a1191ee33cbb7d8c7e65f21b04ed54802",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 9506,
+        "tickSpacing": 95,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x680eb556f5d466e1fee8468b93cbdd6c426e2136c369a6ab70ca36a5204cd471",
+        "createdBlock": 51013794
+      }
+    ],
+    "cashoutPools": [
+      {
+        "poolAddress": "0xa7bb1ac63bbab0c44316e6c8c455213441689167",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000a7bb1ac63bbab0c44316e6c8c455213441689167"
+      },
+      {
+        "poolAddress": "0xddcbba3666f578e3f09516f21ff85bfee859ab5e",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000ddcbba3666f578e3f09516f21ff85bfee859ab5e"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 500,
+        "tickSpacing": 5,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xe5923c8a8be481ec89a2ca784a2bbfa4235de6d88f92260fd66b660c4babf907"
+      },
+      {
+        "poolAddress": "0xc61284332117c3fb23a2a56cceffd07f7af60029",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000c61284332117c3fb23a2a56cceffd07f7af60029"
+      },
+      {
+        "poolAddress": "0xaae0d815ee56e4092a5e5c2911e676fea50b2d6d",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000aae0d815ee56e4092a5e5c2911e676fea50b2d6d"
+      },
+      {
+        "poolAddress": "0xd4eb21209c4d6093f80b5b84f5c45cc093ea14a3",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d4eb21209c4d6093f80b5b84f5c45cc093ea14a3"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "fee": 100,
+        "tickSpacing": 1,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x6444a8e0b267406a15db74ca00c4a24bdfa81ed3180f5b6d0851f8ed6f4f29c5"
+      },
+      {
+        "poolAddress": "0x34d0dc122cf9a8eb296fc5e0d3a233625d7d19b7",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000034d0dc122cf9a8eb296fc5e0d3a233625d7d19b7"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "fee": 350,
+        "tickSpacing": 4,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x3ea70ce0b34473692549f97e630a1d82dc05cea94fa55f81b50f10c8c6d8186f"
+      },
+      {
+        "poolAddress": "0xf4acdaeeb7022862a763c9b1b885e11191c889e3",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000f4acdaeeb7022862a763c9b1b885e11191c889e3"
+      },
+      {
+        "poolAddress": "0xc4f0172d6ac8dd294dd1137d047d5e1893760236",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000c4f0172d6ac8dd294dd1137d047d5e1893760236"
+      },
+      {
+        "poolAddress": "0x31a89afd92f9397465649ad03226c52292fc1ae5",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000031a89afd92f9397465649ad03226c52292fc1ae5"
+      },
+      {
+        "poolAddress": "0xa4bdb396a69617eb7f70e2cc1ef526f7340b1b0d",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000a4bdb396a69617eb7f70e2cc1ef526f7340b1b0d"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "fee": 500,
+        "tickSpacing": 5,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xb8d9b6b622bb03dd06d95790553f327710a73d85d845a59fa9e652638ca96ae6"
+      },
+      {
+        "poolAddress": "0xd057b1bc54917855bbee58ead58647f47cab35e5",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d057b1bc54917855bbee58ead58647f47cab35e5"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+        "fee": 500,
+        "tickSpacing": 5,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xcc2a903a8744a65258bb07fbeea553a25410f731c9fef306321d0c176a09542c"
+      },
+      {
+        "poolAddress": "0xc8c90d3a1c1a24967e773ac2ad0d456ba3e31f64",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000c8c90d3a1c1a24967e773ac2ad0d456ba3e31f64"
+      },
+      {
+        "poolAddress": "0x0ebd4650c9e641e9745b5a508a2d46935dfe753e",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xf6589f11bc40b669e584073f428b05562f568733",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000000ebd4650c9e641e9745b5a508a2d46935dfe753e"
+      },
+      {
+        "poolAddress": "0x48abc7052509caf820c4c22559f08381f9afd823",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+        "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000048abc7052509caf820c4c22559f08381f9afd823"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+        "fee": 1200,
+        "tickSpacing": 15,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x1f2ad5a274a776d8e1408292bde1d92d8fa7b6444acf14ad60b9c3e4e5b66420"
+      },
+      {
+        "poolAddress": "0x055036f511567711e0b2e127a1a468802bb93065",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xec262a75e413fafd0df80480274532c79d42da09",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000055036f511567711e0b2e127a1a468802bb93065"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xec262a75e413fafd0df80480274532c79d42da09",
+        "fee": 2500,
+        "tickSpacing": 25,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x319bac87e616a89e241c10aeb8afd4892a852cdd8b373cd9765ecddc40b87cfe"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xec262a75e413fafd0df80480274532c79d42da09",
+        "fee": 2400,
+        "tickSpacing": 24,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xc105b8300ff65d750a0e4e63c7a879e20504069b770713464a5315e797735326"
+      },
+      {
+        "currency0": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 1000,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x7499938c352d5b5b8f0c648722aca5ee964ef9b85c3a3041f1ec379726291d9d"
+      },
+      {
+        "poolAddress": "0x6ba50150b17ffd0972915aaf04ffd5e8f4fa49b4",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+        "fee": 500,
+        "tickSpacing": 10,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000006ba50150b17ffd0972915aaf04ffd5e8f4fa49b4"
+      },
+      {
+        "currency0": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 2900,
+        "tickSpacing": 29,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x7c2985fd7623a5dcd88c7d51099931ca295875743b96bc64990e374f49e5f387"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "fee": 500,
+        "tickSpacing": 5,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x68beff3b4270ffbbb78a48d7670648909b9de6736456b0f450fee242e1d10a8b"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+        "fee": 2500,
+        "tickSpacing": 25,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xe2e1a0e32205e854525e0fb1d3667a53bd3b4919f032b9bcd2a038b6b6dac314"
+      },
+      {
+        "poolAddress": "0x6707aeac7d0e519b083219d27bb427364363183a",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000006707aeac7d0e519b083219d27bb427364363183a"
+      },
+      {
+        "poolAddress": "0x2e5a92f5013a64661a49312111be2e8abd33f56a",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000002e5a92f5013a64661a49312111be2e8abd33f56a"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+        "fee": 500,
+        "tickSpacing": 5,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x7fb585f108d921de3b197cf7e26b5aebc96b035fec13f972b868e008ea062394"
+      },
+      {
+        "currency0": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+        "currency1": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+        "fee": 300,
+        "tickSpacing": 3,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x18074ca08154f613c70444ef22793ff1875e9bdc92bab25a5ee0f39107c77258"
+      },
+      {
+        "currency0": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 880,
+        "tickSpacing": 9,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xd0f36f913c83d95ab0e5f2cd2b991fc74bad741745ba9e7aeb6df8394c761f7b"
+      },
+      {
+        "poolAddress": "0xd78480cafef722d75519e13b9f516e5704d0d659",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000d78480cafef722d75519e13b9f516e5704d0d659"
+      },
+      {
+        "poolAddress": "0xbd5cd6515ca6285941fbc177381dc8ed4844e6b8",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000bd5cd6515ca6285941fbc177381dc8ed4844e6b8"
+      },
+      {
+        "poolAddress": "0x9036a9406dac1c252c364d037f489e5f0a752f54",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000009036a9406dac1c252c364d037f489e5f0a752f54"
+      },
+      {
+        "poolAddress": "0xc54c8ba6439ab4f5fb734779f83d00185b1ca4ee",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000c54c8ba6439ab4f5fb734779f83d00185b1ca4ee"
+      },
+      {
+        "poolAddress": "0x8774aecc273b8ec563a5656b181cd5f23f7125d0",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x451b42a15100c340ca12f7c66de06fac5ea2d751",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x0000000000000000000000008774aecc273b8ec563a5656b181cd5f23f7125d0"
+      },
+      {
+        "poolAddress": "0xdaf8038e8eab4a56bd1c0485d414241622384fef",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x451b42a15100c340ca12f7c66de06fac5ea2d751",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000daf8038e8eab4a56bd1c0485d414241622384fef"
+      },
+      {
+        "poolAddress": "0xed50bdeea8adc232f159486192a4157281d722ff",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000ed50bdeea8adc232f159486192a4157281d722ff"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+        "fee": 6940,
+        "tickSpacing": 69,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x1097a1ec4902ed6b60d5f2d00c335c0907945b636a8f4fb7876534656551f8f3"
+      },
+      {
+        "poolAddress": "0x34f73f488309208b8cb6012eb47ffeb086ca1c2d",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x00000000000000000000000034f73f488309208b8cb6012eb47ffeb086ca1c2d"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+        "fee": 8000,
+        "tickSpacing": 80,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0xea9f200e13055b82f175f44f592c4c13dd8c9d9320a66487d3c5cd90d68550ef"
+      },
+      {
+        "poolAddress": "0x417e0a3a9d03ddee6749f21aa02498338a652786",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x42afa2124ca5a2b83898e46b2da9a190995b1e18",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000417e0a3a9d03ddee6749f21aa02498338a652786"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0x91a2dae9699f0b82540b5886b0d8759c22820ba3",
+        "fee": 7500,
+        "tickSpacing": 75,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x93cc54eb4e1928e841cb8b2e488bd82e8d97d56e0aab16cf078ef71c576dcded"
+      },
+      {
+        "poolAddress": "0xae71c955c00d86eef306618f6d727b9a1a47f227",
+        "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+        "currency0": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+        "currency1": "0x4db7374e966097be94c6680d49156d580f097bbf",
+        "fee": 10000,
+        "tickSpacing": 200,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x000000000000000000000000ae71c955c00d86eef306618f6d727b9a1a47f227"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xab093def657f15df31b33922a95e047add645b29",
+        "fee": 9000,
+        "tickSpacing": 90,
+        "hooks": "0x0000000000000000000000000000000000000000",
+        "poolId": "0x778a632fdd85577efe9cfce4a2c9ac91b9decdb24c351f9b56e25d38fbe587b4"
+      },
+      {
+        "currency0": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "currency1": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+        "fee": 8388608,
+        "tickSpacing": 10,
+        "hooks": "0x70a9a88402989226847ec122043ce5e7ff462080",
+        "poolId": "0xa2347ba69167e5602f74640ffbf737ee7cdd825e4726d3462564fc6533070147"
+      },
+      {
+        "currency0": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "currency1": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+        "fee": 8388608,
+        "tickSpacing": 10,
+        "hooks": "0x67d86050d22d574df046f3d90f722045f714e080",
+        "poolId": "0xd5effce87036cd858146c0c15fa825c231a9de1843200ca108e431e431331e8e"
+      }
+    ],
+    "lpZapHookCodeHashes": {
+      "0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0x141be60316aeb3aa7c0e0d8e4fbdc0aa78105e6e462cfc03b8a0f0c59f0bf3f8": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0x1fb9a45079b017a6661016ba7dea29e1c4864b0874c21f63e137a52e71c3395b": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0xc39187cec78a076c41a4085598b4cc05be2ed9b04a3443167471fa0fc4984188": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0xf224a070c8626c890a085b258cf562ee4bf052b6d1d59104b3b44d722640c001": "0x0025c3a68a5af9c497148671f36baf6f88917e70a966cc20f31df70f8b109270",
+      "0xbacecf788d2279f65da62d7bf69f4de28580a88bec56847c8d2ba6fbdd73f6eb": "0xc21b1e6c1b45403e81a581f22ed6d9c747997af1cfdac1b1dc9f4b1d346a10db",
+      "0x225cc98f7d66b29fef96377becc7bf89582e2ab7b923a09aee9719fd80eb94ca": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0xdba909ac1600a59685928cf317fb953d518d405b4748371889e3cb2932adf4c2": "0xc21b1e6c1b45403e81a581f22ed6d9c747997af1cfdac1b1dc9f4b1d346a10db",
+      "0xa1771923045e0dade6578f8c99de248d5a6029b97fb928328f9e767674e7663a": "0xc21b1e6c1b45403e81a581f22ed6d9c747997af1cfdac1b1dc9f4b1d346a10db",
+      "0x383957bce2341f59ff97c47eda2ad3b3b839b7050adc8a4747a398abca0ad552": "0xfbc92fd50514496483cef2f6c86312538ef333a73382517bcec291ff4c9ca74c",
+      "0x15a09db785c7b5fc9d794f685a04e4ad38842a2035b9a8fab17909c0e54c425f": "0xc41a91106002f15bf70ae266824317f3f3ac638ac72ca5253bae395fa47ee631",
+      "0xa95b1fbdccb15d2b07509b980f63adab8a94303b1781f5ebc53b72942d12ddc1": "0xc21b1e6c1b45403e81a581f22ed6d9c747997af1cfdac1b1dc9f4b1d346a10db"
+    },
+    "v3Manager": "0x73991a25C818Bf1f1128dEAaB1492D45638DE0D3",
+    "v4Manager": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+    "v3Factory": "0x1f7d7550B1b028f7571E69A784071F0205FD2EfA",
+    "flashPool": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+    "zapQuoter": "0xDfb215909ce14A328445f8e931Dbc93108a7D0b1",
+    "readyBlock": 58125110
+  },
+  "GageZapRouter": "0xc94c999c6c85542283e4136bcf7a4f29f652bce0",
+  "ZZZ": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a",
+  "ASTEROID": "0xfd82d8db539b6ace0d50815845133767e24f1e18",
+  "STONKBROKER": "0xe934e36a439c94017b64a3fece66af12099abf50",
+  "JUGGERNAUT": "0xd7321801caae694090694ff55a9323139f043b88",
+  "INJOH": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d",
+  "INDEX": "0x56910d4409f3a0c78c64dd8d0545ff0705389870",
+  "CME": "0xe2324ff2a59f8ecba8c321c6466e59121c00e795",
+  "HybridFactory": "0x1544b5E7BD7ab57fCcb991586694a8ACF054868B",
+  "HybridVault": "0x1e95DD1EC0a80133D132279B2afA9182d9d63ca4",
+  "HybridFees": "0x5E1Ef58e11f9d2F53Df84678bD82D48ae50774a4",
+  "HybridReserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+  "EarnCore": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+  "earnStartBlock": 61572059,
+  "hybridFactoryStartBlock": 61572036,
+  "earnMandate": {
+    "chainId": 4663,
+    "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+    "core": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+    "admittedTokens": [
+      {
+        "token": "0x020bfc650a365f8bb26819deaabf3e21291018b4"
+      },
+      {
+        "token": "0x0bd7d308f8e1639fab988df18a8011f41eacad73"
+      },
+      {
+        "token": "0x0ff9072a1ead154d92c2d2fef16afba6028ce2b2"
+      },
+      {
+        "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c"
+      },
+      {
+        "token": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c"
+      },
+      {
+        "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516"
+      },
+      {
+        "token": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d"
+      },
+      {
+        "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3"
+      },
+      {
+        "token": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"
+      },
+      {
+        "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d"
+      },
+      {
+        "token": "0x385f4f8ae47651ce5f58f5265395a669f8281e18"
+      },
+      {
+        "token": "0x39dbed3a2bd333467115de45665cc57f813c4571"
+      },
+      {
+        "token": "0x451b42a15100c340ca12f7c66de06fac5ea2d751"
+      },
+      {
+        "token": "0x45242320dbb855eea8fd36804c6487e10e97fcf9"
+      },
+      {
+        "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea"
+      },
+      {
+        "token": "0x56910d4409f3a0c78c64dd8d0545ff0705389870"
+      },
+      {
+        "token": "0x5d6ef090a1461b11c9427ac319260122d1c61e18"
+      },
+      {
+        "token": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be"
+      },
+      {
+        "token": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a"
+      },
+      {
+        "token": "0x812486eaea648819853f8e372dc9f1516c7868bd"
+      },
+      {
+        "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a"
+      },
+      {
+        "token": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18"
+      },
+      {
+        "token": "0xa3b6aee90017b72c0812dc1e013de70eb2917ba3"
+      },
+      {
+        "token": "0xa9efe2fc94de79734c03051515f48f254ce61e18"
+      },
+      {
+        "token": "0xab093def657f15df31b33922a95e047add645b29"
+      },
+      {
+        "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9"
+      },
+      {
+        "token": "0xbe98b75361935b18d688409424a869a4c3dc7401"
+      },
+      {
+        "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35"
+      },
+      {
+        "token": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09"
+      },
+      {
+        "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec"
+      },
+      {
+        "token": "0xd7321801caae694090694ff55a9323139f043b88"
+      },
+      {
+        "token": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18"
+      },
+      {
+        "token": "0xe2324ff2a59f8ecba8c321c6466e59121c00e795"
+      },
+      {
+        "token": "0xe934e36a439c94017b64a3fece66af12099abf50"
+      },
+      {
+        "token": "0xfd82d8db539b6ace0d50815845133767e24f1e18"
+      },
+      {
+        "token": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18"
+      },
+      {
+        "token": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd"
+      }
+    ],
+    "feeRecipient": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+    "curator": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5"
+  },
+  "earnStrategies": [
+    {
+      "HybridVault": "0x1e95DD1EC0a80133D132279B2afA9182d9d63ca4",
+      "HybridFees": "0x5E1Ef58e11f9d2F53Df84678bD82D48ae50774a4",
+      "HybridReserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+      "EarnCore": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+      "earnStartBlock": 61572059,
+      "earnMandate": {
+        "chainId": 4663,
+        "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+        "core": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+        "admittedTokens": [
+          {
+            "token": "0x020bfc650a365f8bb26819deaabf3e21291018b4"
+          },
+          {
+            "token": "0x0bd7d308f8e1639fab988df18a8011f41eacad73"
+          },
+          {
+            "token": "0x0ff9072a1ead154d92c2d2fef16afba6028ce2b2"
+          },
+          {
+            "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c"
+          },
+          {
+            "token": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c"
+          },
+          {
+            "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516"
+          },
+          {
+            "token": "0x2cc0fac44b8252f6b10208b091aff2c94b4da77d"
+          },
+          {
+            "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3"
+          },
+          {
+            "token": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"
+          },
+          {
+            "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d"
+          },
+          {
+            "token": "0x385f4f8ae47651ce5f58f5265395a669f8281e18"
+          },
+          {
+            "token": "0x39dbed3a2bd333467115de45665cc57f813c4571"
+          },
+          {
+            "token": "0x451b42a15100c340ca12f7c66de06fac5ea2d751"
+          },
+          {
+            "token": "0x45242320dbb855eea8fd36804c6487e10e97fcf9"
+          },
+          {
+            "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea"
+          },
+          {
+            "token": "0x56910d4409f3a0c78c64dd8d0545ff0705389870"
+          },
+          {
+            "token": "0x5d6ef090a1461b11c9427ac319260122d1c61e18"
+          },
+          {
+            "token": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be"
+          },
+          {
+            "token": "0x7dbf38976f6d3b9c529e7d9484a71898b409ee6a"
+          },
+          {
+            "token": "0x812486eaea648819853f8e372dc9f1516c7868bd"
+          },
+          {
+            "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a"
+          },
+          {
+            "token": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18"
+          },
+          {
+            "token": "0xa3b6aee90017b72c0812dc1e013de70eb2917ba3"
+          },
+          {
+            "token": "0xa9efe2fc94de79734c03051515f48f254ce61e18"
+          },
+          {
+            "token": "0xab093def657f15df31b33922a95e047add645b29"
+          },
+          {
+            "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9"
+          },
+          {
+            "token": "0xbe98b75361935b18d688409424a869a4c3dc7401"
+          },
+          {
+            "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35"
+          },
+          {
+            "token": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09"
+          },
+          {
+            "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec"
+          },
+          {
+            "token": "0xd7321801caae694090694ff55a9323139f043b88"
+          },
+          {
+            "token": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18"
+          },
+          {
+            "token": "0xe2324ff2a59f8ecba8c321c6466e59121c00e795"
+          },
+          {
+            "token": "0xe934e36a439c94017b64a3fece66af12099abf50"
+          },
+          {
+            "token": "0xfd82d8db539b6ace0d50815845133767e24f1e18"
+          },
+          {
+            "token": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18"
+          },
+          {
+            "token": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd"
+          }
+        ],
+        "feeRecipient": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+        "curator": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5"
+      }
+    },
+    {
+      "HybridVault": "0x21A8771DC8C260B12C916820ba8168B01Ab619BC",
+      "HybridFees": "0x19baB029303d163Ad2BA2fd854bf4cC60412100D",
+      "HybridReserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+      "EarnCore": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+      "earnStartBlock": 61652887,
+      "earnMandate": {
+        "chainId": 4663,
+        "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+        "core": "0x08561c817a5bf5230f91c001800449f047e4c07d",
+        "admittedTokens": [
+          {
+            "token": "0x0bd7d308f8e1639fab988df18a8011f41eacad73"
+          },
+          {
+            "token": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c"
+          },
+          {
+            "token": "0x1d11f0496982706c5e14a514d4e79f2e6bde4516"
+          },
+          {
+            "token": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3"
+          },
+          {
+            "token": "0x322f0929c4625ed5bad873c95208d54e1c003b2d"
+          },
+          {
+            "token": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea"
+          },
+          {
+            "token": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a"
+          },
+          {
+            "token": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9"
+          },
+          {
+            "token": "0xc0d6457c16cc70d6790dd43521c899c87ce02f35"
+          },
+          {
+            "token": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09"
+          },
+          {
+            "token": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec"
+          },
+          {
+            "token": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd"
+          }
+        ],
+        "feeRecipient": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+        "curator": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5"
+      }
+    }
+  ],
+  "HMM": "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f",
+  "STANDARD": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
+  "earnV3": {
+    "GradeRegistry": "0x0250ADfA79Ab2E303AF4C434c62F92f55DD38e50",
+    "EarnFactory": "0x124d74D5626D392E937c3410c0325eA464700682",
+    "earnFactoryStartBlock": 64910936,
+    "strategies": [
+      {
+        "EarnVault": "0x36b438761AA271d9852549F54E88283987977B7a",
+        "EarnReserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+        "EarnCore": "0xfee799ade96229c2c128bc5ed9e55f8d9d01a7e9",
+        "earnStartBlock": 64910936,
+        "earnMandate": {
+          "chainId": 4663,
+          "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+          "core": "0xfee799ade96229c2c128bc5ed9e55f8d9d01a7e9",
+          "feeRecipient": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+          "protocolRecipient": "0x30e8e13e62dfcd063af763ab29501fee74c4918e",
+          "curator": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+          "factoryOwner": "0x30e8e13e62dfcd063af763ab29501fee74c4918e"
+        }
+      },
+      {
+        "EarnVault": "0xc04a365061E5D3CF7f614cF353494294b0E3F0c9",
+        "EarnReserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+        "EarnCore": "0xfee799ade96229c2c128bc5ed9e55f8d9d01a7e9",
+        "earnStartBlock": 64981242,
+        "earnMandate": {
+          "chainId": 4663,
+          "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+          "core": "0xfee799ade96229c2c128bc5ed9e55f8d9d01a7e9",
+          "feeRecipient": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+          "protocolRecipient": "0x30e8e13e62dfcd063af763ab29501fee74c4918e",
+          "curator": "0x86514e45293fcf111ed8a6bda7c8bca4a64dd9e5",
+          "factoryOwner": "0x30e8e13e62dfcd063af763ab29501fee74c4918e"
+        }
+      }
+    ]
+  },
+  "ORBIO": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+  "SCHIFFY": "0x42afa2124ca5a2b83898e46b2da9a190995b1e18",
+  "GLD": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "SLV": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "USO": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+  "GageCards": "0x8F046f55e1FD63F89D3824C8C2bBa08E8dEb538B",
+  "GageCardsRenderer": "0x19E0bbEB76751DdA6B5Ad57F3daC44764EdD44B3",
+  "GageCardsArtRenderer": "0xFAe9E31E74798A5B030A1FC9eDBF7B46D8667c32",
+  "COOK": "0xe10195999a422314155b1e158281dbd4f27adc46",
+  "CUCK": "0x7648f37c2314466726a28f7a5edbdb8dc7b3e23f",
+  "MUSEBOOK": "0x91a2dae9699f0b82540b5886b0d8759c22820ba3",
+  "UP": "0x57c0e45cb534413d1c20a4240955d6bb250bb4f1",
+  "IMD": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+  "CRCL": "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+  "MSTR": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "GME": "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+  "AMC": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+  "SGOV": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "QQQ": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+  "RDDT": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "AMZN": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "COIN": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "INTC": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "MSFT": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "COST": "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+  "DELTA": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
+  "PROLOGUE": "0xb9972ca7188e511174947e3936a5315ac7073277",
+  "INU": "0x63ee32ac3077d1fbd8a77ebba2a6ed4b8e9c1e18",
+  "ROUTE": "0x4a72b9702f991b790788f8afa9e7112541f4e8f8",
+  "TIBBIR": "0x4db7374e966097be94c6680d49156d580f097bbf",
+  "NOSH": "0xe02c53d448a62067b2ac10ed70f5bc6c29471386",
+  "PRIORS": "0xedbf91223639800bcd5756815caf908df3b890be",
+  "RAM": "0x5173d45a1191ee33cbb7d8c7e65f21b04ed54802",
+  "intentV1": {
+    "factory": "0xb086944b140758b33694220d4fe93c9a8d8618a1",
+    "core": "0x0086ec1540719d4199432797e2b6068e6ae5a0e5",
+    "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+    "quoteVerifier": "0x6a42924c195c6a38427320c1b49130998a7e75e1",
+    "fillRouter": "0xae9607acb7e14bd37cb714cff8f35b30443133c8",
+    "startBlock": 106016490,
+    "loopRouter": "0xa46b62d5277465a885de5f2dc518d369199aa93c",
+    "privateRouter": "0xDbb8e949659D0d0d2EDB075b9eC84C9E479bAA45",
+    "previousPrivateLanes": [
+      {
+        "core": "0x856e4232469b957150cb29a8ce9b60059449e87e",
+        "routers": [
+          "0xc62da1872bf3c9922e8c22be4b29b5317b4baa21"
+        ],
+        "startBlock": 88949068
+      }
+    ],
+    "exitDesk": "0x0c7e23f245377551a7fac3b3d05238ac2e9eefc2"
+  },
+  "intentV1Previous": [
+    {
+      "intentV1": {
+        "factory": "0x20a908d82885cf4e990a9f8f3f5a483687660822",
+        "core": "0x856e4232469b957150cb29a8ce9b60059449e87e",
+        "reserve": "0xbeeff033f34c046626b8d0a041844c5d1a5409dd",
+        "quoteVerifier": "0x80ec8893cec448cd43578c9d1e5a4bee71a7db53",
+        "fillRouter": "0xf8560439d914fe1fc2c1a2faa5b19ed46f73208d",
+        "startBlock": 88949068,
+        "loopRouter": "0xacfffd412dd838d3ede489bc4b79e19505769bad",
+        "privateRouter": "0xc62DA1872bf3C9922e8C22Be4b29b5317b4bAa21",
+        "rolloverRouter": "0x85829427103E33F3c8D6B06Ebb3aAd7185b0feDa"
+      }
+    }
+  ],
+  "privacyPools": {
+    "entrypoint": "0xde0140E41656aB6BB8D5a5a86f6c12e0f8a23C58",
+    "assets": {
+      "PONS": {
+        "token": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "pool": "0x76A253C460E8674dBa2EB378CA663BEE7729B9c6",
+        "startBlock": 88950948
+      },
+      "CASHCAT": {
+        "token": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "pool": "0xD23a5acE1EC9Ba3Bfe181e1b81f7a14b8E1F812E",
+        "startBlock": 88950969
+      },
+      "STONKBROKER": {
+        "token": "0xe934e36A439C94017B64a3FecE66AF12099aBF50",
+        "pool": "0x5da5FFb642F8b9f56732F4386AD23241Ab0969Bf",
+        "startBlock": 88950989
+      },
+      "DELTA": {
+        "token": "0xe8ffd7e24187F72afB08d75B1bb13088A989a791",
+        "pool": "0x4eb9214505915C40a481DaE4D07f974450D5f896",
+        "startBlock": 88951009
+      },
+      "HOOKR": {
+        "token": "0x18E674231A58c239Dc7DaeDcffE15Ec3A24cff5c",
+        "pool": "0xa544D5917ED667E4ac428FcA3FeeCd116e1a3f73",
+        "startBlock": 88951032
+      }
+    }
+  },
+  "intentV1Assets": {
+    "GLD": {
+      "lendAsset": {
+        "token": "0xC9a981FEE1F9DEc688bb123ccDeCc63D0deBFC4e",
+        "decimals": 18
+      },
+      "factory": "0x0966d92887d41796fcf6f77159d543b1565fec0d",
+      "core": "0xf2b98f79040b4157373093cdda2a4f2cb3c838d8",
+      "reserve": "0xb150d62186fb136b1d1541c74c1591235293c42f",
+      "quoteVerifier": "0xfaf4e55307aef8e074ef409dbbfe125c5d156322",
+      "fillRouter": "0x5f4c6be5cb0695f7a795debbed326d760dc30566",
+      "gradeRegistry": "0x620ca1fdc07001ee4c631e82e645b11d56e57eb8",
+      "feeProcessor": "0x2d509cb5ed7b0a61c65c604e2b5ca4aab93e1eb9",
+      "startBlock": 89095877,
+      "engine": {
+        "registry": "0x1b7208b92586fbf7eb246234832530efdecfeb86",
+        "rewards": "0x24772Df730EEed3961b4712e99F33Cf0fe257A7E",
+        "cashoutRouter": "0x4fb133edc4b72b81b2804b00b4e843ad34deca84",
+        "flashPool": "0x98996e833EA35EC17c3645Ca7b6Dd40d188564C4",
+        "startBlock": 89095605
+      },
+      "collateral": [
+        {
+          "token": "0x42aFA2124ca5a2B83898E46B2dA9a190995b1E18"
+        }
+      ],
+      "cashoutPools": [
+        {
+          "currency0": "0x42afa2124ca5a2b83898e46b2da9a190995b1e18",
+          "currency1": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+          "fee": 8388608,
+          "tickSpacing": 8,
+          "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+          "poolId": "0xc749412e31087a6e6f9210af575bc9100159fbc9f45da3ca8b26b31f3bf5777e"
+        }
+      ],
+      "rolloverRouter": "0x87A8C18c63A7f5957cB533389c20b80962d4E8A8"
+    },
+    "NVDA": {
+      "lendAsset": {
+        "token": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+        "decimals": 18
+      },
+      "factory": "0xcb848a80801bfcdb7fa43a6729013ecf319a000b",
+      "core": "0x380a536b1c8bf9e8c1035413497f767f76d30b6e",
+      "reserve": "0x24e81017982ac7fb78f17419c727410e893cc222",
+      "quoteVerifier": "0xffc963221cad7c370c1443daa7c43568c73a8566",
+      "fillRouter": "0xda8bb629cfd4ffd8e0e00d7bf96fba35bbf354f4",
+      "gradeRegistry": "0x1aea6ba46beee96b936ceaa36481316b7b579ee1",
+      "feeProcessor": "0xca929749af2cd4c72fbf291c8c880d5b0b6ffbe3",
+      "startBlock": 89111885,
+      "engine": {
+        "registry": "0x8c73694f6394cb2054307b02646e2399a7f54045",
+        "rewards": "0x5f0359CEE3f48cDa6afD4De2a111b62dfde51908",
+        "cashoutRouter": "0xdc5c966e05279fb860b4986c7483e431f1a3d482",
+        "flashPool": "0x62AB521f71431f78ac374CdbadC6cda3c8916b6C",
+        "startBlock": 89111601
+      },
+      "collateral": [
+        {
+          "token": "0x2E8c31162b855A2ffa90F6F8634643Ad6F111e18"
+        }
+      ],
+      "cashoutPools": [
+        {
+          "currency0": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+          "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+          "fee": 8388608,
+          "tickSpacing": 8,
+          "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+          "poolId": "0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27"
+        }
+      ],
+      "rolloverRouter": "0x5d1308A9B8FBe849053E4Fc8E8BE9cD1a5c1D492"
+    },
+    "HIMS": {
+      "lendAsset": {
+        "token": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
+        "decimals": 18
+      },
+      "factory": "0x48a234770e74d907071b8d310f06cf253a846e9d",
+      "core": "0x359bb9751f5c2cfdce5d034a9742e7a0a3ac8e54",
+      "reserve": "0x41140cb9628ae2d5077933ea8188f6de5c87e130",
+      "quoteVerifier": "0x64921900c30540514951f19cd37c93c86be33998",
+      "fillRouter": "0x81495ca59861b17af926fad46d8b2d9f547479b7",
+      "gradeRegistry": "0x8bd57dab6cccb38979cf19edcc276eb16b09046b",
+      "feeProcessor": "0x36077c5c5cad4f7192fece13d4be9fa5598480ea",
+      "startBlock": 90059003,
+      "engine": {
+        "registry": "0x0b07d49dbfb4f6932e4f11bd0b74d5f9adc5dd59",
+        "rewards": "0x50EDf2Be5C6dA2cF82BB853DD008639A180309F3",
+        "cashoutRouter": "0x4a9ef39ca35ff26e4f21099e8dd8914c1df8bb14",
+        "flashPool": "0xd10E6245961D697d975963682ECe9979E9917fBC",
+        "startBlock": 90058471
+      },
+      "collateral": [
+        {
+          "token": "0x98096d17e191B3dA1d5f99a6D7b3584351b11E18"
+        }
+      ],
+      "cashoutPools": [
+        {
+          "currency0": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+          "currency1": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+          "fee": 8388608,
+          "tickSpacing": 8,
+          "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+          "poolId": "0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d"
+        }
+      ],
+      "rolloverRouter": "0x6b563aD0058c369472968D64c3D4Ad63C86c6513"
+    }
+  },
+  "rolloverExecutor": "0xCB14554904b86b3472F960740aE377b5b711A659"
+}

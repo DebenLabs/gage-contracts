@@ -1,0 +1,68 @@
+name: List a token
+description: Ask gage to accept a token as collateral, or to add a pool or exit route for a token it already accepts.
+title: "[Listing] <symbol>: <new token / new pool or route>"
+labels: ["token-listing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Listing is not guaranteed.** gage screens each token against its published criteria: [Collateral rules](https://docs.gage.cash/protocol/collateral-rules). The tokens accepted today: [Accepted collateral](https://docs.gage.cash/borrow/accepted-collateral). How a request is handled: [LISTING.md](https://github.com/DebenLabs/gage-contracts/blob/main/LISTING.md).
+        This issue is intake only. If the token is admitted, it goes into gage's next listing batch, and the issue is closed with the transaction that listed it.
+        **Never report a vulnerability here:** see [SECURITY.md](https://github.com/DebenLabs/gage-contracts/blob/main/SECURITY.md).
+  - type: dropdown
+    id: request
+    attributes:
+      label: Request
+      options:
+        - List a new token
+        - Add a pool or exit route for a token gage already accepts
+    validations:
+      required: true
+  - type: input
+    id: token
+    attributes:
+      label: Token address
+      description: On Robinhood Chain mainnet (chain ID 4663).
+      placeholder: "0x..."
+    validations:
+      required: true
+  - type: textarea
+    id: route
+    attributes:
+      label: Exit pool or route, and its depth
+      description: The pool or route a sale of this token goes through (exchange, pool address or pool key, fee tier), and its depth, with where anyone can check it.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Stock
+        - Meme
+        - Robinhood Chain ecosystem
+        - Commodity
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Verified source
+      description: A link to the token contract's verified source.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: team
+    attributes:
+      label: Team and links
+      description: Who is behind the token, its website and its public channels.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact
+      description: How gage reaches you beyond this issue.
+    validations:
+      required: true

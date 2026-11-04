@@ -1,0 +1,41 @@
+# Every push: build src/ with the release's compiler settings and compare each deployed contract's creation and
+# runtime bytecode with Sourcify's verified build, and its runtime with the chain. Then build and test the kit.
+name: reproduce
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+permissions:
+  contents: read
+env:
+  FOUNDRY_VERSION: nightly-5e88010a83d1b87b8f4d13058e42a2949d3e9dc0
+jobs:
+  bytecode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: ${{ env.FOUNDRY_VERSION }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sourcify and chain
+        run: node script/reproduce.mjs --tree . --sourcify 4663 --rpc https://rpc.mainnet.chain.robinhood.com
+  kit:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: integrations/lender-amm
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: ${{ env.FOUNDRY_VERSION }}
+      - run: forge build
+      - run: forge test --no-match-path 'test/fork/*' --no-match-test 'test_testnetManifest' --no-match-contract 'RehypoSource(Plug|Script)Test'

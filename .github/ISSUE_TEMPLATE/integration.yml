@@ -1,0 +1,49 @@
+name: Integrate with gage
+description: A hook or rehypothecation source, an aggregator or executor, or an app, agent or front end built on gage.
+title: "[Integration] <project>: <what it does>"
+labels: ["integration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is intake only: gage reviews the integration and answers here, and closes the issue with the transaction that settled it.
+        A Uniswap v4 hook or rehypothecation source: read [PARTNERS.md](https://github.com/DebenLabs/gage-contracts/blob/main/PARTNERS.md) first, and meet its checklist before you open the issue.
+        **Never report a vulnerability here:** see [SECURITY.md](https://github.com/DebenLabs/gage-contracts/blob/main/SECURITY.md).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Hook or rehypothecation source
+        - Aggregator or executor (cash-out, leverage)
+        - App, agent or front end built on the SDK
+    validations:
+      required: true
+  - type: textarea
+    id: addresses
+    attributes:
+      label: Addresses
+      description: Each contract and wallet on Robinhood Chain mainnet (chain ID 4663), one per line, with what it is. Not deployed yet? Say so.
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: Repository and the exact commit you deploy, audit report, documentation, website.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What it does and what it needs from gage. For a hook, also the pool key it serves, each side lent or float-only with its float target, and where each source sends sGAGE and recovered collateral.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact
+      description: How gage reaches you beyond this issue.
+    validations:
+      required: true

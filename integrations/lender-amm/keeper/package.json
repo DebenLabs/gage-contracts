@@ -1,0 +1,27 @@
+{
+  "name": "gage-lender-amm-keeper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Keeper for gage's lender-AMM reference hook: refills the swap float from the gage vaults' free cash and sweeps the excess back, outside swaps",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "once": "tsx src/index.ts --once",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "viem": "2.56.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  }
+}

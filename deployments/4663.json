@@ -1,0 +1,126 @@
+{
+  "chainId": 4663,
+  "release": "intent-v1-r13-20261103",
+  "status": "live",
+  "sourceCommit": "f19f3be0a21d4a6159a78a2ef81a53c9c840c3bb",
+  "_comment": "Each contract this release deployed: its source, address, ABI and source-match record. Contracts a factory creates (partner vaults, per-loan accounts) are not listed: read them from their factory. codeStores holds the creation code a factory creates them from, as data at those addresses.",
+  "contracts": [
+    {
+      "contract": "GageV2TokenRegistry",
+      "source": "src/v2/GageV2TokenRegistry.sol",
+      "address": "0x732fb25c6905d0cbeb639f1226398ab317189ba0",
+      "sourcify": null,
+      "abi": "abi/GageV2TokenRegistry.json"
+    },
+    {
+      "contract": "GageLegacyAdapter",
+      "source": "src/v2/GageLegacyAdapter.sol",
+      "address": "0x6c9661b2d0c2fab991097f4c3332f61d28b71891",
+      "sourcify": null,
+      "abi": "abi/GageLegacyAdapter.json"
+    },
+    {
+      "contract": "GageLegacyParty",
+      "source": "src/v2/GageLegacyParty.sol",
+      "address": "0x7e1e8cb3c19b4f0f91e353e3c76d55a61ac79893",
+      "sourcify": null,
+      "abi": "abi/GageLegacyParty.json"
+    },
+    {
+      "contract": "GageV2Vault",
+      "source": "src/v2/GageV2Vault.sol",
+      "address": "0x0086ec1540719d4199432797e2b6068e6ae5a0e5",
+      "sourcify": null,
+      "abi": "abi/GageV2Vault.json"
+    },
+    {
+      "contract": "GageV2Rewards",
+      "source": "src/v2/GageV2Rewards.sol",
+      "address": "0x614e087972d49dfe6fedbac1333192313af36ad9",
+      "sourcify": null,
+      "abi": "abi/GageV2Rewards.json"
+    },
+    {
+      "contract": "GageV2TokenCollateralAccount",
+      "source": "src/v2/GageV2TokenCollateralAccount.sol",
+      "address": "0x7fc263591f3ff2412b99ed7365e502b7c86350c8",
+      "sourcify": null,
+      "abi": "abi/GageV2TokenCollateralAccount.json"
+    },
+    {
+      "contract": "GageV2CashoutRouter",
+      "source": "src/v2/GageV2CashoutRouter.sol",
+      "address": "0xfa91ee9221300e034916400da4c4fc556633ae15",
+      "sourcify": null,
+      "abi": "abi/GageV2CashoutRouter.json"
+    },
+    {
+      "contract": "MorphoV2ReserveLens",
+      "source": "src/intent/MorphoV2ReserveLens.sol",
+      "address": "0x6a702eaea4f3b45ab352c4f3d5bf721bd0110ced",
+      "sourcify": null,
+      "abi": "abi/MorphoV2ReserveLens.json"
+    },
+    {
+      "contract": "IntentFactory",
+      "source": "src/intent/IntentFactory.sol",
+      "address": "0xb086944b140758b33694220d4fe93c9a8d8618a1",
+      "sourcify": null,
+      "abi": "abi/IntentFactory.json"
+    },
+    {
+      "contract": "IntentVaultViews",
+      "source": "src/intent/IntentVaultViews.sol",
+      "address": "0x3c2b782ffd62034c4f02346fedcbd1f567ede4ab",
+      "sourcify": null,
+      "abi": "abi/IntentVaultViews.json"
+    },
+    {
+      "contract": "IntentQuoteVerifier",
+      "source": "src/intent/IntentQuoteVerifier.sol",
+      "address": "0x6a42924c195c6a38427320c1b49130998a7e75e1",
+      "sourcify": null,
+      "abi": "abi/IntentQuoteVerifier.json"
+    },
+    {
+      "contract": "IntentFillRouter",
+      "source": "src/intent/IntentFillRouter.sol",
+      "address": "0xae9607acb7e14bd37cb714cff8f35b30443133c8",
+      "sourcify": null,
+      "abi": "abi/IntentFillRouter.json"
+    },
+    {
+      "contract": "IntentExitDesk",
+      "source": "src/intent/IntentExitDesk.sol",
+      "address": "0x0c7e23f245377551a7fac3b3d05238ac2e9eefc2",
+      "sourcify": null,
+      "abi": "abi/IntentExitDesk.json"
+    },
+    {
+      "contract": "LoopRouter",
+      "source": "src/loop/LoopRouter.sol",
+      "address": "0xa46b62d5277465a885de5f2dc518d369199aa93c",
+      "sourcify": null,
+      "abi": "abi/LoopRouter.json"
+    },
+    {
+      "contract": "PrivateBorrowRouter",
+      "source": "src/private/PrivateBorrowRouter.sol",
+      "address": "0xdbb8e949659d0d0d2edb075b9ec84c9e479baa45",
+      "sourcify": null,
+      "abi": "abi/PrivateBorrowRouter.json"
+    }
+  ],
+  "codeStores": [
+    {
+      "contract": "IntentVault",
+      "source": "src/intent/IntentVault.sol",
+      "parts": [
+        "0xdddaa2b15647a4d3b127afe40e0d272b4269391b",
+        "0xea1c433f6d303cc27d59c3257c56d58ddff413f7"
+      ],
+      "note": "The factory creates every partner vault from this creation code, held as data in two contracts (SSTORE2: a leading STOP, then one half each).",
+      "abi": "abi/IntentVault.json"
+    }
+  ]
+}
