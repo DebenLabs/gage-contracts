@@ -37,5 +37,9 @@ jobs:
       - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: ${{ env.FOUNDRY_VERSION }}
+      # The rehypo plug and script suites read gage's factory from its build at the repository root (the kit's
+      # fs_permissions name ../../out/GageRehypoSourceFactory.sol): build it there first, with the root's settings.
+      - run: if [ -f src/rehypo/GageRehypoSourceFactory.sol ]; then forge build src/rehypo/GageRehypoSourceFactory.sol; fi
+        working-directory: .
       - run: forge build
       - run: forge test --no-match-path 'test/fork/*' --no-match-test 'test_testnetManifest'

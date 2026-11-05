@@ -73,7 +73,7 @@ LENDER_AMM_MAINNET_FORK_RPC=<a chain 4663 RPC> forge test --match-path test/fork
 ```
 
 The rehypo source's fork test runs gage's rehypo source on mainnet's live PoolManager with real USDG and frxUSD:
-the factory built in `contracts/` (`forge build src/rehypo/GageRehypoSourceFactory.sol` there first), `UnlockCheckedHook`
+the factory built at the repository root (`forge build src/rehypo/GageRehypoSourceFactory.sol` there first), `UnlockCheckedHook`
 on a new pool at one for one, set up as `script/RehypoSource.s.sol` does. The gage vault and the generation deployer's
 record are the plug test's stand-ins: neither is on chain 4663 yet. `LENDER_AMM_MAINNET_FORK_BLOCK` pins the block; the
 RPC must still serve that block's state (the public node keeps only about the last ten minutes, so pin a recent block
