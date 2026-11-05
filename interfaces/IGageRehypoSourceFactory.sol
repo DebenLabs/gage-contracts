@@ -2,7 +2,7 @@
 pragma solidity >=0.8.24 <0.9.0;
 
 /// @notice The rehypo source factory: create and predict a pool token's source. Generated from its build; not deployed yet.
-/// @dev Generated from the build of `src/rehypo/GageRehypoSourceFactory.sol` at f19f3be0a21d.
+/// @dev Generated from the build of `src/rehypo/GageRehypoSourceFactory.sol` at d3aad8097d5c.
 interface IGageRehypoSourceFactory {
     error InvalidConfiguration();
     error SourceCodeNotWritten();

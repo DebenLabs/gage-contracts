@@ -38,4 +38,4 @@ jobs:
         with:
           version: ${{ env.FOUNDRY_VERSION }}
       - run: forge build
-      - run: forge test --no-match-path 'test/fork/*' --no-match-test 'test_testnetManifest' --no-match-contract 'RehypoSource(Plug|Script)Test'
+      - run: forge test --no-match-path 'test/fork/*' --no-match-test 'test_testnetManifest'

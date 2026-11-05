@@ -64,11 +64,29 @@ if (!has('no-build')) {
   run('forge', ['build']);
 }
 const out = path.join(tree, 'out');
+// The artifact compiled from `source`: at out/<File>.sol/, or where forge nests a second contract of the same name
+// apart (out/<dir>/<File>.sol/).
+const artifactFiles = new Map();
 const artifactOf = (dir, source, contract) => {
-  const file = path.join(dir, path.basename(source), `${contract}.json`);
-  if (!fs.existsSync(file)) return null;
-  const artifact = json(file);
-  return artifact.metadata?.settings?.compilationTarget?.[source] === contract ? artifact : null;
+  if (!artifactFiles.has(dir)) {
+    const files = [];
+    const walk = (d, depth) => {
+      for (const e of fs.existsSync(d) ? fs.readdirSync(d, {withFileTypes: true}) : []) {
+        if (!e.isDirectory()) continue;
+        if (e.name.endsWith('.sol')) files.push(path.join(d, e.name));
+        else if (e.name !== 'build-info' && depth < 4) walk(path.join(d, e.name), depth + 1);
+      }
+    };
+    walk(dir, 0);
+    artifactFiles.set(dir, files);
+  }
+  for (const solDir of artifactFiles.get(dir)) {
+    const file = path.join(solDir, `${contract}.json`);
+    if (!fs.existsSync(file)) continue;
+    const artifact = json(file);
+    if (artifact.metadata?.settings?.compilationTarget?.[source] === contract) return artifact;
+  }
+  return null;
 };
 
 const deployment = fs.readdirSync(path.join(tree, 'deployments')).filter((f) => /^\d+\.json$/.test(f)).map((f) => json(path.join(tree, 'deployments', f)))[0];
@@ -115,6 +133,20 @@ const masked = (code, refs) => {
 };
 const sourcify = opt('sourcify');
 const rpc = opt('rpc');
+// eth_getCode, retried: a public RPC that rate-limits answers an error, never code, and that is no mismatch.
+const codeAt = async (address) => {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const r = await fetch(rpc, {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify({jsonrpc: '2.0', id: 1, method: 'eth_getCode', params: [address, 'latest']}), signal: AbortSignal.timeout(60_000)});
+      const body = r.ok ? await r.json() : null;
+      if (typeof body?.result === 'string') return body.result;
+      if (attempt >= 6) throw new Error(`eth_getCode ${address}: ${body?.error?.message ?? `HTTP ${r.status}`}`);
+    } catch (e) {
+      if (attempt >= 6) throw e;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 500 * 2 ** attempt));
+  }
+};
 for (const c of deployment.contracts) {
   if (!c.address || (!sourcify && !rpc)) continue;
   const artifact = built.get(`${c.source}:${c.contract}`);
@@ -129,8 +161,7 @@ for (const c of deployment.contracts) {
     if (!(creation && runtime)) problems.push(`${c.contract} at ${c.address}: Sourcify ${r.ok ? [!creation && 'creation', !runtime && 'runtime'].filter(Boolean).join(' and ') + ' differ' : `HTTP ${r.status}`}`);
   }
   if (rpc) {
-    const r = await fetch(rpc, {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify({jsonrpc: '2.0', id: 1, method: 'eth_getCode', params: [c.address, 'latest']}), signal: AbortSignal.timeout(60_000)});
-    const code = (await r.json()).result ?? '0x';
+    const code = await codeAt(c.address);
     const refs = artifact.deployedBytecode.immutableReferences;
     const ok = masked(code, refs) === masked(artifact.deployedBytecode.object, refs);
     results.push({check: 'chain', contract: c.contract, address: c.address, ok});
@@ -142,8 +173,7 @@ for (const s of rpc ? stores : []) {
   if (!artifact) continue;
   let joined = '';
   for (const address of s.parts) {
-    const r = await fetch(rpc, {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify({jsonrpc: '2.0', id: 1, method: 'eth_getCode', params: [address, 'latest']}), signal: AbortSignal.timeout(60_000)});
-    const code = ((await r.json()).result ?? '0x').replace(/^0x/, '');
+    const code = (await codeAt(address)).replace(/^0x/, '');
     joined += code.startsWith('00') ? code.slice(2) : `<${address} has no leading STOP>`;
   }
   const ok = `0x${joined}` === artifact.bytecode.object;

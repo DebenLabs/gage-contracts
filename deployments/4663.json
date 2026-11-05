@@ -1,117 +1,1292 @@
 {
   "chainId": 4663,
-  "release": "intent-v1-r13-20261103",
+  "release": "mainnet-20261105",
   "status": "live",
-  "sourceCommit": "f19f3be0a21d4a6159a78a2ef81a53c9c840c3bb",
+  "sourceCommit": "d3aad8097d5c2837a2cbed0a8c97ecb87e9dc0ff",
   "_comment": "Each contract this release deployed: its source, address, ABI and source-match record. Contracts a factory creates (partner vaults, per-loan accounts) are not listed: read them from their factory. codeStores holds the creation code a factory creates them from, as data at those addresses.",
   "contracts": [
     {
       "contract": "GageV2TokenRegistry",
+      "label": "USDG registry",
       "source": "src/v2/GageV2TokenRegistry.sol",
       "address": "0x732fb25c6905d0cbeb639f1226398ab317189ba0",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:32Z"
+      },
       "abi": "abi/GageV2TokenRegistry.json"
     },
     {
       "contract": "GageLegacyAdapter",
+      "label": "USDG core's adapter",
       "source": "src/v2/GageLegacyAdapter.sol",
       "address": "0x6c9661b2d0c2fab991097f4c3332f61d28b71891",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:36Z"
+      },
       "abi": "abi/GageLegacyAdapter.json"
     },
     {
       "contract": "GageLegacyParty",
+      "label": "USDG core's adapter, created by GageLegacyAdapter",
       "source": "src/v2/GageLegacyParty.sol",
       "address": "0x7e1e8cb3c19b4f0f91e353e3c76d55a61ac79893",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:33Z"
+      },
       "abi": "abi/GageLegacyParty.json"
     },
     {
       "contract": "GageV2Vault",
+      "label": "USDG core",
       "source": "src/v2/GageV2Vault.sol",
       "address": "0x0086ec1540719d4199432797e2b6068e6ae5a0e5",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:45Z"
+      },
       "abi": "abi/GageV2Vault.json"
     },
     {
       "contract": "GageV2Rewards",
+      "label": "USDG core, created by GageV2Vault",
       "source": "src/v2/GageV2Rewards.sol",
       "address": "0x614e087972d49dfe6fedbac1333192313af36ad9",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:36Z"
+      },
       "abi": "abi/GageV2Rewards.json"
     },
     {
       "contract": "GageV2TokenCollateralAccount",
+      "label": "USDG core, created by GageV2Vault",
       "source": "src/v2/GageV2TokenCollateralAccount.sol",
       "address": "0x7fc263591f3ff2412b99ed7365e502b7c86350c8",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:35Z"
+      },
       "abi": "abi/GageV2TokenCollateralAccount.json"
     },
     {
       "contract": "GageV2CashoutRouter",
+      "label": "USDG cash-out router",
       "source": "src/v2/GageV2CashoutRouter.sol",
       "address": "0xfa91ee9221300e034916400da4c4fc556633ae15",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:42Z"
+      },
       "abi": "abi/GageV2CashoutRouter.json"
     },
     {
       "contract": "MorphoV2ReserveLens",
+      "label": "USDG reserve lens",
       "source": "src/intent/MorphoV2ReserveLens.sol",
       "address": "0x6a702eaea4f3b45ab352c4f3d5bf721bd0110ced",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:38Z"
+      },
       "abi": "abi/MorphoV2ReserveLens.json"
     },
     {
+      "contract": "GradeRegistry",
+      "label": "USDG grade registry, kept from the previous generation",
+      "source": "src/earn/GradeRegistry.sol",
+      "address": "0x897b15ea30923f9adbea4637aaee98722480cb3d",
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-10-16T08:01:24Z"
+      },
+      "abi": "abi/GradeRegistry.json"
+    },
+    {
       "contract": "IntentFactory",
+      "label": "USDG factory",
       "source": "src/intent/IntentFactory.sol",
       "address": "0xb086944b140758b33694220d4fe93c9a8d8618a1",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:41Z"
+      },
       "abi": "abi/IntentFactory.json"
     },
     {
       "contract": "IntentVaultViews",
+      "label": "USDG factory, created by IntentFactory",
       "source": "src/intent/IntentVaultViews.sol",
       "address": "0x3c2b782ffd62034c4f02346fedcbd1f567ede4ab",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:48Z"
+      },
       "abi": "abi/IntentVaultViews.json"
     },
     {
       "contract": "IntentQuoteVerifier",
+      "label": "USDG quote verifier",
       "source": "src/intent/IntentQuoteVerifier.sol",
       "address": "0x6a42924c195c6a38427320c1b49130998a7e75e1",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:40Z"
+      },
       "abi": "abi/IntentQuoteVerifier.json"
     },
     {
       "contract": "IntentFillRouter",
+      "label": "USDG fill router",
       "source": "src/intent/IntentFillRouter.sol",
       "address": "0xae9607acb7e14bd37cb714cff8f35b30443133c8",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:41Z"
+      },
       "abi": "abi/IntentFillRouter.json"
     },
     {
       "contract": "IntentExitDesk",
+      "label": "exit desk, shared by every generation",
       "source": "src/intent/IntentExitDesk.sol",
       "address": "0x0c7e23f245377551a7fac3b3d05238ac2e9eefc2",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:42Z"
+      },
       "abi": "abi/IntentExitDesk.json"
     },
     {
       "contract": "LoopRouter",
+      "label": "USDG loop router",
       "source": "src/loop/LoopRouter.sol",
       "address": "0xa46b62d5277465a885de5f2dc518d369199aa93c",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:44Z"
+      },
       "abi": "abi/LoopRouter.json"
     },
     {
       "contract": "PrivateBorrowRouter",
+      "label": "USDG private borrow router",
       "source": "src/private/PrivateBorrowRouter.sol",
       "address": "0xdbb8e949659d0d0d2edb075b9ec84c9e479baa45",
-      "sourcify": null,
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:43Z"
+      },
       "abi": "abi/PrivateBorrowRouter.json"
+    },
+    {
+      "contract": "NuntiusPriceSource",
+      "label": "USDG one-day settlement",
+      "source": "src/oneday/NuntiusPriceSource.sol",
+      "address": "0xbF042AE7216Ed5176790e19F463DbAB878f5caE8",
+      "group": "USDG generation (Intent V1, r13)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:41Z"
+      },
+      "abi": "abi/NuntiusPriceSource.json"
+    },
+    {
+      "contract": "IntentAssetFeeProcessor",
+      "label": "NVDA fee processor",
+      "source": "src/intent/IntentAssetFeeProcessor.sol",
+      "address": "0x5eF8697a5fD43d4c593c6E087d0F2a2B8ff2E584",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:01Z"
+      },
+      "abi": "abi/IntentAssetFeeProcessor.json"
+    },
+    {
+      "contract": "IntentClosedReserve",
+      "label": "NVDA reserve",
+      "source": "src/intent/IntentClosedReserve.sol",
+      "address": "0xB384a8419931703f651d87A02856ced67141139f",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:01Z"
+      },
+      "abi": "abi/IntentClosedReserve.json"
+    },
+    {
+      "contract": "GageV2TokenRegistry",
+      "label": "NVDA registry",
+      "source": "src/v2/GageV2TokenRegistry.sol",
+      "address": "0x1897cb1bfC61507259073086810F94BCFb609955",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:01Z"
+      },
+      "abi": "abi/GageV2TokenRegistry.json"
+    },
+    {
+      "contract": "GageV2Vault",
+      "label": "NVDA core",
+      "source": "src/v2/GageV2Vault.sol",
+      "address": "0xe0dDd6869677d3F5A2BC48375FC899B10A6848E1",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:08Z"
+      },
+      "abi": "abi/GageV2Vault.json"
+    },
+    {
+      "contract": "GageV2Rewards",
+      "label": "NVDA core, created by GageV2Vault",
+      "source": "src/v2/GageV2Rewards.sol",
+      "address": "0x25c3976ca28D2B9265050D290a58dF46864A2D5d",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:03Z"
+      },
+      "abi": "abi/GageV2Rewards.json"
+    },
+    {
+      "contract": "GageV2TokenCollateralAccount",
+      "label": "NVDA core, created by GageV2Vault",
+      "source": "src/v2/GageV2TokenCollateralAccount.sol",
+      "address": "0xb3c7f3EFE112145ad338448F6c4AF4492f9Af233",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:02Z"
+      },
+      "abi": "abi/GageV2TokenCollateralAccount.json"
+    },
+    {
+      "contract": "GageV2CashoutRouter",
+      "label": "NVDA cash-out router",
+      "source": "src/v2/GageV2CashoutRouter.sol",
+      "address": "0xF30ad2ED957e74d36774168c63DfC43C8B025e91",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:12Z"
+      },
+      "abi": "abi/GageV2CashoutRouter.json"
+    },
+    {
+      "contract": "GradeRegistry",
+      "label": "NVDA grade registry",
+      "source": "src/earn/GradeRegistry.sol",
+      "address": "0xCA7e4819383f1842f42E64d7E12E066551Ac4757",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:04Z"
+      },
+      "abi": "abi/GradeRegistry.json"
+    },
+    {
+      "contract": "IntentFactory",
+      "label": "NVDA factory",
+      "source": "src/intent/IntentFactory.sol",
+      "address": "0xd1Fc8951289372C7260Ac0F7BC830bAbA49F109c",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:11Z"
+      },
+      "abi": "abi/IntentFactory.json"
+    },
+    {
+      "contract": "IntentVaultViews",
+      "label": "NVDA factory, created by IntentFactory",
+      "source": "src/intent/IntentVaultViews.sol",
+      "address": "0x5abF84c75cBDDcBc396045E4a683C544809De2BA",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:08Z"
+      },
+      "abi": "abi/IntentVaultViews.json"
+    },
+    {
+      "contract": "IntentQuoteVerifier",
+      "label": "NVDA quote verifier",
+      "source": "src/intent/IntentQuoteVerifier.sol",
+      "address": "0xDF320f2FD7D6075571E0f083ff04571D9ACdeb46",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:08Z"
+      },
+      "abi": "abi/IntentQuoteVerifier.json"
+    },
+    {
+      "contract": "IntentFillRouter",
+      "label": "NVDA fill router",
+      "source": "src/intent/IntentFillRouter.sol",
+      "address": "0x9c748Ebd8f7691E1aC9E670E0dE96920791D9932",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:10Z"
+      },
+      "abi": "abi/IntentFillRouter.json"
+    },
+    {
+      "contract": "LendRewardsBridge",
+      "label": "NVDA",
+      "source": "src/intent/LendRewardsBridge.sol",
+      "address": "0x020B2F852ae8b0Fa83D0C3F0924A63D65EF899D3",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:13Z"
+      },
+      "abi": "abi/LendRewardsBridge.json"
+    },
+    {
+      "contract": "LendRewardsLender",
+      "label": "NVDA rewards bridge, created by LendRewardsBridge",
+      "source": "src/intent/LendRewardsLender.sol",
+      "address": "0xf4c708Dc58F14a8BC914b4cB64cDc92da7cF7600",
+      "group": "NVDA generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:05Z"
+      },
+      "abi": "abi/LendRewardsLender.json"
+    },
+    {
+      "contract": "IntentAssetFeeProcessor",
+      "label": "HIMS fee processor",
+      "source": "src/intent/IntentAssetFeeProcessor.sol",
+      "address": "0x53f952a05Ac750aca7591DBa2D386762EfBA637A",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:24Z"
+      },
+      "abi": "abi/IntentAssetFeeProcessor.json"
+    },
+    {
+      "contract": "IntentClosedReserve",
+      "label": "HIMS reserve",
+      "source": "src/intent/IntentClosedReserve.sol",
+      "address": "0x2677299Eaa9Dc7B0dd2Aac972C63B20ffe2C87D8",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:24Z"
+      },
+      "abi": "abi/IntentClosedReserve.json"
+    },
+    {
+      "contract": "GageV2TokenRegistry",
+      "label": "HIMS registry",
+      "source": "src/v2/GageV2TokenRegistry.sol",
+      "address": "0xA077B4D108544EFe90e9d6D1348C3E6c3E071BB1",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:25Z"
+      },
+      "abi": "abi/GageV2TokenRegistry.json"
+    },
+    {
+      "contract": "GageV2Vault",
+      "label": "HIMS core",
+      "source": "src/v2/GageV2Vault.sol",
+      "address": "0xc64C71f1A989E1830948D1ADCB43a2b5f5a8DbA1",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:34Z"
+      },
+      "abi": "abi/GageV2Vault.json"
+    },
+    {
+      "contract": "GageV2Rewards",
+      "label": "HIMS core, created by GageV2Vault",
+      "source": "src/v2/GageV2Rewards.sol",
+      "address": "0x4BEa4A533Ef7463fc67565b9Ac96F7eE1AF93AE2",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:26Z"
+      },
+      "abi": "abi/GageV2Rewards.json"
+    },
+    {
+      "contract": "GageV2TokenCollateralAccount",
+      "label": "HIMS core, created by GageV2Vault",
+      "source": "src/v2/GageV2TokenCollateralAccount.sol",
+      "address": "0x10CDfD654220b008c45A44F89c20FD502e3Bbc5A",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:26Z"
+      },
+      "abi": "abi/GageV2TokenCollateralAccount.json"
+    },
+    {
+      "contract": "GageV2CashoutRouter",
+      "label": "HIMS cash-out router",
+      "source": "src/v2/GageV2CashoutRouter.sol",
+      "address": "0xf092DA59586b0bBDF9eb9B9C68234887C83eD473",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:33Z"
+      },
+      "abi": "abi/GageV2CashoutRouter.json"
+    },
+    {
+      "contract": "GradeRegistry",
+      "label": "HIMS grade registry",
+      "source": "src/earn/GradeRegistry.sol",
+      "address": "0x37Ce0efc2013a5054BE561B9cEeb1D25C4574Ea1",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:26Z"
+      },
+      "abi": "abi/GradeRegistry.json"
+    },
+    {
+      "contract": "IntentFactory",
+      "label": "HIMS factory",
+      "source": "src/intent/IntentFactory.sol",
+      "address": "0x76030f3fd8631a2839D79fEfBf5EFf124229734a",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:33Z"
+      },
+      "abi": "abi/IntentFactory.json"
+    },
+    {
+      "contract": "IntentVaultViews",
+      "label": "HIMS factory, created by IntentFactory",
+      "source": "src/intent/IntentVaultViews.sol",
+      "address": "0x0F57f212F92f5514216e12080489D0D1a5C1B344",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:28Z"
+      },
+      "abi": "abi/IntentVaultViews.json"
+    },
+    {
+      "contract": "IntentQuoteVerifier",
+      "label": "HIMS quote verifier",
+      "source": "src/intent/IntentQuoteVerifier.sol",
+      "address": "0x6260cd08D8aE6d635b58966Ac3B2EcfA3e4dC2A7",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:32Z"
+      },
+      "abi": "abi/IntentQuoteVerifier.json"
+    },
+    {
+      "contract": "IntentFillRouter",
+      "label": "HIMS fill router",
+      "source": "src/intent/IntentFillRouter.sol",
+      "address": "0x3C472D54D5c51cFFa682e85A86F7562fF368e53D",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:32Z"
+      },
+      "abi": "abi/IntentFillRouter.json"
+    },
+    {
+      "contract": "LendRewardsBridge",
+      "label": "HIMS",
+      "source": "src/intent/LendRewardsBridge.sol",
+      "address": "0x1cF5Eb476D5200ceF62c7FBBDf872b31AE3A2E82",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:34Z"
+      },
+      "abi": "abi/LendRewardsBridge.json"
+    },
+    {
+      "contract": "LendRewardsLender",
+      "label": "HIMS rewards bridge, created by LendRewardsBridge",
+      "source": "src/intent/LendRewardsLender.sol",
+      "address": "0x25E4739beAD723CB500f7E438C245ab4f6Acc9c9",
+      "group": "HIMS generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:30Z"
+      },
+      "abi": "abi/LendRewardsLender.json"
+    },
+    {
+      "contract": "IntentAssetFeeProcessor",
+      "label": "GLD fee processor",
+      "source": "src/intent/IntentAssetFeeProcessor.sol",
+      "address": "0xcAB24b35F7A3B4FcC958ac56422F0D86A77C84f2",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:47Z"
+      },
+      "abi": "abi/IntentAssetFeeProcessor.json"
+    },
+    {
+      "contract": "IntentClosedReserve",
+      "label": "GLD reserve",
+      "source": "src/intent/IntentClosedReserve.sol",
+      "address": "0x799BB6b361E1e310D4bC9e31901E5B89Ec3153b2",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:47Z"
+      },
+      "abi": "abi/IntentClosedReserve.json"
+    },
+    {
+      "contract": "GageV2TokenRegistry",
+      "label": "GLD registry",
+      "source": "src/v2/GageV2TokenRegistry.sol",
+      "address": "0x79e64d21F0514BC5aaAFc332D1A1096F0368Ae4c",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:48Z"
+      },
+      "abi": "abi/GageV2TokenRegistry.json"
+    },
+    {
+      "contract": "GageV2Vault",
+      "label": "GLD core",
+      "source": "src/v2/GageV2Vault.sol",
+      "address": "0x1E8bd7348C84Ab0A0faBE61DCA1249f75B4e9275",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:55Z"
+      },
+      "abi": "abi/GageV2Vault.json"
+    },
+    {
+      "contract": "GageV2Rewards",
+      "label": "GLD core, created by GageV2Vault",
+      "source": "src/v2/GageV2Rewards.sol",
+      "address": "0xa83939Ff28EcdB75D96C653717CF07a638ecA4Af",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:49Z"
+      },
+      "abi": "abi/GageV2Rewards.json"
+    },
+    {
+      "contract": "GageV2TokenCollateralAccount",
+      "label": "GLD core, created by GageV2Vault",
+      "source": "src/v2/GageV2TokenCollateralAccount.sol",
+      "address": "0x0fbaC3e2d16b5CF5865fB77B04D83A1aae5b8660",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:49Z"
+      },
+      "abi": "abi/GageV2TokenCollateralAccount.json"
+    },
+    {
+      "contract": "GageV2CashoutRouter",
+      "label": "GLD cash-out router",
+      "source": "src/v2/GageV2CashoutRouter.sol",
+      "address": "0x2d89e340e2ef83729fb6Dc9da61E425fa0e46D70",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:55Z"
+      },
+      "abi": "abi/GageV2CashoutRouter.json"
+    },
+    {
+      "contract": "GradeRegistry",
+      "label": "GLD grade registry",
+      "source": "src/earn/GradeRegistry.sol",
+      "address": "0xf15D75520bcebd6a1A9ffcdcFDcABa6F9474c0B3",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:50Z"
+      },
+      "abi": "abi/GradeRegistry.json"
+    },
+    {
+      "contract": "IntentFactory",
+      "label": "GLD factory",
+      "source": "src/intent/IntentFactory.sol",
+      "address": "0x2a09498f11A70c4F2AB0a4e1B3323699bF7cC143",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:53Z"
+      },
+      "abi": "abi/IntentFactory.json"
+    },
+    {
+      "contract": "IntentVaultViews",
+      "label": "GLD factory, created by IntentFactory",
+      "source": "src/intent/IntentVaultViews.sol",
+      "address": "0x25E5ef391E6d50DECa1D795593dbb90Ab0043cC6",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:52Z"
+      },
+      "abi": "abi/IntentVaultViews.json"
+    },
+    {
+      "contract": "IntentQuoteVerifier",
+      "label": "GLD quote verifier",
+      "source": "src/intent/IntentQuoteVerifier.sol",
+      "address": "0x619781E2aF98973FE8200E70fd77bdd782dfc673",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:53Z"
+      },
+      "abi": "abi/IntentQuoteVerifier.json"
+    },
+    {
+      "contract": "IntentFillRouter",
+      "label": "GLD fill router",
+      "source": "src/intent/IntentFillRouter.sol",
+      "address": "0x6E07B640af910B8eF1c7E2e6B24a417558061F53",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:55Z"
+      },
+      "abi": "abi/IntentFillRouter.json"
+    },
+    {
+      "contract": "LendRewardsBridge",
+      "label": "GLD",
+      "source": "src/intent/LendRewardsBridge.sol",
+      "address": "0x7888fB3330141c1fD9682C753f88F280B41FA458",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:57Z"
+      },
+      "abi": "abi/LendRewardsBridge.json"
+    },
+    {
+      "contract": "LendRewardsLender",
+      "label": "GLD rewards bridge, created by LendRewardsBridge",
+      "source": "src/intent/LendRewardsLender.sol",
+      "address": "0xfdAC7EAb0504A24FC5439EBF47d97C08f151F1e9",
+      "group": "GLD generation",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:27:53Z"
+      },
+      "abi": "abi/LendRewardsLender.json"
+    },
+    {
+      "contract": "IntentFactory",
+      "label": "frxUSD factory",
+      "source": "src/intent/IntentFactory.sol",
+      "address": "0xb8aa2f7e1448220D8503262ACED7ecF94231828A",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:13Z"
+      },
+      "abi": "abi/IntentFactory.json"
+    },
+    {
+      "contract": "IntentVaultViews",
+      "label": "frxUSD factory, created by IntentFactory",
+      "source": "src/intent/IntentVaultViews.sol",
+      "address": "0x916465ff07248eC162985f80c0F46daef4A3948d",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:12Z"
+      },
+      "abi": "abi/IntentVaultViews.json"
+    },
+    {
+      "contract": "GageV2Vault",
+      "label": "frxUSD core",
+      "source": "src/v2/GageV2Vault.sol",
+      "address": "0x7511F3a302481eEa40982510f2B23D8fCA8C24BA",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:17Z"
+      },
+      "abi": "abi/GageV2Vault.json"
+    },
+    {
+      "contract": "GageV2Rewards",
+      "label": "frxUSD core, created by GageV2Vault",
+      "source": "src/v2/GageV2Rewards.sol",
+      "address": "0xFcb084a63ffe04Bb757fdffa9841132abFBB4F83",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:13Z"
+      },
+      "abi": "abi/GageV2Rewards.json"
+    },
+    {
+      "contract": "GageV2TokenCollateralAccount",
+      "label": "frxUSD core, created by GageV2Vault",
+      "source": "src/v2/GageV2TokenCollateralAccount.sol",
+      "address": "0x16b992c007ceE8c4041fe395b14940B3d87B52D7",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:12Z"
+      },
+      "abi": "abi/GageV2TokenCollateralAccount.json"
+    },
+    {
+      "contract": "GageV2TokenRegistry",
+      "label": "frxUSD registry",
+      "source": "src/v2/GageV2TokenRegistry.sol",
+      "address": "0x6337D154b172BAEaA8c85C20444BCD2F4f91716E",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:13Z"
+      },
+      "abi": "abi/GageV2TokenRegistry.json"
+    },
+    {
+      "contract": "IntentClosedReserve",
+      "label": "frxUSD reserve",
+      "source": "src/intent/IntentClosedReserve.sol",
+      "address": "0x6dc768b5b59929308De13795a10A2432e61CcEB8",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:14Z"
+      },
+      "abi": "abi/IntentClosedReserve.json"
+    },
+    {
+      "contract": "IntentAssetV4FeeProcessor",
+      "label": "frxUSD fee processor",
+      "source": "src/intent/IntentAssetV4FeeProcessor.sol",
+      "address": "0x426137090eA84C24E2093fB3cF1c4c0AdBa32d00",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:16Z"
+      },
+      "abi": "abi/IntentAssetV4FeeProcessor.json"
+    },
+    {
+      "contract": "IntentQuoteVerifier",
+      "label": "frxUSD quote verifier",
+      "source": "src/intent/IntentQuoteVerifier.sol",
+      "address": "0xa1003C2A15202bdE3f099DDf5B167cbd773C10d1",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:16Z"
+      },
+      "abi": "abi/IntentQuoteVerifier.json"
+    },
+    {
+      "contract": "IntentFillRouter",
+      "label": "frxUSD fill router",
+      "source": "src/intent/IntentFillRouter.sol",
+      "address": "0x44Efb32BeC421dc8D47d38007702D527a0FF6975",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:17Z"
+      },
+      "abi": "abi/IntentFillRouter.json"
+    },
+    {
+      "contract": "GradeRegistry",
+      "label": "frxUSD grade registry",
+      "source": "src/earn/GradeRegistry.sol",
+      "address": "0x8d5a12ff8865bA3652A5FD53d08Bd1ef6ad7F619",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:16Z"
+      },
+      "abi": "abi/GradeRegistry.json"
+    },
+    {
+      "contract": "V4CashoutRouter",
+      "label": "frxUSD cash-out router",
+      "source": "src/intent/V4CashoutRouter.sol",
+      "address": "0xB7d2861e0269941e552E1eBa1cA195044516Cf2e",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:18Z"
+      },
+      "abi": "abi/V4CashoutRouter.json"
+    },
+    {
+      "contract": "RolloverRouter",
+      "label": "frxUSD rollover router",
+      "source": "src/rollover/RolloverRouter.sol",
+      "address": "0x31060bF34E8755750bb52Ae91c44AD8a70e41E15",
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:19Z"
+      },
+      "abi": "abi/RolloverRouter.json"
+    },
+    {
+      "contract": "GenerationDeployer",
+      "source": "src/intent/GenerationDeployer.sol",
+      "address": "0xcea38204C97e9745f831978357d562E5CcC6834F",
+      "group": "GenerationDeployer",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:26:22Z"
+      },
+      "abi": "abi/GenerationDeployer.json"
+    },
+    {
+      "contract": "RolloverRouter",
+      "label": "USDG, intent-v1-r13-20261103",
+      "source": "src/rollover/RolloverRouter.sol",
+      "address": "0x3bee806F87386e71713516bA0b91dAE21D576f72",
+      "group": "Rollover routers",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T05:38:18Z"
+      },
+      "abi": "abi/RolloverRouter.json"
+    },
+    {
+      "contract": "RolloverRouter",
+      "label": "NVDA, lend-nvda-r12-20261103",
+      "source": "src/rollover/RolloverRouter.sol",
+      "address": "0xB47D90C6af419353536E023Ae00D132c68226c40",
+      "group": "Rollover routers",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T09:40:26Z"
+      },
+      "abi": "abi/RolloverRouter.json"
+    },
+    {
+      "contract": "RolloverRouter",
+      "label": "HIMS, lend-hims-r12-20261103",
+      "source": "src/rollover/RolloverRouter.sol",
+      "address": "0xa27F40174B6293252E0FDbCFf8c3B50868156EE0",
+      "group": "Rollover routers",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T09:40:27Z"
+      },
+      "abi": "abi/RolloverRouter.json"
+    },
+    {
+      "contract": "RolloverRouter",
+      "label": "GLD, lend-gld-r13-20261103",
+      "source": "src/rollover/RolloverRouter.sol",
+      "address": "0xb078114872369a5f43E9b8548C501dbb88ef84ac",
+      "group": "Rollover routers",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T11:26:26Z"
+      },
+      "abi": "abi/RolloverRouter.json"
+    },
+    {
+      "contract": "LoopRouter",
+      "label": "NVDA puts, lend-nvda-r12-20261103",
+      "source": "src/loop/LoopRouter.sol",
+      "address": "0xe5A69a1DEd8437bbFDe19263B626aAE4Ec1f09cf",
+      "group": "NVDA puts",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T11:26:09Z"
+      },
+      "abi": "abi/LoopRouter.json"
+    },
+    {
+      "contract": "PutRouter",
+      "label": "NVDA puts, lend-nvda-r12-20261103",
+      "source": "src/put/PutRouter.sol",
+      "address": "0x93D6665D881a2DB7d054dBD271dF513dAa52ec99",
+      "group": "NVDA puts",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T11:26:11Z"
+      },
+      "abi": "abi/PutRouter.json"
+    },
+    {
+      "contract": "LPRegistry",
+      "label": "LP lane",
+      "source": "src/lp/LPRegistry.sol",
+      "address": "0xdFCFe33eB08E63dD1f8B7cBCd49f5E960BC85bBC",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:34Z"
+      },
+      "abi": "abi/LPRegistry.json"
+    },
+    {
+      "contract": "LPCore",
+      "label": "LP lane",
+      "source": "src/lp/LPCore.sol",
+      "address": "0x8EDedDadA6be6C81cD838a028910ADDA29365c50",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:45Z"
+      },
+      "abi": "abi/LPCore.json"
+    },
+    {
+      "contract": "LPEscrow",
+      "label": "LP lane, created by LPCore",
+      "source": "src/lp/LPEscrow.sol",
+      "address": "0xe19aae63b2A235C807b89Ff32eF7508237B18b86",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:35Z"
+      },
+      "abi": "abi/LPEscrow.json"
+    },
+    {
+      "contract": "UniV3PositionAdapter",
+      "label": "LP lane, uniswap-v3",
+      "source": "src/lp/adapters/UniV3PositionAdapter.sol",
+      "address": "0x6cEE9304e8f759Edf6BadCdE1d64b01Fb022872a",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:35Z"
+      },
+      "abi": "abi/UniV3PositionAdapter.json"
+    },
+    {
+      "contract": "RamsesV3PositionAdapter",
+      "label": "LP lane, ramses-v3",
+      "source": "src/lp/adapters/RamsesV3PositionAdapter.sol",
+      "address": "0xdc2001A57912164Ecb8139b7D3121955AE3A9320",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:35Z"
+      },
+      "abi": "abi/RamsesV3PositionAdapter.json"
+    },
+    {
+      "contract": "UniV3PositionAdapter",
+      "label": "LP lane, sushiswap-v3",
+      "source": "src/lp/adapters/UniV3PositionAdapter.sol",
+      "address": "0xd9aF6b4BCf9eE6b0bF84279C8d1FD72071cdF2e8",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:36Z"
+      },
+      "abi": "abi/UniV3PositionAdapter.json"
+    },
+    {
+      "contract": "UniV4PositionAdapter",
+      "label": "LP lane, uniswap-v4",
+      "source": "src/lp/adapters/UniV4PositionAdapter.sol",
+      "address": "0xc3dE275A11e0B3783770882F5c4E640eaE45833C",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:36Z"
+      },
+      "abi": "abi/UniV4PositionAdapter.json"
+    },
+    {
+      "contract": "FablesPositionWrapper",
+      "label": "LP lane, fables",
+      "source": "src/lp/fables/FablesPositionWrapper.sol",
+      "address": "0x1a8e8F0aab1C9e58827D86EbAE29Bc3e79CC1B2b",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:40Z"
+      },
+      "abi": "abi/FablesPositionWrapper.json"
+    },
+    {
+      "contract": "FablesShareHolder",
+      "label": "LP lane, fables, created by FablesPositionWrapper",
+      "source": "src/lp/fables/FablesShareHolder.sol",
+      "address": "0xa62edA23A8877912fb938Ed1eBD1BCde4465cC68",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:37Z"
+      },
+      "abi": "abi/FablesShareHolder.json"
+    },
+    {
+      "contract": "FablesPositionAdapter",
+      "label": "LP lane, fables",
+      "source": "src/lp/adapters/FablesPositionAdapter.sol",
+      "address": "0xbaFCd70B060ed26F5a2Cb67e43fe030Cf8981793",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:37Z"
+      },
+      "abi": "abi/FablesPositionAdapter.json"
+    },
+    {
+      "contract": "LPVaultFactory",
+      "label": "LP lane",
+      "source": "src/lp/LPVaultFactory.sol",
+      "address": "0xDDd6afeA325F20Bba4Df0A5a7DB307524bbcbF77",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:38Z"
+      },
+      "abi": "abi/LPVaultFactory.json"
+    },
+    {
+      "contract": "UniV3SwapExecutor",
+      "label": "LP lane, sells 0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "source": "src/lp/executors/UniV3SwapExecutor.sol",
+      "address": "0xd5309aB57BdfaEF1491dB0c91D5c4d1D4c8d814F",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:45Z"
+      },
+      "abi": "abi/UniV3SwapExecutor.json"
+    },
+    {
+      "contract": "UniV3TwoHopSwapExecutor",
+      "label": "LP lane, sells 0x5173D45A1191eE33cBB7D8c7e65f21B04eD54802",
+      "source": "src/lp/executors/UniV3TwoHopSwapExecutor.sol",
+      "address": "0x8Cd6E727C3679649bae14CE9d223E837B906852b",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:38Z"
+      },
+      "abi": "abi/UniV3TwoHopSwapExecutor.json"
+    },
+    {
+      "contract": "UniV3SwapExecutor",
+      "label": "LP lane, sells 0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+      "source": "src/lp/executors/UniV3SwapExecutor.sol",
+      "address": "0x1035E23DF3ac7bf9693dbB5a9F3C0eFe2C2760ad",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:40Z"
+      },
+      "abi": "abi/UniV3SwapExecutor.json"
+    },
+    {
+      "contract": "UniV4SwapExecutor",
+      "label": "LP lane, sells 0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
+      "source": "src/lp/executors/UniV4SwapExecutor.sol",
+      "address": "0xa26570618E08218BF3fFd5bB96382D72Eb2F2ECe",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:40Z"
+      },
+      "abi": "abi/UniV4SwapExecutor.json"
+    },
+    {
+      "contract": "UniV3SwapExecutor",
+      "label": "LP lane, sells 0xC9a981FEE1F9DEc688bb123ccDeCc63D0deBFC4e",
+      "source": "src/lp/executors/UniV3SwapExecutor.sol",
+      "address": "0xEC03f72f59e68b4757c6Ef17295Ae1c18dfD4A46",
+      "group": "LP lane",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T14:28:39Z"
+      },
+      "abi": "abi/UniV3SwapExecutor.json"
+    },
+    {
+      "contract": "FablesGaugeAdapter",
+      "label": "GAGE/sGAGE pool on the Fables gauges",
+      "source": "src/token/FablesGaugeAdapter.sol",
+      "address": "0xeE83C8e5A453cE582C90F487F0E050B69425D291",
+      "group": "Fables gauge adapter",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T13:58:20Z"
+      },
+      "abi": "abi/FablesGaugeAdapter.json"
+    },
+    {
+      "contract": "GageRehypoSourceFactory",
+      "source": "src/rehypo/GageRehypoSourceFactory.sol",
+      "address": "0xab0425C2f5D5bab9867b42EFE3c228BAD2239419",
+      "group": "Rehypo source factory",
+      "sourcify": {
+        "creationMatch": "match",
+        "runtimeMatch": "match",
+        "verifiedAt": "2026-11-05T11:27:40Z"
+      },
+      "abi": "abi/GageRehypoSourceFactory.json"
     }
   ],
   "codeStores": [
+    {
+      "contract": "LPVault",
+      "source": "src/lp/LPVault.sol",
+      "parts": [
+        "0x23780D258feB6a72bc4cBb9aaC277d3e6d0b133c",
+        "0x362FB273f756fFf32230BDb2FD5A574F7013aBcc"
+      ],
+      "group": "LP lane",
+      "note": "the LP vault factory creates each LPVault from this code (its CODE_A and CODE_B)",
+      "abi": "abi/LPVault.json"
+    },
+    {
+      "contract": "GageRehypoSource",
+      "source": "src/rehypo/GageRehypoSource.sol",
+      "parts": [
+        "0xc23ea8ce1e150289bdb28519e7d751038b6330a4"
+      ],
+      "group": "Rehypo source factory",
+      "note": "the rehypo source factory creates each source from this code (its SOURCE_CODE)",
+      "abi": "abi/GageRehypoSource.json"
+    },
     {
       "contract": "IntentVault",
       "source": "src/intent/IntentVault.sol",
@@ -119,7 +1294,148 @@
         "0xdddaa2b15647a4d3b127afe40e0d272b4269391b",
         "0xea1c433f6d303cc27d59c3257c56d58ddff413f7"
       ],
-      "note": "The factory creates every partner vault from this creation code, held as data in two contracts (SSTORE2: a leading STOP, then one half each).",
+      "group": "USDG generation (Intent V1, r13)",
+      "abi": "abi/IntentVault.json"
+    },
+    {
+      "contract": "IntentVault",
+      "source": "src/intent/IntentVault.sol",
+      "parts": [
+        "0x9F29354b58799931025613519838f66b3773Bb7F",
+        "0xCe0CaB5A09C7FB888bb38A2194Dcf81E633f1cdD"
+      ],
+      "group": "NVDA generation",
+      "abi": "abi/IntentVault.json"
+    },
+    {
+      "contract": "IntentVault",
+      "source": "src/intent/IntentVault.sol",
+      "parts": [
+        "0xc95FeD047646F9766e1c4D08DE24c9e413453A35",
+        "0x29e59A3e3B420d457BB291888B1E27dAc0AebB42"
+      ],
+      "group": "HIMS generation",
+      "abi": "abi/IntentVault.json"
+    },
+    {
+      "contract": "IntentVault",
+      "source": "src/intent/IntentVault.sol",
+      "parts": [
+        "0x7FC81cc8665664132EdBA623830576b0E0355Db5",
+        "0xf45e730a058f484dc17Cb9d2692265bA439343cA"
+      ],
+      "group": "GLD generation",
+      "abi": "abi/IntentVault.json"
+    },
+    {
+      "contract": "IntentVault",
+      "source": "src/intent/IntentVault.sol",
+      "parts": [
+        "0x8dfA2B25D4A888996b3864B2180B99Db0803c45C",
+        "0xCf97c3aFeBCAE318cEe116f533256c8340C94F30"
+      ],
+      "group": "frxUSD generation (built by the GenerationDeployer)",
+      "abi": "abi/IntentVault.json"
+    },
+    {
+      "contract": "IntentAssetV4FeeProcessor",
+      "source": "src/intent/IntentAssetV4FeeProcessor.sol",
+      "parts": [
+        "0xCb5bB9AA4bf13939F60bb056C2eEb44beE315c2A"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/IntentAssetV4FeeProcessor.json"
+    },
+    {
+      "contract": "IntentClosedReserve",
+      "source": "src/intent/IntentClosedReserve.sol",
+      "parts": [
+        "0x18c0E3C902D015B0C8dd7970d0BE133d46A948e8"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/IntentClosedReserve.json"
+    },
+    {
+      "contract": "GageV2TokenRegistry",
+      "source": "src/v2/GageV2TokenRegistry.sol",
+      "parts": [
+        "0x48Cd041392B49b122CC476883C31742F243382D2"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/GageV2TokenRegistry.json"
+    },
+    {
+      "contract": "GageV2Vault",
+      "source": "src/v2/GageV2Vault.sol",
+      "parts": [
+        "0x4aCfea89cB7B8cA9B19691319EE6A29E75F4D90b",
+        "0xA7D042643C7F07ab2f615A75abF424d762D4102b"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/GageV2Vault.json"
+    },
+    {
+      "contract": "V4CashoutRouter",
+      "source": "src/intent/V4CashoutRouter.sol",
+      "parts": [
+        "0x5Af47072fDB602b8c19ceFddC5aBD06eEB26b0ed"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/V4CashoutRouter.json"
+    },
+    {
+      "contract": "GradeRegistry",
+      "source": "src/earn/GradeRegistry.sol",
+      "parts": [
+        "0xeB008aEeDcC36a053cfF542f41807dB8794125d1"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/GradeRegistry.json"
+    },
+    {
+      "contract": "IntentFactory",
+      "source": "src/intent/IntentFactory.sol",
+      "parts": [
+        "0x22491F2B7A7Cef8225bab8C155601AE636D07bAe"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/IntentFactory.json"
+    },
+    {
+      "contract": "IntentQuoteVerifier",
+      "source": "src/intent/IntentQuoteVerifier.sol",
+      "parts": [
+        "0x26DFd543Ce94591f913D8E40050D8433Ec8734C8"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/IntentQuoteVerifier.json"
+    },
+    {
+      "contract": "IntentFillRouter",
+      "source": "src/intent/IntentFillRouter.sol",
+      "parts": [
+        "0x1A0DEF32C1C4729E693bD93966150e28f5cEc1fF"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/IntentFillRouter.json"
+    },
+    {
+      "contract": "RolloverRouter",
+      "source": "src/rollover/RolloverRouter.sol",
+      "parts": [
+        "0xff1a29aB23ACcD76C5e747678b7cce6f42c48389"
+      ],
+      "group": "GenerationDeployer",
+      "abi": "abi/RolloverRouter.json"
+    },
+    {
+      "contract": "IntentVault",
+      "source": "src/intent/IntentVault.sol",
+      "parts": [
+        "0x8dfA2B25D4A888996b3864B2180B99Db0803c45C",
+        "0xCf97c3aFeBCAE318cEe116f533256c8340C94F30"
+      ],
+      "group": "GenerationDeployer",
       "abi": "abi/IntentVault.json"
     }
   ]

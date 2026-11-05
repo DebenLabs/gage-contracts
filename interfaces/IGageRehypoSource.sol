@@ -4,8 +4,8 @@ pragma solidity >=0.8.24 <0.9.0;
 import {PoolId} from "@uniswap/v4-core/src/types/PoolId.sol";
 import {PoolKey} from "@uniswap/v4-core/src/types/PoolKey.sol";
 
-/// @notice A rehypo source: an ERC-4626 vault per pool token that a partner's hook deposits into. Generated from its build; the source is not deployed yet.
-/// @dev Generated from the build of `src/rehypo/GageRehypoSource.sol` at f19f3be0a21d.
+/// @notice A rehypo source: an ERC-4626 vault per pool token that a partner's hook deposits into. Generated from its build.
+/// @dev Generated from the build of `src/rehypo/GageRehypoSource.sol` at d3aad8097d5c.
 interface IGageRehypoSource {
     error AlreadyBound();
     error AttachTooEarly(uint40 readyAt);

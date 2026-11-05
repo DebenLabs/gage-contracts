@@ -15,6 +15,7 @@ cbor_metadata = false
 additional_compiler_profiles = [
     { name = "v2-native", optimizer_runs = 200, via_ir = true },
     { name = "hybrid", optimizer_runs = 200, via_ir = true },
+    { name = "rehypo", optimizer_runs = 200, via_ir = false },
 ]
 compilation_restrictions = [
     { paths = "src/v2/**", optimizer_runs = 200, via_ir = true },
@@ -22,6 +23,10 @@ compilation_restrictions = [
     { paths = "src/intent/**", optimizer_runs = 200, via_ir = true },
     { paths = "src/private/**", optimizer_runs = 200, via_ir = true },
     { paths = "src/loop/**", optimizer_runs = 200, via_ir = true },
+    { paths = "src/rollover/**", optimizer_runs = 200, via_ir = true },
+    { paths = "src/lp/**", optimizer_runs = 200, via_ir = true },
+    { paths = "src/put/**", optimizer_runs = 200, via_ir = true },
+    { paths = "src/rehypo/**", optimizer_runs = 200, via_ir = false },
 ]
 
 [fmt]

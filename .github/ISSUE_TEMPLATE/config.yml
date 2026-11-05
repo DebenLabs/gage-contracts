@@ -3,6 +3,9 @@ contact_links:
   - name: Report a vulnerability (private)
     url: https://github.com/DebenLabs/gage-contracts/security/advisories/new
     about: Never in a public issue. To claim a bug bounty, follow docs.gage.cash/protocol/bug-bounty.
+  - name: Open a vault
+    url: https://github.com/DebenLabs/gage-contracts/blob/main/docs/integrate/partner-vaults.md#curators-and-creators
+    about: Any address can create and manage a partner vault, with no request to gage. The guide shows how.
   - name: Support
     url: https://gage.cash/support
     about: Help with a loan, a deposit or the app.

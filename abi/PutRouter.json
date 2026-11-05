@@ -1,0 +1,1567 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "fills",
+        "type": "address",
+        "internalType": "contract IntentFillRouter"
+      },
+      {
+        "name": "poolManager",
+        "type": "address",
+        "internalType": "contract IPoolManager"
+      },
+      {
+        "name": "v3Factory",
+        "type": "address",
+        "internalType": "contract IUniV3Factory"
+      },
+      {
+        "name": "initialOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "CORE",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract GageV2Vault"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "FACTORY",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IntentFactory"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "FILLS",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IntentFillRouter"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "MAX_PLANS",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "MAX_WINDOW",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "POOL_MANAGER",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IPoolManager"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "USDG",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IERC20"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "V3_FACTORY",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IUniV3Factory"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "acceptOwnership",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "autoRolls",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "borrower",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "term",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "window",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "rollsLeft",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "withRewards",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "executor",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "until",
+        "type": "uint40",
+        "internalType": "uint40"
+      },
+      {
+        "name": "maxCost",
+        "type": "uint128",
+        "internalType": "uint128"
+      },
+      {
+        "name": "maxSpend",
+        "type": "uint128",
+        "internalType": "uint128"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "cancelAutoRoll",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "close",
+    "inputs": [
+      {
+        "name": "c",
+        "type": "tuple",
+        "internalType": "struct PutRouter.Close",
+        "components": [
+          {
+            "name": "loanId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "swap",
+            "type": "tuple",
+            "internalType": "struct PutRouter.Swap",
+            "components": [
+              {
+                "name": "venue",
+                "type": "uint8",
+                "internalType": "enum PutRouter.Venue"
+              },
+              {
+                "name": "key",
+                "type": "tuple",
+                "internalType": "struct PoolKey",
+                "components": [
+                  {
+                    "name": "currency0",
+                    "type": "address",
+                    "internalType": "Currency"
+                  },
+                  {
+                    "name": "currency1",
+                    "type": "address",
+                    "internalType": "Currency"
+                  },
+                  {
+                    "name": "fee",
+                    "type": "uint24",
+                    "internalType": "uint24"
+                  },
+                  {
+                    "name": "tickSpacing",
+                    "type": "int24",
+                    "internalType": "int24"
+                  },
+                  {
+                    "name": "hooks",
+                    "type": "address",
+                    "internalType": "contract IHooks"
+                  }
+                ]
+              },
+              {
+                "name": "v3Fee",
+                "type": "uint24",
+                "internalType": "uint24"
+              }
+            ]
+          },
+          {
+            "name": "maxSpend",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minBack",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "recipient",
+            "type": "address",
+            "internalType": "address"
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "spent",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "returned",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "evidenceFor",
+    "inputs": [
+      {
+        "name": "borrower",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "pricing",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pause",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "paused",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pendingOwner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "renounceOwnership",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "rescueCollateral",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "roll",
+    "inputs": [
+      {
+        "name": "r",
+        "type": "tuple",
+        "internalType": "struct PutRouter.Roll",
+        "components": [
+          {
+            "name": "loanId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "swap",
+            "type": "tuple",
+            "internalType": "struct PutRouter.Swap",
+            "components": [
+              {
+                "name": "venue",
+                "type": "uint8",
+                "internalType": "enum PutRouter.Venue"
+              },
+              {
+                "name": "key",
+                "type": "tuple",
+                "internalType": "struct PoolKey",
+                "components": [
+                  {
+                    "name": "currency0",
+                    "type": "address",
+                    "internalType": "Currency"
+                  },
+                  {
+                    "name": "currency1",
+                    "type": "address",
+                    "internalType": "Currency"
+                  },
+                  {
+                    "name": "fee",
+                    "type": "uint24",
+                    "internalType": "uint24"
+                  },
+                  {
+                    "name": "tickSpacing",
+                    "type": "int24",
+                    "internalType": "int24"
+                  },
+                  {
+                    "name": "hooks",
+                    "type": "address",
+                    "internalType": "contract IHooks"
+                  }
+                ]
+              },
+              {
+                "name": "v3Fee",
+                "type": "uint24",
+                "internalType": "uint24"
+              }
+            ]
+          },
+          {
+            "name": "maxSpend",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "withRewards",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "pricing",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          }
+        ]
+      },
+      {
+        "name": "plans",
+        "type": "tuple[]",
+        "internalType": "struct IntentQuoteVerifier.Plan[]",
+        "components": [
+          {
+            "name": "engine",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "listingId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "filler",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "token",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "kind",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "collateral",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "principal",
+            "type": "uint128",
+            "internalType": "uint128"
+          },
+          {
+            "name": "cap",
+            "type": "uint128",
+            "internalType": "uint128"
+          },
+          {
+            "name": "term",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "costBps",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "feePolicy",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "epoch",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "issuedAt",
+            "type": "uint40",
+            "internalType": "uint40"
+          },
+          {
+            "name": "expiry",
+            "type": "uint40",
+            "internalType": "uint40"
+          },
+          {
+            "name": "evidence",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "allocations",
+            "type": "tuple[]",
+            "internalType": "struct IntentQuoteVerifier.Allocation[]",
+            "components": [
+              {
+                "name": "vault",
+                "type": "address",
+                "internalType": "address"
+              },
+              {
+                "name": "units",
+                "type": "uint8",
+                "internalType": "uint8"
+              },
+              {
+                "name": "principal",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "interest",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "minimum",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "executionFee",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "maxReserveShares",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "minRateGrade",
+                "type": "uint8",
+                "internalType": "uint8"
+              },
+              {
+                "name": "capBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              },
+              {
+                "name": "managerBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "signatures",
+        "type": "bytes[]",
+        "internalType": "bytes[]"
+      },
+      {
+        "name": "maxReserveShares",
+        "type": "uint256[]",
+        "internalType": "uint256[]"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "id",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "rollFor",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "pricing",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "swap",
+        "type": "tuple",
+        "internalType": "struct PutRouter.Swap",
+        "components": [
+          {
+            "name": "venue",
+            "type": "uint8",
+            "internalType": "enum PutRouter.Venue"
+          },
+          {
+            "name": "key",
+            "type": "tuple",
+            "internalType": "struct PoolKey",
+            "components": [
+              {
+                "name": "currency0",
+                "type": "address",
+                "internalType": "Currency"
+              },
+              {
+                "name": "currency1",
+                "type": "address",
+                "internalType": "Currency"
+              },
+              {
+                "name": "fee",
+                "type": "uint24",
+                "internalType": "uint24"
+              },
+              {
+                "name": "tickSpacing",
+                "type": "int24",
+                "internalType": "int24"
+              },
+              {
+                "name": "hooks",
+                "type": "address",
+                "internalType": "contract IHooks"
+              }
+            ]
+          },
+          {
+            "name": "v3Fee",
+            "type": "uint24",
+            "internalType": "uint24"
+          }
+        ]
+      },
+      {
+        "name": "plans",
+        "type": "tuple[]",
+        "internalType": "struct IntentQuoteVerifier.Plan[]",
+        "components": [
+          {
+            "name": "engine",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "listingId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "filler",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "token",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "kind",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "collateral",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "principal",
+            "type": "uint128",
+            "internalType": "uint128"
+          },
+          {
+            "name": "cap",
+            "type": "uint128",
+            "internalType": "uint128"
+          },
+          {
+            "name": "term",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "costBps",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "feePolicy",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "epoch",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "issuedAt",
+            "type": "uint40",
+            "internalType": "uint40"
+          },
+          {
+            "name": "expiry",
+            "type": "uint40",
+            "internalType": "uint40"
+          },
+          {
+            "name": "evidence",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "allocations",
+            "type": "tuple[]",
+            "internalType": "struct IntentQuoteVerifier.Allocation[]",
+            "components": [
+              {
+                "name": "vault",
+                "type": "address",
+                "internalType": "address"
+              },
+              {
+                "name": "units",
+                "type": "uint8",
+                "internalType": "uint8"
+              },
+              {
+                "name": "principal",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "interest",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "minimum",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "executionFee",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "maxReserveShares",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "minRateGrade",
+                "type": "uint8",
+                "internalType": "uint8"
+              },
+              {
+                "name": "capBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              },
+              {
+                "name": "managerBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "signatures",
+        "type": "bytes[]",
+        "internalType": "bytes[]"
+      },
+      {
+        "name": "maxReserveShares",
+        "type": "uint256[]",
+        "internalType": "uint256[]"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "id",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "rollableAt",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setAutoRoll",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "executor",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "term",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "window",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "maxCost",
+        "type": "uint128",
+        "internalType": "uint128"
+      },
+      {
+        "name": "maxSpend",
+        "type": "uint128",
+        "internalType": "uint128"
+      },
+      {
+        "name": "rollsLeft",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "withRewards",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "until",
+        "type": "uint40",
+        "internalType": "uint40"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "uniswapV3SwapCallback",
+    "inputs": [
+      {
+        "name": "amount0Delta",
+        "type": "int256",
+        "internalType": "int256"
+      },
+      {
+        "name": "amount1Delta",
+        "type": "int256",
+        "internalType": "int256"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "unlockCallback",
+    "inputs": [
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "unpause",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "AutoRollCancelled",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "borrower",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "AutoRollCarried",
+    "inputs": [
+      {
+        "name": "fromId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "toId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "rollsLeft",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "uint8"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "AutoRollSet",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "borrower",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "autoRoll",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct PutRouter.AutoRoll",
+        "components": [
+          {
+            "name": "borrower",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "term",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "window",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "rollsLeft",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "withRewards",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "executor",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "until",
+            "type": "uint40",
+            "internalType": "uint40"
+          },
+          {
+            "name": "maxCost",
+            "type": "uint128",
+            "internalType": "uint128"
+          },
+          {
+            "name": "maxSpend",
+            "type": "uint128",
+            "internalType": "uint128"
+          }
+        ]
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Closed",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "borrower",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "repaid",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "spent",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "returned",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "CollateralRescued",
+    "inputs": [
+      {
+        "name": "loanId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "holder",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipTransferStarted",
+    "inputs": [
+      {
+        "name": "previousOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipTransferred",
+    "inputs": [
+      {
+        "name": "previousOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Paused",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Rolled",
+    "inputs": [
+      {
+        "name": "oldId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "newId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "borrower",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "caller",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "repaid",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "principal",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "cap",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "term",
+        "type": "uint32",
+        "indexed": false,
+        "internalType": "uint32"
+      },
+      {
+        "name": "topUp",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "spent",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Unpaused",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "AutoRollEnded",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "CollateralMismatch",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "CostTooHigh",
+    "inputs": [
+      {
+        "name": "cost",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "maxCost",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "EnforcedPause",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ExpectedPause",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InexactTransfer",
+    "inputs": [
+      {
+        "name": "expected",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "received",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "InvalidAutoRoll",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidConfiguration",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidRecipient",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidSwap",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ListingMismatch",
+    "inputs": [
+      {
+        "name": "listed",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "planned",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "NoAutoRoll",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotActive",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotBorrower",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotBorrowersPlan",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotExecutor",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotPool",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotPoolManager",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NothingToRescue",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "OwnableInvalidOwner",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "OwnableUnauthorizedAccount",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "PartialPurchase",
+    "inputs": [
+      {
+        "name": "bought",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "wanted",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "PlanMismatch",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "PrincipalMismatch",
+    "inputs": [
+      {
+        "name": "planned",
+        "type": "uint128",
+        "internalType": "uint128"
+      },
+      {
+        "name": "old",
+        "type": "uint128",
+        "internalType": "uint128"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "ReentrancyGuardReentrantCall",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ReturnTooLow",
+    "inputs": [
+      {
+        "name": "returned",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "minBack",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "SafeERC20FailedOperation",
+    "inputs": [
+      {
+        "name": "token",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "SpendTooHigh",
+    "inputs": [
+      {
+        "name": "spent",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "maxSpend",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "StrayBalance",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "TermMismatch",
+    "inputs": [
+      {
+        "name": "planned",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "wanted",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "TooEarly",
+    "inputs": [
+      {
+        "name": "opensAt",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  }
+]

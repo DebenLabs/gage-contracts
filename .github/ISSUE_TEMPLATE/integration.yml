@@ -1,5 +1,5 @@
 name: Integrate with gage
-description: A hook or rehypothecation source, an aggregator or executor, or an app, agent or front end built on gage.
+description: A hook or rehypothecation source, an aggregator or executor, an app, agent or front end built on gage, a Rates API key, or browser access to the rates service for your site.
 title: "[Integration] <project>: <what it does>"
 labels: ["integration"]
 body:
@@ -7,6 +7,8 @@ body:
     attributes:
       value: |
         This issue is intake only: gage reviews the integration and answers here, and closes the issue with the transaction that settled it.
+        **A Rates API key** is optional. Without one, gage's rates service answers the slim quote (cost, amounts, limits, the amount-to-cost curve), 30 requests a minute per address. With one, it answers the whole quote, the model's detail included, under the key's own ceiling of 600 requests a minute, from wherever you call. Partners get a key free at first. **A key is never posted in an issue:** gage sends it to the private contact you give, and you keep it on your server.
+        **Your site's origin:** the rates service answers browsers only from the origins it names. Ask for yours (`https://your.site`, exact, no wildcard) to call it from your own pages.
         A Uniswap v4 hook or rehypothecation source: read [PARTNERS.md](https://github.com/DebenLabs/gage-contracts/blob/main/PARTNERS.md) first, and meet its checklist before you open the issue.
         **Never report a vulnerability here:** see [SECURITY.md](https://github.com/DebenLabs/gage-contracts/blob/main/SECURITY.md).
   - type: dropdown
@@ -17,13 +19,25 @@ body:
         - Hook or rehypothecation source
         - Aggregator or executor (cash-out, leverage)
         - App, agent or front end built on the SDK
+        - Rates API key
+        - Allow my site's origin (browser access to rates)
     validations:
       required: true
+  - type: input
+    id: caller
+    attributes:
+      label: Origin or server
+      description: "For an origin: the exact origin your pages call from (https://your.site). For a key: the server or service that will send it. Leave empty for other kinds."
+  - type: input
+    id: volume
+    attributes:
+      label: Expected volume
+      description: Quotes or requests a minute at your busiest, for a key or an origin. Leave empty for other kinds.
   - type: textarea
     id: addresses
     attributes:
       label: Addresses
-      description: Each contract and wallet on Robinhood Chain mainnet (chain ID 4663), one per line, with what it is. Not deployed yet? Say so.
+      description: Each contract and wallet on Robinhood Chain mainnet (chain ID 4663), one per line, with what it is. Not deployed yet, or a key or origin request? Say so.
     validations:
       required: true
   - type: textarea
@@ -43,7 +57,7 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact
-      description: How gage reaches you beyond this issue.
+      label: Private contact
+      description: How gage reaches you beyond this issue, privately. A Rates API key is sent here, never in the issue.
     validations:
       required: true

@@ -2,8 +2,9 @@
 
 A DEX can lend the idle part of a Uniswap v4 pool's liquidity through gage. gage gives each partner DEX a reference kit: a
 hook built on OpenZeppelin's `ReHypothecationHook` (uniswap-hooks v1.3.0-rc.0, a release candidate), a deploy script and a
-keeper. The DEX deploys its own copy and has it audited. gage deploys none, and the kit is unaudited, like the OpenZeppelin contract it builds on,
-which OpenZeppelin marks experimental.
+keeper. The DEX deploys its own copy and has it audited. gage deploys none of the kit, and the kit is unaudited, like the OpenZeppelin contract it builds on,
+which OpenZeppelin marks experimental. A DEX whose own hook already follows OpenZeppelin's can plug it into
+gage's rehypo source instead (below).
 
 ## How it works
 
@@ -57,3 +58,30 @@ vault lends against memes: memes can go to zero, and if the borrower walks away,
 * **A custom range.** The kit uses the full range. A range that follows the price lets a cheap swap force liquidity in at
   a poor price.
 * **Lent tokens.** A walk-away lowers the vault's price at its settle, and the share price with it.
+
+## gage's rehypo source
+
+For a DEX that runs its own OpenZeppelin-style rehypothecation hook, gage deployed the source those hooks plug into: one
+ERC-4626 per pool token, which keeps the float for swaps and lends the rest through a gage partner vault of that token.
+The hook stays free of anything gage-specific.
+
+| Contract | Address |
+| --- | --- |
+| GageRehypoSourceFactory | [`0xab0425C2f5D5bab9867b42EFE3c228BAD2239419`](https://robinhoodchain.blockscout.com/address/0xab0425C2f5D5bab9867b42EFE3c228BAD2239419) ([Sourcify](https://repo.sourcify.dev/4663/0xab0425C2f5D5bab9867b42EFE3c228BAD2239419)) |
+| PoolManager it names (`POOL_MANAGER()`) | [`0x8366a39CC670B4001A1121B8F6A443A643e40951`](https://robinhoodchain.blockscout.com/address/0x8366a39CC670B4001A1121B8F6A443A643e40951) |
+| Registry it names (`REGISTRY()`) | [`0xcea38204C97e9745f831978357d562E5CcC6834F`](https://robinhoodchain.blockscout.com/address/0xcea38204C97e9745f831978357d562E5CcC6834F), gage's generation deployer |
+
+* **One call per pool token.** The DEX's Safe calls `create(asset, vault, owner, beneficiary, floatBps, salt)` on the
+  factory: `vault` is the token's partner vault, created by the Safe, or zero for a side that only keeps a float.
+  `predict` gives the address first. The factory has no owner and no settings.
+* **Only gage partner vaults.** A source accepts a vault only if the registry above records the factory that created
+  it.
+* **What the hook must do.** Use the sources as its ERC-4626 sources; size swaps by the source's `maxWithdraw`; follow
+  OpenZeppelin's settle order; and refuse adding, removing and seeding liquidity while the PoolManager is unlocked.
+* **Set-up.** The Safe deploys the hook naming the sources, creates the pool, binds each source to it once (`bind`) and
+  names gage's keeper (`setKeeper`). gage's keeper keeps the float on its target. While the pool's price is outside a
+  band around parity it opens swaps only thinly, so rehypo pools are for stable pairs for now.
+* **Shares and rewards.** The hook holds every share of its sources, and liquidity providers hold the hook's shares.
+  sGAGE rewards and a walk-away's collateral go to the source's beneficiary, the DEX, which says how its liquidity
+  providers get them.
+* **Not audited.** The source and its factory join gage's next audit. The hook is the DEX's, and so is its audit.

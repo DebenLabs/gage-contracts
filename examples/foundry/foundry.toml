@@ -1,0 +1,15 @@
+# Worked examples: fork tests against Robinhood Chain mainnet, run from this folder.
+#   forge test
+# Addresses come from ../../deployments/manifest/4663.json, never from the code.
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["../../lib"]
+solc_version = "0.8.28"
+evm_version = "cancun"
+remappings = ["forge-std/=../../lib/forge-std/src/"]
+fs_permissions = [{access = "read", path = "../../deployments"}]
+
+[rpc_endpoints]
+mainnet = "https://rpc.mainnet.chain.robinhood.com"

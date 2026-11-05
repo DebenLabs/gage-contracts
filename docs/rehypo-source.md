@@ -7,7 +7,19 @@
 - the plug test `integrations/lender-amm/test/RehypoSourcePlug.t.sol`;
 - the factory's release step and a pool's set-up, one script: `integrations/lender-amm/script/RehypoSource.s.sol`, with the reference hook `integrations/lender-amm/src/UnlockCheckedHook.sol`.
 
-**Status:** built, tested and rehearsed on testnet; under review. The source and its factory are not deployed on mainnet, so their code is not in this repository yet: it joins the release that deploys them. The plug test and the set-up script below are here now.
+**Status:** live on mainnet. The factory is at `0xab0425C2f5D5bab9867b42EFE3c228BAD2239419`, and checks each partner vault against the GenerationDeployer (`0xcea38204C97e9745f831978357d562E5CcC6834F`), its factory registry. How to plug a hook in: [integrate/dex-partners.md](integrate/dex-partners.md).
+
+## On mainnet (Robinhood Chain, 4663)
+
+| | Address | |
+|---|---|---|
+| `GageRehypoSourceFactory` | `0xab0425C2f5D5bab9867b42EFE3c228BAD2239419` | Block 106,656,287, tx `0xa7e7c83b24474a556dd91453006a9848f01e6254a2914118fb1688d7f4200780`, from the release signer `0x1Ed0670462cD5AD80C1dd9eE8691F62c47698d98` (`RehypoSource.s.sol` `run()`). Sourcify: runtime and creation match. |
+| its `SOURCE_CODE` | `0xc23ea8cE1e150289BdB28519e7D751038b6330a4` | The data contract its constructor wrote: a leading STOP, then `GageRehypoSource`'s creation code, equal to this repository's build byte for byte. Never executed. |
+| `POOL_MANAGER()` | `0x8366a39CC670B4001A1121B8F6A443A643e40951` | Uniswap v4's PoolManager. |
+| `REGISTRY()` | `0xcea38204C97e9745f831978357d562E5CcC6834F` | The r13 GenerationDeployer: a source lends only through a vault of an Intent factory it records (2b). |
+
+- The deployment manifest does not name the factory: nothing that reads the manifest needs it. A source is found from the factory's `SourceCreated` events.
+- gage's keeper rebalances a source once gage lists it, with the band its set-up prints. For frxUSD/USDG (frxUSD, 18 decimals, is `currency0`; USDG, 6 decimals, `currency1`) the ±0.5% band is `minSqrtPriceX96` `79029843899059723247256` and `maxSqrtPriceX96` `79425985949584624389260` (parity `79228162514264337593543`), for any pool of the pair.
 
 ## What it is
 
@@ -161,7 +173,7 @@ An LP whose share of the pool is more than the source can pay now (the float, wh
 - **An LP who asks to exit now and never removes** leaves the sales' cash idle for the hour, and the stayers bear their part of the interest the sale gave up, at most that LP's share. An LP can ask again each hour while its share stays more than the source can pay.
   - The share is read when the LP asks. Someone who borrows LP shares for that one transaction (outside an unlock: a v4 flash loan cannot reach `exitNow`) commits as if it held them.
   - Someone who asks and also runs a buyer vault can buy what its own ask listed, near book, and keep the interest still to come that the pool's LPs gave up, less the protocol's share. Today only admitted creators run vaults and only gage's signed plans buy; this matters once vaults open to anyone.
-- **The factory has 191 bytes of room.** It carries the source's whole creation code, so a larger source makes the factory too large to deploy (EIP-170): any further change to the source must make room first.
+- **The source's code has 1,988 bytes of room.** The factory keeps the source's whole creation code in its data contract, whose runtime counts against EIP-170: on mainnet it holds 22,588 of the 24,576 bytes allowed. Any change to the source means a new factory (the deployed one keeps its code for good), and a change past that room must make room first.
 - **An exit the vault cannot pay its part of narrows swaps, and can stop them.** The vault pays an exit's lent part from its free cash. When that cash is gone (on loan, taken first by the vault's other depositors, or closed in a fill's purchase second) or the vault refuses (`RewardsPending`), the float pays instead, because LPs can always take the float, and the swap float falls to what is left.
   - An exit of the whole float and the vault's free cash leaves a swap float of zero, and OpenZeppelin's hook then refuses swaps both ways. Nobody needs a bug for it: a large LP can do it alone, and an LP who also deposits in the vault (taking its free cash first) or who exits in a fill's purchase second needs a stake only the size of the float.
   - An LP entry after it does not reopen swaps: it scales a swap float of zero, so the float can sit on its target with swaps stopped.

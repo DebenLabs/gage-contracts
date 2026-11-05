@@ -6,7 +6,7 @@ For a DEX whose Uniswap v4 hook lends a pool's idle liquidity through gage. Your
 - The reference kit (hook, keeper, scripts, the plug suite): [integrations/lender-amm/](integrations/lender-amm/) and [docs/lender-amm.md](docs/lender-amm.md)
 - What you call: [interfaces/](interfaces/)
 
-**Status:** partner vaults are live on mainnet. The rehypo source factory is not deployed yet: steps 4 to 7 below wait for it.
+**Status:** partner vaults and the rehypo source factory (`0xab0425C2f5D5bab9867b42EFE3c228BAD2239419`) are live on mainnet. The integration guide for DEX partners: [docs/integrate/dex-partners.md](docs/integrate/dex-partners.md).
 
 ## The steps
 
